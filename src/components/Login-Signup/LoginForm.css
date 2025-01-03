@@ -1,0 +1,142 @@
+/* General styling for the login container */
+.login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 500px;
+    margin: auto;
+    margin-top: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.35);
+}
+
+/* Form title styling */
+.login-form .form-title {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+/* Form group and input field styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #0056b3;
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Button styling */
+.btn {
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    width: 100%;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Signup link styling */
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Password visibility toggle styling */
+.password-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+.password-toggle:hover {
+    color: #0056b3;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+        max-width: 80%;
+    }
+
+    .login-form .form-title {
+        font-size: 1.7rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 15px;
+        width: 95%;
+    }
+
+    .login-form .form-title {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+
+    .form-control {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,77 @@
+/* Sidebar Styling */
+.sidebar {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    width: 285px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    margin-top: 62px;
+    /* Adjust top margin */
+    margin-bottom: 20px;
+    /* Adjust bottom margin */
+}
+
+/* Sidebar Links */
+.sidebar-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Sidebar Section Titles */
+.sidebar-section-title {
+    font-size: 1rem;
+    /* Corrected typo from 0.10rm to 1rem */
+    color: white;
+    background: none;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* Sidebar Link Item Styling */
+.sidebar-links li {
+    margin: 10px 0;
+}
+
+/* Sidebar Link Styling */
+.sidebar-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Sidebar Links */
+.sidebar-links li a:hover {
+    background-color: white;
+    color: #007bff;
+    /* Change text color on hover */
+}
+
+/* Sidebar Link Icon Styling */
+.sidebar-links li a svg {
+    margin-right: 10px;
+}
+
+/* Nested List Styling */
+.sidebar-links ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+/* Hover Effect for Section Titles */
+.sidebar-section-title:hover {
+    color: #007bff;
+}
+
+/* Dashboard */
+ 

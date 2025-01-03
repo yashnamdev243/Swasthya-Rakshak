@@ -1,0 +1,23 @@
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack Navbar and Sidebar vertically */
+    height: 100vh;
+    /* Full viewport height */
+    /* background-color: white; */
+}
+
+.content {
+    display: flex;
+    margin-left: 300px;
+   
+    flex: 1;
+}
+
+.main-content {
+    background-color: #f8f9fa;
+    /* Light gray background */
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
