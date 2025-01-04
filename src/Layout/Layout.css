@@ -1,16 +1,15 @@
 .layout-container {
     display: flex;
     flex-direction: column;
-    /* Stack Navbar and Sidebar vertically */
+
     height: 100vh;
-    /* Full viewport height */
-    /* background-color: white; */
+
 }
 
 .content {
     display: flex;
     margin-left: 300px;
-   
+    overflow: hidden;
     flex: 1;
 }
 
