@@ -7,7 +7,9 @@
 /* Dashboard Heading */
 .dashboard-heading h2 {
     font-size: 2em;
-    color: #007bff;
+    /* color: #007bff; */
+    color: #1e5a84;
+
     margin-bottom: 10px;
 }
 
@@ -41,7 +43,8 @@
 
 .stat-card h3 {
     font-size: 1.5em;
-    color: #007bff;
+    /* color: #007bff; */
+   color: #1e5a84;
 }
 
 .stat-card p {

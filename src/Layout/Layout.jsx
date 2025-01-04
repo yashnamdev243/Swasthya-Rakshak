@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
-import Sidebar from './Sidebar';
+//import Sidebar from './Sidebar';
 import './Layout.css';
 
 const Layout = ({ children }) => {
@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <div className="layout-container" >
       <Navbar />
       <div className="content">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <main className="main-content">
           {children}
         </main>

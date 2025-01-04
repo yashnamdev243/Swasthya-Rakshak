@@ -8,13 +8,15 @@
 
 .content {
     display: flex;
-    margin-left: 300px;
+    /* margin-left: 300px; */
     overflow: hidden;
     flex: 1;
 }
 
 .main-content {
-    background-color: #f8f9fa;
+    background-image: linear-gradient(180deg, #6c91c9, #e3f2fd);
+
+    /* background-color: #f8f9fa; */
     /* Light gray background */
     padding: 20px;
     flex: 1;
