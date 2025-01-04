@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import LoginForm from './components/Login-Signup/LoginForm.jsx';
 import SignupForm from './components/Login-Signup/SignupForm.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
+import PatientForm from './Patient/PatientForm.jsx';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/login" element={<LoginForm />} />
           <Route path="/" element={<SignupForm />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/patient" element={<PatientForm />} />
         </Routes>
       </div>
     </Router>

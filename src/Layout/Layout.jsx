@@ -7,12 +7,10 @@ const Layout = ({ children }) => {
   return (
     <div className="layout-container" >
       <Navbar />
-      <div className="content">
         {/* <Sidebar /> */}
         <main className="main-content">
           {children}
         </main>
-      </div>
     </div>
   );
 };
