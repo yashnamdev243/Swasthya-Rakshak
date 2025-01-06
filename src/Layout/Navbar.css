@@ -1,88 +1,139 @@
-/* Basic navbar styling */
+/* Basic Navbar Styling */
 .navbar {
   background-color: white;
-  color: #007bff;
-  padding: 10px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 0;
-  /* overflow: hidden; */
   right: 0;
   z-index: 1000;
-  width: 1700px;
-  margin: 0;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Navbar brand */
+/* Navbar Brand */
 .navbar .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
+  background-image: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  color: transparent;
   margin-left: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* Navbar links container */
+
+/* Navbar Links Container */
 .navbar-links {
-  list-style-type: none;
+  list-style: none;
   display: flex;
   gap: 20px;
 }
 
-/* Navbar link styling */
+/* Navbar Link Styling */
 .navbar-links li a {
   text-decoration: none;
-  color: #007bff;
+  color: #0000FF;
   font-weight: 500;
-  padding: 10px;
+  padding: 15px 15px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Navbar link hover effect */
+/* Navbar Link Hover Effect */
 .navbar-links li a:hover {
-  color: #0056b3;
+  color: #FF0000;
 }
 
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
+/* Animated Underline Effect */
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #FF0000;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
 
-  /* Stack navbar items vertically */
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+/* Dropdown Menu */
+.navbar-links .dropdown {
+  position: relative;
+}
+
+.navbar-links .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.navbar-links .dropdown-menu li a {
+  padding: 10px 15px;
+  color: #333;
+
+  transition: background-color 0.3s;
+}
+
+.navbar-links .dropdown:hover .dropdown-menu {
+  display: block;
+
+}
+
+/* Hamburger Menu Styling */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.navbar-toggle .bar {
+  width: 25px;
+  height: 3px;
+
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
     padding: 15px;
   }
 
-  /* Adjust navbar links to be in a column */
   .navbar-links {
     display: none;
-    /* Hidden by default */
-    width: 100%;
     flex-direction: column;
+    width: 100%;
     gap: 10px;
-    padding-left: 0;
   }
 
-  /* Toggle the navbar visibility when expanded */
   .navbar-links.active {
     display: flex;
   }
 
-  /* Add hamburger icon */
   .navbar-toggle {
-    display: block;
-    cursor: pointer;
-  }
-
-  .navbar-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #007bff;
-    margin: 5px 0;
-  }
-
-  .navbar-toggle {
-    display: block;
+    display: flex;
   }
 }

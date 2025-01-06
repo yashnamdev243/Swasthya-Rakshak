@@ -1,66 +1,408 @@
-/* Dashboard Container */
 .dashboard-container {
-    padding: 20px;
-    text-align: center;
-}
-
-/* Dashboard Heading */
-.dashboard-heading h2 {
-    font-size: 2em;
-    /* color: #007bff; */
-    color: #1e5a84;
-
-    margin-bottom: 10px;
-}
-
-.dashboard-heading p {
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-/* Image */
-.dashboard-image img {
-    width: 200px;
-    height: 400px;
-
-}
-
-/* Stats Section */
-.dashboard-stats {
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
+    /* background: linear-gradient(135deg, #6a11cb, #2575fc); */
+    /* Gradient background for a modern look */
+    color: #fff;
+    /* Ensure text stands out on the background */
+    gap: 2rem;
 }
 
-.stat-card {
-    background-color: #f4f4f4;
+.dashboard-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.dashboard-image-style {
+    width: 80%;
+    max-width: 550px;
+    animation: upDownMovement 4s infinite;
+    /* Adds the up and down movement */
+}
+
+@keyframes upDownMovement {
+    0% {
+        transform: translateY(0);
+        /* Start position */
+    }
+
+    50% {
+        transform: translateY(-50px);
+        /* Move up */
+    }
+
+    100% {
+        transform: translateY(60);
+        /* Move back to the start position */
+    }
+}
+
+
+.dashboard-content {
+    flex: 1;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+
+    text-align: left;
+}
+
+.dashboard-content h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    /* Add subtle text shadow */
+}
+
+.dashboard-content p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .dashboard-content {
+        padding: 1.5rem;
+    }
+
+    .dashboard-image-style {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .dashboard-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .dashboard-content p {
+        font-size: 1.2rem;
+    }
+}
+
+/* ----------------------------------- */
+
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 30px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.3s;
+
+}
+
+/* Animation for the card entrance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Card Design */
+.card {
+    background: linear-gradient(145deg, #f0f1f6, #d1e3f0);
+    /* Soft gradient background */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    /* Adjust this value to control card width */
+    text-align: center;
     padding: 20px;
-    border-radius: 8px;
-    width: 25%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, background 0.3s ease; */
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.stat-card h3 {
-    font-size: 1.5em;
-    /* color: #007bff; */
-   color: #1e5a84;
+.card:hover {
+    transform: translateY(-15px);
+    /* Move card up on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow */
+    opacity: 1;
+    background: linear-gradient(145deg, #4f94e1, #5da8e6);
+    /* Darker gradient on hover */
 }
 
-.stat-card p {
-    font-size: 1.2em;
+/* Card Image */
+.card img {
+    width: 60%;
+    /* Image takes 70% width of the card */
+    height: 300px;
+    /* Fixed height */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Shadow effect on image hover */
+}
+
+/* Card Title */
+.card h3 {
+    font-size: 1.4rem;
+    /* Larger title size */
+    font-weight: 600;
     color: #333;
+    margin: 15px 0 10px;
+    transition: color 0.3s ease;
+}
+
+.card:hover h3 {
+    color: #ffffff;
+    /* White color on hover for title */
+}
+
+/* Card Text */
+.card p {
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for text inside the card */
+.card:hover p {
+    color: #f1f1f1;
+    /* Light text color on hover */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .dashboard-stats {
-        flex-direction: column;
-        align-items: center;
+    .card-container {
+        justify-content: center;
+        gap: 20px;
     }
 
-    .stat-card {
-        width: 80%;
-        margin-bottom: 20px;
+    .card {
+        width: 100%;
+        /* Make cards full-width on smaller screens */
     }
+}
+
+/* ----------------------------------------- */
+.facilities-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin-top: 100px;
+    /* background-color: #f4f4f4; */
+    border-radius: 15px;
+}
+
+.facilities-content {
+    width: 50%;
+}
+
+.facilities-content h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.facilities-content p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #fff;
+    margin-bottom: 1rem;
+    flex: 1;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+
+}
+
+.facilities-image {
+    width: 40%;
+}
+
+.facilities-image img {
+    width: 100%;
+    height: auto;
+    animation: upDownMovement 4s infinite;
+}
+
+@media (max-width: 768px) {
+    .facilities-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .facilities-content {
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    .facilities-image img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .facilities-content h2 {
+        font-size: 2.4rem;
+    }
+
+    .facilities-content p {
+        font-size: 1.2rem;
+    }
+}
+
+/* ----------------------------------------------------- */
+.appointment-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+    padding: 0 20px;
+    gap: 50px;
+}
+
+.appointment-left {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+    max-width: 45%;
+}
+
+.appointment-left h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.appointment-left p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #fff;
+    margin-bottom: 1rem;
+    flex: 1;
+    padding: 1.5rem;
+    /* Reduced padding */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.appointment-form-container {
+    flex: 1;
+    padding: 30px;
+    /* Reduced padding */
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    margin-left: 20px;
+    max-width: 50%;
+}
+
+.appointment-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* Reduced gap between form elements */
+}
+
+.form-column {
+    flex: 1;
+    min-width: 250px;
+    /* Reduced minimum width */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Reduced gap between fields */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-input {
+    padding: 10px;
+    /* Reduced padding */
+    font-size: 14px;
+    /* Reduced font size */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.form-input:focus {
+    border: 2px solid #4CAF50;
+    box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.6);
+}
+
+textarea.form-input {
+    resize: vertical;
+    height: 80px;
+    /* Reduced height for textarea */
+}
+
+.appointment-submit-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+    width: 300px;
+    height: 50px;
+    align-self: flex-start;
+}
+
+.appointment-submit-btn:hover {
+    background-color: #0056b3;
+    /* Darker blue for hover effect */
+    transform: scale(1.05);
 }

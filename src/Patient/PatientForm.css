@@ -62,7 +62,8 @@
   margin-top: 20px;
 }
 
-.patient-table th, .patient-table td {
+.patient-table th,
+.patient-table td {
   padding: 12px 15px;
   text-align: left;
   border: 1px solid #ddd;
@@ -102,7 +103,9 @@
   display: block;
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.form-group input,
+.form-group select,
+.form-group textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -112,7 +115,8 @@
   color: black;
 }
 
-.form-group input[type="date"], .form-group input[type="tel"] {
+.form-group input[type="date"],
+.form-group input[type="tel"] {
   font-size: 16px;
 }
 
