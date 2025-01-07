@@ -1,0 +1,63 @@
+/* Add Doctor Button */
+.add-doctor-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-doctor-btn:hover {
+    background-color: #45a049;
+}
+
+/* General container styles */
+.doctor-list-container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    /* background-color: #f9f9f9; */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* Ensure the button is positioned correctly */
+}
+
+/* Table Styles */
+.doctors-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.doctors-table th,
+.doctors-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.doctors-table th {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+}
+
+.doctors-table td {
+    background-color: #ffffff;
+}
+
+.doctor-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4caf50;
+}
