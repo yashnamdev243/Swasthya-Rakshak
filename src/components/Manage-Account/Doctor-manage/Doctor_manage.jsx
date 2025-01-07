@@ -261,7 +261,7 @@ const DoctorManage = () => {
                             </Row>
 
                             {/* Add/Cancel Buttons */}
-                            <div className="d-flex justify-content-between">
+                            <div className="d-flex justify-content-between" style={{gap:"10px"}}>
                                 <Button variant="primary" type="submit" className="btn-submit">
                                     Add Doctor
                                 </Button>

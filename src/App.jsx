@@ -10,7 +10,7 @@ import Aboutus from './components/About us/Aboutus.jsx';
 import Doctors from './components/Doctors/Doctors.jsx';
 import Doctor_manage from './components/Manage-Account/Doctor-manage/Doctor_manage.jsx';
 import Staff from './components/Manage-Account/Staff-manage/Staff.jsx';
-import Patient from './components/Manage-Account/Patient-manage/Patient.jsx';
+import Patient from './components/Manage-Account/Patient-manage/PatientManage.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -20,8 +20,6 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-
-
         <Routes>
           <Route path="/" element={<SignupForm />} />
           <Route path="/login" element={<LoginForm />} />
@@ -34,7 +32,6 @@ const App = () => {
           <Route path='/patient-manage' element={<Patient />} />
           <Route path='/staff-manage' element={<Staff />} />
           <Route path='/doctor-manage' element={<Doctor_manage />} />
-
         </Routes>
       </div>
     </Router>
