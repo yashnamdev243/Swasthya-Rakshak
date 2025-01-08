@@ -65,7 +65,8 @@ const DoctorManage = () => {
       });
 
       const response = await axios.post(
-        "http://localhost:3000/api/doctors",
+        // "http://localhost:3000/api/doctors",
+        "http://192.168.46.246:3001/api/doctors",
         formData,
         {
           headers: {
