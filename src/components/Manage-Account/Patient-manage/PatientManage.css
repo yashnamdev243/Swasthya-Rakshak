@@ -23,7 +23,7 @@
   margin: 0 auto;
   margin-top: 50px;
   padding: 20px;
-  background-color: #f9f9f9;
+  /* background-color: #f9f9f9; */
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -102,7 +102,7 @@
 
 .custom-modal .modal-dialog {
   max-width: 50%;
-  margin: 10px auto;
+  margin: 120px auto;
   
   
 }
