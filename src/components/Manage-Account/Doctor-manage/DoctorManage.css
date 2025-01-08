@@ -4,7 +4,8 @@
     top: 20px;
     right: 20px;
     padding: 10px 20px;
-    background-color: #4caf50;
+    /* background-color: #0096FF; */
+    background-color: #37474f;
     color: white;
     border: none;
     border-radius: 5px;
@@ -14,7 +15,7 @@
 }
 
 .add-doctor-btn:hover {
-    background-color: #45a049;
+    background-color: #1F51FF;
 }
 
 /* General container styles */
@@ -45,7 +46,7 @@
 }
 
 .doctors-table th {
-    background-color: #4caf50;
+    background-color: #0096FF;
     color: white;
     font-weight: bold;
 }
@@ -59,7 +60,7 @@
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #4caf50;
+    border: 2px solid #0096FF;
 }
 
 

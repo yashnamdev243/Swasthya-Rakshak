@@ -60,7 +60,8 @@
     font-size: 2.8rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #fff;
+    /* color: #fff; */
+    color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     /* Add subtle text shadow */
 }
@@ -68,7 +69,10 @@
 .dashboard-content p {
     font-size: 1.4rem;
     line-height: 1.8;
-    color: #f0f0f0;
+    /* color: #f0f0f0; */
+    /* color: #ffffff; */
+    color: #37474f;
+    
     margin-bottom: 1rem;
 }
 
@@ -239,7 +243,7 @@
 .facilities-content p {
     font-size: 1.4rem;
     line-height: 1.8;
-    color: #fff;
+    color: #37474f;
     margin-bottom: 1rem;
     flex: 1;
     padding: 2rem;
@@ -314,7 +318,7 @@
 .appointment-left p {
     font-size: 1.4rem;
     line-height: 1.8;
-    color: #fff;
+    color: #37474f;
     margin-bottom: 1rem;
     flex: 1;
     padding: 1.5rem;

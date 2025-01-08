@@ -4,7 +4,7 @@
   top: 20px;
   right: 20px;
   padding: 10px 20px;
-  background-color: #0096FF;
+  background-color: #37474f;
   color: white;
   border: none;
   border-radius: 5px;
@@ -14,7 +14,8 @@
 }
 
 .add-patient-btn:hover {
-  background-color: #1F51FF;
+  /* background-color: #0096FF; */
+  background-color: #1a237e;
 }
 
 /* General container styles */
@@ -60,7 +61,7 @@
   margin-left: 28px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #4caf50;
+  border: 2px solid #0096FF;
 }
 
 /* --------------------------------------------------------------- */
