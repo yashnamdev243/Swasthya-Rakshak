@@ -100,7 +100,9 @@ const PatientManage = () => {
                 <h2>Patient Details</h2>
 
                 {/* Bootstrap Modal for Add Patient Form */}
-                <Modal show={showAddPatientForm} onHide={() => setShowAddPatientForm(false)}>
+                <Modal show={showAddPatientForm} onHide={() => setShowAddPatientForm(false)} 
+                className='custom-modal'
+                >
                     <Modal.Header closeButton>
                         <Modal.Title>Add New Patient</Modal.Title>
                     </Modal.Header>

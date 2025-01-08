@@ -37,7 +37,8 @@
 /* Navbar Link Styling */
 .navbar-links li a {
   text-decoration: none;
-  color: #0000FF;
+  /* color: #0000FF; */
+  color: #000;
   font-weight: 500;
   padding: 15px 15px;
   position: relative;
@@ -46,7 +47,8 @@
 
 /* Navbar Link Hover Effect */
 .navbar-links li a:hover {
-  color: #FF0000;
+  /* color: #FF0000; */
+  color: #1959db;
 }
 
 /* Animated Underline Effect */
@@ -55,7 +57,8 @@
   position: absolute;
   width: 0;
   height: 2px;
-  background: #FF0000;
+  /* background: #FF0000; */
+  background: #1959db;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);

@@ -1,67 +1,108 @@
 /* Add Patient Button */
 .add-patient-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .add-patient-btn:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 /* General container styles */
 .patient-list-container {
-    width: 100%;
-    margin: 0 auto;
-    margin-top: 50px;
-    padding: 20px;
-    /* background-color: #f9f9f9; */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    /* Ensure the button is positioned correctly */
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  /* Ensure the button is positioned correctly */
 }
 
 /* Table Styles */
 .patients-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 .patients-table th,
 .patients-table td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
 }
 
 .patients-table th {
-    background-color: #4caf50;
-    color: white;
-    font-weight: bold;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
 }
 
 .patients-table td {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .patient-image {
-    width: 50px;
-    height: 50px;
-    margin-left: 28px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #4caf50;
+  width: 50px;
+  height: 50px;
+  margin-left: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4caf50;
 }
 
 /* --------------------------------------------------------------- */
 /* General Modal Styling */
+
+.profile-preview {
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #4caf50;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #45a049;
+}
+
+.pagination button:hover {
+  background-color: #45a049;
+}
+
+.custom-modal .modal-dialog {
+  max-width: 50%;
+  margin: 10px auto;
+  
+  
+}
