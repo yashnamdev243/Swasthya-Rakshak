@@ -345,3 +345,6 @@ const DoctorManage = () => {
 };
 
 export default DoctorManage;
+
+
+  

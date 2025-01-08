@@ -4,7 +4,7 @@
   top: 20px;
   right: 20px;
   padding: 10px 20px;
-  background-color: #4caf50;
+  background-color: #0096FF;
   color: white;
   border: none;
   border-radius: 5px;
@@ -14,7 +14,7 @@
 }
 
 .add-patient-btn:hover {
-  background-color: #45a049;
+  background-color: #1F51FF;
 }
 
 /* General container styles */
@@ -45,13 +45,13 @@
 }
 
 .patients-table th {
-  background-color: #4caf50;
+  background-color: #0096FF;
   color: white;
   font-weight: bold;
 }
 
 .patients-table td {
-  background-color: #ffffff;
+  background-color: rgb(220, 230, 245);
 }
 
 .patient-image {
@@ -86,23 +86,23 @@
   margin: 0 5px;
   padding: 5px 10px;
   border: none;
-  background-color: #4caf50;
+  background-color: #0096FF;
   color: white;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .pagination button.active {
-  background-color: #45a049;
+  background-color: #0096FF;
 }
 
 .pagination button:hover {
-  background-color: #45a049;
+  background-color: #0096FF;
 }
 
 .custom-modal .modal-dialog {
   max-width: 50%;
   margin: 120px auto;
-  
-  
+
+
 }

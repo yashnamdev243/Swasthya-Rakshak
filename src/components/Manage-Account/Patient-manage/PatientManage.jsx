@@ -322,3 +322,20 @@ const PatientManage = () => {
 };
 
 export default PatientManage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
