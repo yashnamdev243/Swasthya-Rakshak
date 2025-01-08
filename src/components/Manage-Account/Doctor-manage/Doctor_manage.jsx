@@ -314,7 +314,7 @@ const DoctorManage = () => {
                 <tr key={index}>
                   <td>
                     <img
-                      src={`http://localhost:3000/uploads/${doctor.profile_picture}`}
+                      src={`http://192.168.46.246:3001/uploads/${doctor.profile_picture}`}
                       alt="Profile"
                       className="doctor-image"
                     />
