@@ -27,9 +27,7 @@ const DoctorManage = () => {
     const fetchDoctorsData = async () => {
       try {
         // const response = await axios.get("http://localhost:3000/api/doctors");
-        const response = await axios.get(
-          "http://192.168.46.218:30001/api/doctors"
-        );
+        const response = await axios.get("http://192.168.46.246:3001/api/doctors");
 
         setDoctorsData(response.data);
       } catch (error) {
