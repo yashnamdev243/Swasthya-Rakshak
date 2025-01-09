@@ -5,7 +5,7 @@
     right: 20px;
     padding: 10px 20px;
     /* background-color: #0096FF; */
-    background-color: #37474f;
+    background-color: #1F51FF;
     color: white;
     border: none;
     border-radius: 5px;
@@ -15,7 +15,7 @@
 }
 
 .add-doctor-btn:hover {
-    background-color: #1F51FF;
+    background-color:  #37474f;
 }
 
 /* General container styles */
