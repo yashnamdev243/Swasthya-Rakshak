@@ -2,6 +2,7 @@ import React from 'react';
 import hospitalimg from "../../assets/f990586c95c040a891d1ac9e818c19f9.png"
 import missionimg from "../../assets/87b116184e9533029bad129dd09a53.png"
 import teamimg from "../../assets/d9112197ad3feaf283ee68c103da78c9.png"
+import whychooseimg from "../../assets/fc3a503f145917c0806f8ab5e9d6b841.png"
 import Layout from '../../Layout/Layout';
 
 import './Aboutus.css'; // CSS file for styling and animations
@@ -46,6 +47,16 @@ const Aboutus = () => {
                         <p>Swasthya Rakshak is powered by a team of dedicated healthcare professionals committed to providing the best care. Our doctors, nurses, and support staff work together to ensure excellent service and care for all. Together, we are focused on making healthcare accessible and improving the lives of the communities we serve.</p>
                     </div>
                 </div>
+            </div>
+
+            <div className="why-choose-container">
+                <div className="why-choose-section">
+                    <div className="unique-card">
+                        <h2>Why Choose Swasthya Rakshak?</h2>
+                        <p>Swasthya Rakshak stands out for its trusted doctors and specialists, simple and fast appointment process, 24x7 support, and commitment to confidentiality and data security. We ensure personalized care with a focus on making healthcare reliable and accessible. Choose us for a seamless healthcare experience you can trust.</p>
+                    </div>
+                </div>
+                <img src={whychooseimg} alt="Why Choose Image" className="why-choose-image" />
             </div>
 
         </Layout>

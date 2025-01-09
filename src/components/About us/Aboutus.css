@@ -210,3 +210,60 @@
     line-height: 1.6;
     color: #555;
 }
+
+/* ------------------------------------------------------ */
+.why-choose-container {
+    display: flex;
+    justify-content: space-between;
+    /* Ensures space between the card and the image */
+    align-items: center;
+    /* Aligns card and image vertically */
+    padding: 20px;
+    gap: 20px;
+    /* Adds spacing between card and image */
+    /* background-color: #f9f9f9; */
+    /* Light background for contrast */
+}
+
+.why-choose-section {
+    flex: 1;
+    /* Ensures the card takes up the remaining space */
+}
+
+.unique-card {
+    /* background-color: #ffffff; */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    padding: 20px;
+    max-width: 500px;
+    /* Limits the card width */
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.unique-card h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    /* Dark blue for the heading */
+}
+
+.unique-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    /* Soft black for readability */
+}
+
+.why-choose-image {
+    width: 40%;
+    /* Sets the image width */
+    height: auto;
+    object-fit: cover;
+    /* Ensures the image covers the space proportionally */
+    border-radius: 8px;
+    /* Adds rounded corners to the image */
+}
