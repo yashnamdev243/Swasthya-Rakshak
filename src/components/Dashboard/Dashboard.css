@@ -166,12 +166,13 @@
 
 /* Card Image */
 .card img {
-    width: 30%;
+    width: 40%;
     /* Image takes 70% width of the card */
     height: 200px;
     /* Fixed height */
     object-fit: cover;
     border-radius: 10px;
+    margin-top: 12px;
     margin-bottom: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
