@@ -1,0 +1,46 @@
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.welcome-section {
+    animation: fadeIn 2s ease-in-out;
+    border-radius: 15px;
+    margin-top: -500px;
+    padding: 20px;
+
+}
+
+.welcome-text {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    /* Dark green for trust and health association */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.welcome-subtext {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    /* Medium green for readability */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ------------------------------------------------------------------- */
