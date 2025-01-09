@@ -5,7 +5,9 @@
     right: 20px;
     padding: 10px 20px;
     /* background-color: #0096FF; */
-    background-color: #1F51FF;
+    /* background-color: #1F51FF; */
+    background-color:   #024d82;
+
     color: white;
     border: none;
     border-radius: 5px;
@@ -15,7 +17,10 @@
 }
 
 .add-doctor-btn:hover {
-    background-color: #37474f;
+    /* background-color:  #37474f; */
+    background-color:   #0e6aab;
+    color: #000;
+
 }
 
 /* General container styles */
@@ -24,13 +29,17 @@
     margin: 0 auto;
     margin-top: 50px;
     padding: 20px;
+    
     /* background-color: #f9f9f9; */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     /* Ensure the button is positioned correctly */
 }
-
+.heading{
+    color: #ffffff;
+    font-size: 40px;
+}
 /* Table Styles */
 .doctors-table {
     width: 100%;
@@ -46,7 +55,9 @@
 }
 
 .doctors-table th {
-    background-color: #0096FF;
+    /* background-color: #0096FF; */
+    background-color:   #024d82;
+
     color: white;
     font-weight: bold;
 }
@@ -60,10 +71,10 @@
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #0096FF;
+    /* border: 2px solid #0096FF; */
+    border: 2px solid  #024d82;
 }
 
 
 
 
-/* --------------------------------- */

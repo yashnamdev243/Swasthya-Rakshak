@@ -4,7 +4,9 @@
   top: 20px;
   right: 20px;
   padding: 10px 20px;
-  background-color: #37474f;
+  /* background-color: #37474f; */
+  background-color:   #024d82;
+
   color: white;
   border: none;
   border-radius: 5px;
@@ -15,7 +17,10 @@
 
 .add-patient-btn:hover {
   /* background-color: #0096FF; */
-  background-color: #1a237e;
+  /* background-color: #1a237e; */
+  background-color:   #0e6aab;
+  color: #000;
+
 }
 
 /* General container styles */
@@ -46,13 +51,17 @@
 }
 
 .patients-table th {
-  background-color: #0096FF;
+  /* background-color: #0096FF; */
+  background-color:   #024d82;
+
   color: white;
   font-weight: bold;
 }
 
 .patients-table td {
-  background-color: rgb(220, 230, 245);
+  background-color: #ffffff;
+
+  /* background-color: rgb(220, 230, 245); */
 }
 
 .patient-image {
@@ -61,7 +70,7 @@
   margin-left: 28px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #0096FF;
+  border: 2px solid  #024d82;
 }
 
 /* --------------------------------------------------------------- */

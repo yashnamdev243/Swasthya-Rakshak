@@ -365,8 +365,8 @@ const PatientManage = () => {
     useEffect(() => {
         const fetchPatientsData = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/patients');
-                // const response = await axios.get('http://192.168.46.246:5000/api/patients');
+                // const response = await axios.get('http://localhost:3000/api/patients');
+                const response = await axios.get('http://192.168.46.246:5000/api/patients');
                 if (response.data.success) {
                     setPatientsData(response.data.data); // Adjusting to correct response structure
                 } else {
@@ -441,7 +441,7 @@ const PatientManage = () => {
                     Add Patient
                 </button>
 
-                <h2>Patient Details</h2>
+                <h2 className="heading">Patient Details</h2>
 
                 {/* Bootstrap Modal for Add Patient Form */}
                 <Modal show={showAddPatientForm} onHide={() => setShowAddPatientForm(false)}
