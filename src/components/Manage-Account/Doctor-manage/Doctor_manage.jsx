@@ -378,7 +378,9 @@ const DoctorManage = () => {
   useEffect(() => {
     const fetchDoctorsData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/doctors");
+        // const response = await axios.get("http://localhost:3000/api/doctors");
+                const response = await axios.get("http://192.168.46.246:3001/api/doctors");
+
         setDoctorsData(response.data);
       } catch (error) {
         console.error("Error fetching doctors data:", error);
@@ -438,7 +440,7 @@ const DoctorManage = () => {
           Add Doctor
         </button>
 
-        <h2>Doctor Details</h2>
+        <h2 className="heading">Doctor Details</h2>
 
         {/* Bootstrap Modal for Add Doctor Form */}
         <Modal
