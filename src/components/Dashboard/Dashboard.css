@@ -84,6 +84,8 @@
 
     .dashboard-content {
         padding: 1.5rem;
+        width: 100%;
+
     }
 
     .dashboard-image-style {
@@ -101,9 +103,6 @@
 }
 
 
-.Appoinment-image{
-   
-}   
 
 
 
@@ -357,8 +356,12 @@
   
   .form-header h2 {
     font-size: 40px;
-    color: #1d3fa4;
+    color:  #1e78d7;
+
     font-weight: bold;
+  }
+  .form-header h2:hover {
+    color: #0056b3;
   }
   
   .appointment-form {
@@ -428,7 +431,7 @@
     width: 200px;
     height: 50px;
     
-    margin-left: 190px;
+    margin-left: 200px;
 }
 .appointment-open-btn:hover {
     background-color: #0056b3;
@@ -450,6 +453,7 @@
     animation: upDownMovement 4s infinite;
     /* Adds the up and down movement */
 }
+
 
 .close-icon {
     background: none;
