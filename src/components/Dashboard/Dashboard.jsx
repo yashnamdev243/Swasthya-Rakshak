@@ -6,17 +6,35 @@ import Staffimg from "../../assets/transparent-stethoscope-female-nurse-with-ste
 import Patientimg from "../../assets/6eeca84f7ec1a58b2b88d33b5dbd7e93.png";
 import Facilitiesimage from "../../assets/transparent-sick-room-hospital-room-medical-supplies-isometric-clean-hospital-room-with-medical-supplies-organize661c4707612889.45712943.png";
 import './Dashboard.css'; // Ensure to update the CSS for attractive design
-
+import Appoinmentimage from "../../assets/transparent-glasses-young-female-doctor-with-serious-expression65ee80a19eb183.12780541171012931.png";
 const Dashboard = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+  // Function to toggle modal visibility
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
+    // Form data state
     const [formData, setFormData] = useState({
         fullName: '',
         phoneNumber: '',
         email: '',
+        reasonForVisit: '',
         preferredDoctor: '',
         appointmentDate: '',
         timeSlot: '',
-        reasonForVisit: ''
-    });
+      });
+    // const [formData, setFormData] = useState({
+    //     fullName: '',
+    //     phoneNumber: '',
+    //     email: '',
+    //     preferredDoctor: '',
+    //     appointmentDate: '',
+    //     timeSlot: '',
+    //     reasonForVisit: ''
+    // });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -29,8 +47,14 @@ const Dashboard = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Appointment booked:', formData);
-    };
+        setIsModalOpen(false);
 
+    };
+    const handleCloseModal = () => {
+        // Logic to close the modal
+        setIsModalOpen(false); // Assuming `isModalOpen` is managed by a state
+      };
+      
     return (
         <Layout>
             <div className="dashboard-container">
@@ -77,6 +101,7 @@ const Dashboard = () => {
             </div>
 
             {/* New Section for Hospital Facilities */}
+           
             <div className="facilities-container">
                 <div className="facilities-content">
                     <h2>Our State-of-the-Art Hospital Facilities</h2>
@@ -93,12 +118,18 @@ const Dashboard = () => {
                     />
                 </div>
             </div>
-
+            
             {/* Book Appointment Section - Animated Card */}
             <div className="appointment-section">
 
-
-                <div className="appointment-form-container">
+            <div className="Appoinment-image">
+                    <img
+                        src={Appoinmentimage}
+                        alt="Hospital Facilities"
+                        className="Appoinment-image-style"
+                    />
+                </div>
+                {/* <div className="appointment-form-container">
                     <form onSubmit={handleSubmit} className="appointment-form">
                         <div className="form-column">
                             <div className="form-group">
@@ -208,17 +239,295 @@ const Dashboard = () => {
 
 
                             <button type="submit" className="appointment-submit-btn">
-                                Book Appointment
+                                Submit
                             </button>
                         </div>
 
                     </form>
-                </div>
+                </div> */}
+
                 <div className="appointment-left">
                     <h2>Book Your Appointment with Swasthya Rakshak!</h2>
                     <p>
                         Take control of your health by booking an appointment with our trusted doctors. Choose your preferred doctor, date, and time, and we’ll ensure a smooth and personalized healthcare experience. Quick, easy, and dedicated to your well-being—schedule your appointment now for better health!
+                        {/* <button type="submit" className="appointment-open-btn">
+                        Book Appointment </button> */}
+                          {/* Button to open modal */}
+      <button type="button" className="appointment-open-btn" onClick={toggleModal}>
+        Book Appointment
+      </button>
+
                     </p>
+                       {/* Modal */}
+                {/* {isModalOpen && (
+        <div className="appointment-form-container">
+          <form onSubmit={handleSubmit} className="appointment-form">
+            
+            <div className="form-column">
+                
+              <div className="form-group">
+               
+                <label htmlFor="fullName" className="form-label">Full Name</label>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  placeholder="Enter your full name"
+                  required
+                  className="form-input"
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
+                <input
+                  type="text"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
+                  onChange={handleChange}
+                  placeholder="Enter your phone number"
+                  required
+                  className="form-input"
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email" className="form-label">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Enter your email address"
+                  required
+                  className="form-input"
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="reasonForVisit" className="form-label">Reason for Visit</label>
+                <textarea
+                  id="reasonForVisit"
+                  name="reasonForVisit"
+                  value={formData.reasonForVisit}
+                  onChange={handleChange}
+                  placeholder="Explain the reason for your visit"
+                  required
+                  className="form-input"
+                ></textarea>
+              </div>
+            </div>
+
+            <div className="form-column">
+              <div className="form-group">
+                <label htmlFor="preferredDoctor" className="form-label">Preferred Doctor</label>
+                <select
+                  id="preferredDoctor"
+                  name="preferredDoctor"
+                  value={formData.preferredDoctor}
+                  onChange={handleChange}
+                  required
+                  className="form-input"
+                >
+                  <option value="">Select Doctor</option>
+                  <option value="Dr. A">Dr. A</option>
+                  <option value="Dr. B">Dr. B</option>
+                  <option value="Dr. C">Dr. C</option>
+                </select>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="appointmentDate" className="form-label">Date</label>
+                <input
+                  type="date"
+                  id="appointmentDate"
+                  name="appointmentDate"
+                  value={formData.appointmentDate}
+                  onChange={handleChange}
+                  required
+                  className="form-input"
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="timeSlot" className="form-label">Time Slot</label>
+                <select
+                  id="timeSlot"
+                  name="timeSlot"
+                  value={formData.timeSlot}
+                  onChange={handleChange}
+                  required
+                  className="form-input"
+                >
+                  <option value="">Select Time Slot</option>
+                  <option value="9:00 AM">9:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="2:00 PM">2:00 PM</option>
+                  <option value="4:00 PM">4:00 PM</option>
+                </select>
+              </div>
+
+              <button type="submit" className="appointment-submit-btn">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+                   )} */}
+{isModalOpen && (
+  <div className="appointment-form-container">
+    <div className="form-header" >
+      <h2>New Appointment</h2>
+
+       {/* Cancel Icon */}
+       <button
+        type="button"
+        className="close-icon"
+        onClick={handleCloseModal}
+        aria-label="Close"
+      >
+        &times; {/* Or use an icon from a library */}
+      </button>
+    </div>
+    <form onSubmit={handleSubmit} className="appointment-form">
+      <div className="form-column">
+        <div className="form-group">
+          <label htmlFor="fullName" className="form-label">Full Name</label>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
+            placeholder="Enter your full name"
+            required
+            className="form-input"
+          />
+        </div>
+        <div className="form-group">
+
+        <label htmlFor="gender" className="form-label">Gender</label>
+  <select
+    id="gender"
+    name="gender"
+    value={formData.gender}
+    onChange={handleChange}
+    required
+    className="form-input"
+  >
+    <option value="">Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+  </div>
+
+        <div className="form-group">
+          <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
+          <input
+            type="text"
+            id="phoneNumber"
+            name="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleChange}
+            placeholder="Enter your phone number"
+            required
+            className="form-input"
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="email" className="form-label">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Enter your email address"
+            required
+            className="form-input"
+          />
+        </div>
+
+      
+      </div>
+
+      <div className="form-column">
+        <div className="form-group">
+          <label htmlFor="preferredDoctor" className="form-label">Preferred Doctor</label>
+          <select
+            id="preferredDoctor"
+            name="preferredDoctor"
+            value={formData.preferredDoctor}
+            onChange={handleChange}
+            required
+            className="form-input"
+          >
+            <option value="">Select Doctor</option>
+            <option value="Dr. A">Dr. A</option>
+            <option value="Dr. B">Dr. B</option>
+            <option value="Dr. C">Dr. C</option>
+          </select>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="appointmentDate" className="form-label">Date</label>
+          <input
+            type="date"
+            id="appointmentDate"
+            name="appointmentDate"
+            value={formData.appointmentDate}
+            onChange={handleChange}
+            required
+            className="form-input"
+          />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="timeSlot" className="form-label">Time Slot</label>
+          <select
+            id="timeSlot"
+            name="timeSlot"
+            value={formData.timeSlot}
+            onChange={handleChange}
+            required
+            className="form-input"
+          >
+            <option value="">Select Time Slot</option>
+            <option value="9:00 AM">9:00 AM</option>
+            <option value="10:00 AM">10:00 AM</option>
+            <option value="11:00 AM">11:00 AM</option>
+            <option value="2:00 PM">2:00 PM</option>
+            <option value="4:00 PM">4:00 PM</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="reasonForVisit" className="form-label">Reason for Visit</label>
+          <textarea
+            id="reasonForVisit"
+            name="reasonForVisit"
+            value={formData.reasonForVisit}
+            onChange={handleChange}
+            placeholder="Explain the reason for your visit"
+            required
+            className="form-input"
+          ></textarea>
+        </div>
+        <button type="submit" className="appointment-submit-btn">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+)}
+
+
                 </div>
             </div>
 

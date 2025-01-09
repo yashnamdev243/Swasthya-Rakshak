@@ -15,9 +15,9 @@
 }
 
 .main-content {
-    /* background-image: linear-gradient(180deg, #6c91c9, #e3f2fd); */
-    /* background: linear-gradient(135deg, #6a11cb, #2575fc); */
     background-image: linear-gradient(180deg, #6c91c9, #e3f2fd);
+    /* background: linear-gradient(135deg, #6a11cb, #2575fc); */
+    /* background-image: linear-gradient(180deg, #266fdc, #e3f2fd); */
 
     /* background-color: #f8f9fa; */
     /* Light gray background */

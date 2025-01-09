@@ -66,44 +66,7 @@
 
 /* --------------------------------------------------------------- */
 /* General Modal Styling */
-
-.profile-preview {
-  width: 100%;
-  max-width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border: 2px solid #4caf50;
-  border-radius: 50%;
-  margin-top: 10px;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.pagination button {
-  margin: 0 5px;
-  padding: 5px 10px;
-  border: none;
-  background-color: #0096FF;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.pagination button.active {
-  background-color: #0096FF;
-}
-
-.pagination button:hover {
-  background-color: #0096FF;
-}
-
 .custom-modal .modal-dialog {
   max-width: 50%;
   margin: 120px auto;
-
-
 }
