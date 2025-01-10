@@ -72,7 +72,7 @@
     /* color: #f0f0f0; */
     /* color: #ffffff; */
     color: #37474f;
-    
+
     margin-bottom: 1rem;
 }
 
@@ -336,6 +336,7 @@
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
 }
+
 .appointment-form-container {
     position: fixed;
     top: 50%;
@@ -347,46 +348,47 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     padding: 20px;
     z-index: 9999;
-  }
-  
-  .form-header {
+}
+
+.form-header {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  .form-header h2 {
+}
+
+.form-header h2 {
     font-size: 40px;
-    color:  #1e78d7;
+    color: #1e78d7;
 
     font-weight: bold;
-  }
-  .form-header h2:hover {
+}
+
+.form-header h2:hover {
     color: #0056b3;
-  }
-  
-  .appointment-form {
+}
+
+.appointment-form {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-  }
-  
-  .form-column {
+}
+
+.form-column {
     flex: 1;
     min-width: 250px;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
-  }
-  
-  .form-label {
+}
+
+.form-label {
     font-weight: bold;
     color: #333;
-  }
-  
-  .form-input {
+}
+
+.form-input {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -394,13 +396,13 @@
     outline: none;
     background-color: whitesmoke;
     color: #000;
-  }
-  
-  textarea.form-input {
+}
+
+textarea.form-input {
     resize: vertical;
-  }
-  
-  .appointment-submit-btn {
+}
+
+.appointment-submit-btn {
     padding: 10px 20px;
     background-color: #1e78d7;
     color: white;
@@ -411,12 +413,12 @@
     align-self: flex-start;
     width: 200px;
     margin-left: -100px;
-  }
-  
-  .appointment-submit-btn:hover {
+}
+
+.appointment-submit-btn:hover {
     background-color: #0056b3;
-  }
-  
+}
+
 
 .appointment-open-btn {
     padding: 10px 20px;
@@ -430,9 +432,10 @@
     margin-top: 20px;
     width: 200px;
     height: 50px;
-    
+
     margin-left: 200px;
 }
+
 .appointment-open-btn:hover {
     background-color: #0056b3;
     /* Darker blue for hover effect */
@@ -466,10 +469,128 @@
     top: -30px;
     right: -5px;
     width: 10px;
-    
-  }
-  
-  .close-icon:hover {
-    color:  black;
-  }
-  
+
+}
+
+.close-icon:hover {
+    color: black;
+}
+
+/* ---------------------------------------------------------- */
+/* Footer Styling */
+.footer {
+    background-color: #37474f;
+    /* Dark background color */
+    color: #ffffff;
+    /* White text color */
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.footer-logo {
+    flex: 1;
+    max-width: 250px;
+}
+
+.footer-logo img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+.footer-links,
+.footer-contact {
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 10px 0;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    font-size: 1rem;
+    margin: 8px 0;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-links,
+    .footer-contact {
+        max-width: 100%;
+    }
+
+    .footer-links,
+    .footer-contact {
+        margin-top: 20px;
+    }
+
+    .social-media {
+        margin-top: 10px;
+    }
+}

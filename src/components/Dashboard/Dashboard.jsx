@@ -294,11 +294,11 @@
 //           {/* {isModalOpen && (
 //         <div className="appointment-form-container">
 //           <form onSubmit={handleSubmit} className="appointment-form">
-            
+
 //             <div className="form-column">
-                
+
 //               <div className="form-group">
-               
+
 //                 <label htmlFor="fullName" className="form-label">Full Name</label>
 //                 <input
 //                   type="text"
@@ -584,7 +584,7 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import hospitalimg from "../../assets/view-building-with-cartoon-style-architecture.png"
 import Layout from "../../Layout/Layout";
 import DashbordImg from "../../assets/c0a9d3ce8c41bf587cf6c62388f4461e.png";
 import Doctorimg from "../../assets/transparent-doctors-day-cartoon-doctor-with-glasses-and-white-coat65d806f5e3b747.1020546517086563739327.png";
@@ -597,13 +597,14 @@ import Appoinmentimage from "../../assets/transparent-glasses-young-female-docto
 const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [doctorsData, setDoctorsData] = useState([]);
-  const [patientsData, setPatientsData] = useState([]); // New state for patients data
+  const [patientsData, setPatientsData] = useState([]);
+
 
   useEffect(() => {
     const fetchDoctorsData = async () => {
       try {
-        const response = await axios.get("http://192.168.46.246:3001/api/doctors");
-        setDoctorsData(response.data);
+        const response = await axios.get("http://localhost:3000/api/doctors");
+        setDoctorsData(response.data); // Assuming response.data is an array
       } catch (error) {
         console.error("Error fetching doctors data:", error);
       }
@@ -611,8 +612,15 @@ const Dashboard = () => {
 
     const fetchPatientsData = async () => {
       try {
-        const response = await axios.get("http://192.168.46.246:5000/api/patients"); // Replace with the actual endpoint for patients
-        setPatientsData(response.data);
+        const response = await axios.get("http://localhost:3000/api/patients");
+        // Check the structure of response.data
+        if (Array.isArray(response.data)) {
+          setPatientsData(response.data); // Directly set if it's an array
+        } else if (response.data.data && Array.isArray(response.data.data)) {
+          setPatientsData(response.data.data); // Handle nested data
+        } else {
+          console.error("Unexpected response structure for patients data:", response.data);
+        }
       } catch (error) {
         console.error("Error fetching patients data:", error);
       }
@@ -621,7 +629,7 @@ const Dashboard = () => {
     fetchDoctorsData();
     fetchPatientsData();
   }, []);
- // Function to toggle modal visibility
+  // Function to toggle modal visibility
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -636,7 +644,7 @@ const Dashboard = () => {
     appointmentDate: "",
     timeSlot: "",
   });
- 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -722,8 +730,8 @@ const Dashboard = () => {
         </div>
       </div>
 
-           {/* Book Appointment Section - Animated Card */}
-           <div className="appointment-section">
+      {/* Book Appointment Section - Animated Card */}
+      <div className="appointment-section">
         <div className="Appoinment-image">
           <img
             src={Appoinmentimage}
@@ -731,7 +739,7 @@ const Dashboard = () => {
             className="Appoinment-image-style"
           />
         </div>
-        
+
         <div className="appointment-left">
           <h2>Book Your Appointment with Swasthya Rakshak!</h2>
           <p>
@@ -740,7 +748,7 @@ const Dashboard = () => {
             we’ll ensure a smooth and personalized healthcare experience. Quick,
             easy, and dedicated to your well-being schedule your appointment now
             for better health!
-        
+
             <button
               type="button"
               className="appointment-open-btn"
@@ -749,7 +757,7 @@ const Dashboard = () => {
               Book Appointment
             </button>
           </p>
-        
+
           {isModalOpen && (
             <div className="appointment-form-container">
               <div className="form-header">
@@ -912,6 +920,45 @@ const Dashboard = () => {
           )}
         </div>
       </div>
+      <footer class="footer">
+        <div class="footer-container">
+        
+          <div class="footer-logo">
+            {/* <img src="logo.png" alt="Swasthya Rakshak Logo" class="footer-logo-img"> */}
+              <p>Your Health, Our Priority</p>
+          </div>
+
+       
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Blog/News</a></li>
+            </ul>
+          </div>
+
+    
+          <div class="footer-contact">
+            <h4>Contact Info</h4>
+            <p>Helpline: +91-9876543210</p>
+            <p>Email: <a href="mailto:support@swasthyarakshak.com">support@swasthyarakshak.com</a></p>
+            <p>Office: Sector 12, New Delhi</p>
+            <a href="https://www.google.com/maps" target="_blank">Google Map Link</a>
+            <div class="social-media">
+              <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="footer-bottom">
+          <p>© 2025 Swasthya Rakshak | All Rights Reserved</p>
+        </div>
+      </footer>
+
+
     </Layout>
   );
 };

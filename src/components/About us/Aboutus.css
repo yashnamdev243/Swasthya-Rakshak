@@ -44,100 +44,165 @@
 
 
 /* ------------------------------------------------------------------- */
-
 .Introduction-container {
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* Allow wrapping for responsiveness */
+    justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     margin-top: -550px;
 }
 
 .hospital-image {
-    width: 35%;
+    width: 100%;
+    max-width: 400px;
+    /* Limit image width for responsiveness */
     height: auto;
     object-fit: cover;
     border-radius: 8px;
+    margin-bottom: 20px;
+    /* Space between image and text */
 }
 
 .introduction-section {
     display: flex;
-    justify-content: flex-end;
-    margin-left: 450px;
-    align-items: center;
-
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    max-width: 650px;
+    text-align: left;
+    /* Ensure text alignment on small screens */
+    padding: 0 20px;
 }
 
 .intro-card {
     background-color: transparent;
-    /* White background for the card */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    /* Subtle shadow for depth */
     padding: 20px;
-    max-width: 500px;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #37474f;
+    margin-bottom: 1rem;
     text-align: left;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    /* Better readability */
-    color: #333;
-    /* Darker text for contrast */
+    /* Left-align content */
 }
 
-.intro-card::before {
-    content: "Introduction";
-    display: block;
-    font-size: 20px;
+.intro-card h2 {
+    font-size: 2rem;
+    /* Adjust for smaller screens */
     font-weight: bold;
-    margin-bottom: 10px;
-    color: #2c3e50;
-    /* Dark blue heading */
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .Introduction-container {
+        flex-wrap: nowrap;
+        /* Prevent wrapping on medium screens */
+        margin-top: 0;
+        /* Adjust margin for larger screens */
+    }
+
+    .hospital-image {
+        width: 35%;
+        margin-right: 40px;
+        /* Add space between image and text */
+        margin-bottom: 0;
+        /* Remove bottom margin */
+    }
+
+    .introduction-section {
+        margin-left: 20px;
+        align-items: flex-start;
+        width: 60%;
+        /* Adjust text container width */
+    }
+}
+
+@media (min-width: 1024px) {
+    .Introduction-container {
+        justify-content: flex-start;
+    }
+
+    .hospital-image {
+        width: 30%;
+        /* Reduce image width for large screens */
+    }
+
+    .introduction-section {
+        margin-left: 40px;
+        /* Increase spacing on large screens */
+        text-align: left;
+    }
+
+    .intro-card h2 {
+        font-size: 2.5rem;
+        /* Adjust heading size */
+    }
 }
 
 /* ------------------------------------------------------ */
 .mission-vision {
     display: flex;
-    justify-content: flex-end;
-    /* Aligns the image to the right */
+    flex-wrap: wrap;
+    /* Allow wrapping for small screens */
+    justify-content: center;
+    /* Center-align content on smaller screens */
+    align-items: center;
     padding: 20px;
+    margin-top: -100px;
 }
 
 .mission-image {
-    width: 50%;
-    /* Adjust image width as needed */
+    width: 100%;
+    max-width: 400px;
+    /* Limit the image width for better responsiveness */
     height: auto;
     object-fit: cover;
-    /* Ensures image covers the area without stretching */
     border-radius: 8px;
-    /* Optional: Adds rounded corners to the image */
+    margin-bottom: 20px;
+    /* Add space below the image */
 }
 
 .mission-vision-section {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 600px;
+    /* Restrict max width for better alignment */
+    text-align: left;
     padding: 20px;
-    height: 100vh;
-    align-items: center;
 }
 
 .mission-vision-card {
-
-    /* White background for the card */
+    background-color: transparent;
+    /* Transparent background */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
+    /* Subtle shadow */
     padding: 20px;
-    max-width: 400px;
-    text-align: left;
     font-family: 'Arial', sans-serif;
     font-size: 16px;
+    line-height: 1.6;
     color: #333;
     /* Darker text for contrast */
+    margin-bottom: 1rem;
+    /* Add spacing for stacking */
+    text-align: left;
+    /* Align text to the left */
 }
 
 .mission-vision-card h2 {
     font-size: 24px;
+    /* Adjust heading size */
+    font-weight: bold;
     margin-bottom: 15px;
     color: #2c3e50;
     /* Dark blue for the heading */
@@ -146,7 +211,7 @@
 .mission-vision-card p {
     font-size: 16px;
     line-height: 1.6;
-    /* Better readability */
+    /* Improve readability */
     color: #555;
     /* Soft black for text */
 }
@@ -156,114 +221,300 @@
     /* Highlight key points */
 }
 
+/* Responsive Design */
+@media (min-width: 768px) {
+    .mission-vision {
+        flex-wrap: nowrap;
+        /* No wrapping for medium screens */
+        justify-content: space-between;
+        /* Distribute content evenly */
+    }
+
+    .mission-image {
+        width: 45%;
+        /* Adjust width for larger screens */
+        margin-bottom: 0;
+        /* Remove bottom margin */
+    }
+
+    .mission-vision-section {
+        width: 50%;
+        /* Allow space for both sections */
+        padding: 20px 40px;
+        /* Add padding for spacing */
+    }
+}
+
+@media (min-width: 1024px) {
+    .mission-vision {
+        justify-content: flex-end;
+        /* Align content to the right */
+        margin-top: 0;
+        /* Adjust margin for desktops */
+    }
+
+    .mission-image {
+        width: 40%;
+        /* Reduce image width slightly */
+    }
+
+    .mission-vision-section {
+        width: 55%;
+        /* Adjust text section width */
+        padding: 40px;
+        /* Increase padding for better spacing */
+    }
+
+    .mission-vision-card h2 {
+        font-size: 28px;
+        /* Larger heading for desktops */
+    }
+
+    .mission-vision-card p {
+        font-size: 18px;
+        /* Slightly larger font for readability */
+    }
+}
+
 
 /* --------------------------------------------------- */
 .our-team-container {
     display: flex;
-    justify-content: flex-start;
-    /* Aligns image and card next to each other */
+    flex-wrap: wrap;
+    /* Enable wrapping for smaller screens */
+    justify-content: center;
+    /* Center align content on smaller screens */
     align-items: center;
-    /* Vertically centers them */
+    /* Vertically center items */
     gap: 20px;
-    /* Adds space between the image and the card */
+    /* Space between image and card */
     padding: 20px;
 }
 
 .team-image {
-    width: 40%;
-    /* Adjust the image size as needed */
+    width: 100%;
+    max-width: 400px;
+    /* Limit the image size */
     height: auto;
     object-fit: cover;
-    /* Ensures the image fills the space without distorting */
+    /* Ensure proper image scaling */
     border-radius: 8px;
-    /* Optional: adds rounded corners to the image */
+    /* Add rounded corners */
+    margin-bottom: 20px;
+    /* Space below the image on small screens */
 }
 
 .our-team-section {
     flex: 1;
-    /* Makes sure the card takes the remaining space */
+    max-width: 600px;
+    /* Limit the text container's width */
+    text-align: left;
+    padding: 20px;
 }
 
 .team-card {
-    /* background-color: #ffffff; */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
+    /* Subtle shadow */
     padding: 20px;
-    max-width: 500px;
-    /* Ensure card doesn't stretch too much */
-    text-align: left;
     font-family: 'Arial', sans-serif;
     font-size: 16px;
+    line-height: 1.6;
+    /* Improve readability */
     color: #333;
+    /* Darker text for contrast */
+    background-color: #ffffff;
+    /* Optional: white card background */
 }
 
 .team-card h2 {
     font-size: 24px;
+    /* Adjust heading size */
+    font-weight: bold;
     margin-bottom: 15px;
     color: #2c3e50;
-    /* Dark blue for the heading */
+    /* Dark blue for heading */
 }
 
 .team-card p {
     font-size: 16px;
     line-height: 1.6;
     color: #555;
+    /* Soft black for text */
 }
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .our-team-container {
+        flex-wrap: nowrap;
+        /* Prevent wrapping on medium screens */
+        justify-content: space-between;
+        /* Spread content evenly */
+    }
+
+    .team-image {
+        width: 40%;
+        /* Adjust image size for medium screens */
+        margin-bottom: 0;
+        /* Remove bottom margin */
+    }
+
+    .our-team-section {
+        width: 50%;
+        /* Adjust text container width */
+        padding: 20px 40px;
+        /* Add padding for spacing */
+    }
+}
+
+@media (min-width: 1024px) {
+    .our-team-container {
+        justify-content: flex-start;
+        /* Align content to the left */
+        gap: 40px;
+        /* Increase gap for larger screens */
+    }
+
+    .team-image {
+        width: 35%;
+        /* Reduce image width slightly */
+    }
+
+    .our-team-section {
+        width: 55%;
+        /* Adjust text container width */
+        padding: 40px;
+        /* Increase padding for better spacing */
+    }
+
+    .team-card h2 {
+        font-size: 28px;
+        /* Larger heading for desktops */
+    }
+
+    .team-card p {
+        font-size: 18px;
+        /* Slightly larger font for readability */
+    }
+}
+
 
 /* ------------------------------------------------------ */
 .why-choose-container {
     display: flex;
-    justify-content: space-between;
-    /* Ensures space between the card and the image */
+    flex-wrap: wrap;
+    /* Allows items to stack on smaller screens */
+    justify-content: center;
+    /* Centers content on smaller screens */
     align-items: center;
-    /* Aligns card and image vertically */
-    padding: 20px;
+    /* Vertically aligns the content */
     gap: 20px;
-    /* Adds spacing between card and image */
-    /* background-color: #f9f9f9; */
-    /* Light background for contrast */
+    /* Adds spacing between elements */
+    padding: 20px;
 }
 
 .why-choose-section {
     flex: 1;
-    /* Ensures the card takes up the remaining space */
+    max-width: 600px;
+    /* Limits the width of the text container */
+    padding: 20px;
+    text-align: left;
 }
 
 .unique-card {
-    /* background-color: #ffffff; */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     /* Subtle shadow for depth */
     padding: 20px;
-    max-width: 500px;
-    /* Limits the card width */
-    text-align: left;
     font-family: 'Arial', sans-serif;
     font-size: 16px;
+    line-height: 1.6;
+    /* Improves text readability */
     color: #333;
+    /* Darker text for contrast */
+    background-color: #ffffff;
+    /* Optional: white background */
 }
 
 .unique-card h2 {
     font-size: 24px;
+    /* Adjust heading size */
+    font-weight: bold;
     margin-bottom: 15px;
     color: #2c3e50;
-    /* Dark blue for the heading */
+    /* Dark blue for heading */
 }
 
 .unique-card p {
     font-size: 16px;
-    line-height: 1.6;
     color: #555;
-    /* Soft black for readability */
+    /* Soft black for text */
 }
 
 .why-choose-image {
-    width: 40%;
-    /* Sets the image width */
+    width: 100%;
+    max-width: 400px;
+    /* Limits the image size */
     height: auto;
     object-fit: cover;
-    /* Ensures the image covers the space proportionally */
+    /* Ensures proportional image scaling */
     border-radius: 8px;
-    /* Adds rounded corners to the image */
+    /* Adds rounded corners */
+    margin-bottom: 20px;
+    /* Space below image on smaller screens */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .why-choose-container {
+        flex-wrap: nowrap;
+        /* Prevent wrapping on medium screens */
+        justify-content: space-between;
+        /* Distributes content evenly */
+    }
+
+    .why-choose-image {
+        width: 40%;
+        /* Adjust image width for medium screens */
+        margin-bottom: 0;
+        /* Remove bottom margin */
+    }
+
+    .why-choose-section {
+        width: 50%;
+        /* Adjust text container width */
+        padding: 20px 40px;
+        /* Add padding for spacing */
+    }
+}
+
+@media (min-width: 1024px) {
+    .why-choose-container {
+        justify-content: flex-start;
+        /* Aligns content to the left */
+        gap: 40px;
+        /* Increase spacing between elements */
+    }
+
+    .why-choose-image {
+        width: 35%;
+        /* Reduce image width slightly */
+    }
+
+    .why-choose-section {
+        width: 55%;
+        /* Adjust text container width */
+        padding: 40px;
+        /* Increase padding for larger screens */
+    }
+
+    .unique-card h2 {
+        font-size: 28px;
+        /* Larger heading for desktops */
+    }
+
+    .unique-card p {
+        font-size: 18px;
+        /* Slightly larger font for readability */
+    }
 }

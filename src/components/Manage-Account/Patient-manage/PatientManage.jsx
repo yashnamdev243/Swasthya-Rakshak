@@ -365,8 +365,8 @@ const PatientManage = () => {
     useEffect(() => {
         const fetchPatientsData = async () => {
             try {
-                // const response = await axios.get('http://localhost:3000/api/patients');
-                const response = await axios.get('http://192.168.46.246:5000/api/patients');
+                const response = await axios.get('http://localhost:3000/api/patients');
+                // const response = await axios.get('http://192.168.46.246:5000/api/patients');
                 if (response.data.success) {
                     setPatientsData(response.data.data); // Adjusting to correct response structure
                 } else {
@@ -420,7 +420,7 @@ const PatientManage = () => {
         }
 
         try {
-            const response = await axios.post('http://192.168.46.246:5000/api/patients', formData, {
+            const response = await axios.post('http://localhost:3000/api/patients', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
@@ -653,7 +653,7 @@ const PatientManage = () => {
                                         <td>
                                             {patient.profile_picture ? (
                                                 <img
-                                                    src={`http://192.168.46.246:5000/uploads/${patient.profile_picture}`} // Ensure the image path is correct
+                                                    src={`http://localhost:3000/uploads/${patient.profile_picture}`} // Ensure the image path is correct
                                                     alt={patient.full_name}
                                                     className="patient-image"
                                                     style={{ width: '50px', height: '50px', objectFit: 'cover' }}
