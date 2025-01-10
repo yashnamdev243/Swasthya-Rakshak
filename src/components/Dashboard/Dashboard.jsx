@@ -584,7 +584,7 @@
 
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import hospitalimg from "../../assets/view-building-with-cartoon-style-architecture.png"
+//import hospitalimg from "../../assets/view-building-with-cartoon-style-architecture.png"
 import Layout from "../../Layout/Layout";
 import DashbordImg from "../../assets/c0a9d3ce8c41bf587cf6c62388f4461e.png";
 import Doctorimg from "../../assets/transparent-doctors-day-cartoon-doctor-with-glasses-and-white-coat65d806f5e3b747.1020546517086563739327.png";
@@ -593,6 +593,7 @@ import Patientimg from "../../assets/6eeca84f7ec1a58b2b88d33b5dbd7e93.png";
 import Facilitiesimage from "../../assets/transparent-sick-room-hospital-room-medical-supplies-isometric-clean-hospital-room-with-medical-supplies-organize661c4707612889.45712943.png";
 import "./Dashboard.css"; // Ensure to update the CSS for attractive design
 import Appoinmentimage from "../../assets/transparent-glasses-young-female-doctor-with-serious-expression65ee80a19eb183.12780541171012931.png";
+import Footer from "../../Layout/Footer";
 
 const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -920,45 +921,9 @@ const Dashboard = () => {
           )}
         </div>
       </div>
-      <footer class="footer">
-        <div class="footer-container">
-        
-          <div class="footer-logo">
-            {/* <img src="logo.png" alt="Swasthya Rakshak Logo" class="footer-logo-img"> */}
-              <p>Your Health, Our Priority</p>
-          </div>
+   
 
-       
-          <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Blog/News</a></li>
-            </ul>
-          </div>
-
-    
-          <div class="footer-contact">
-            <h4>Contact Info</h4>
-            <p>Helpline: +91-9876543210</p>
-            <p>Email: <a href="mailto:support@swasthyarakshak.com">support@swasthyarakshak.com</a></p>
-            <p>Office: Sector 12, New Delhi</p>
-            <a href="https://www.google.com/maps" target="_blank">Google Map Link</a>
-            <div class="social-media">
-              <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
-            </div>
-          </div>
-        </div>
- 
-        <div class="footer-bottom">
-          <p>© 2025 Swasthya Rakshak | All Rights Reserved</p>
-        </div>
-      </footer>
-
-
+<Footer />
     </Layout>
   );
 };

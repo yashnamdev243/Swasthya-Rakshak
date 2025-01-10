@@ -59,7 +59,6 @@ const Aboutus = () => {
                 </div>
                 <img src={whychooseimg} alt="Why Choose Image" className="why-choose-image" />
             </div>
-
         </Layout>
     );
 };
