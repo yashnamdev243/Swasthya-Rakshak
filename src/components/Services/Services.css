@@ -102,7 +102,40 @@
     width: 280px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.mode-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.mode-image {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    /* Ensures the image isn't too large */
+    border-radius: 50%;
+    /* Circular image effect */
+    margin-bottom: 15px;
+    /* Space below the image */
+}
+
+.mode-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.mode-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
 
 .mode-card:hover {
     transform: translateY(-10px);
@@ -156,7 +189,7 @@
     width: 80px;
     height: 80px;
     object-fit: cover;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     margin-bottom: 15px;
 }
 

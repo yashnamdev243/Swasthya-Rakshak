@@ -1,5 +1,12 @@
 import React from 'react'
 import Layout from '../../Layout/Layout'
+import offlineconsultation from "../../assets/c0a9d3ce8c41bf587cf6c62388f4461e.png"
+import onlineconsultation from "../../assets/72abed91e94df20cf803e8bf536e5f0c.png"
+import specialists from "../../assets/19e7d647915ec2db2cc54178b44bad4d.png"
+import bloodtest from "../../assets/istockphoto-1346546916-612x612-removebg-preview.png"
+import dentist from "../../assets/smiling-dentist-character-holding-tooth-showing-thumbs-up-3d-style-isolated-generative-ai_422666-4672-removebg-preview.png"
+import pediatrician from "../../assets/360_F_1045887904_QX0ZX58JBoNrMfsapxtiDxbfqSIjqhab-removebg-preview.png"
+import cardiologist from "../../assets/360_F_743426379_mV4iIexdUg81VLYGRHEGX1TK9U4DLJ8d-removebg-preview (1).png"
 import './Services.css' // Make sure to create this CSS file for styling
 
 const Services = () => {
@@ -35,12 +42,12 @@ const Services = () => {
                 {/* Modes of Consultation */}
                 <div className="consultation-modes">
                     <div className="mode-card">
-                        <img src="/images/online-consultation.png" alt="Online Consultation" className="mode-image" />
+                        <img src={onlineconsultation} alt="Online Consultation" className="mode-image" />
                         <h3 className="mode-title">Online Consultation  </h3>
                         <p>Choose video or audio calls for a consultation from the comfort of your home.</p>
                     </div>
                     <div className="mode-card">
-                        <img src="/images/offline-consultation.png" alt="Offline Consultation" className="mode-image" />
+                        <img src= {offlineconsultation}  alt="Offline Consultation" className="mode-image" />
                         <h3 className="mode-title">Offline Consultation  </h3>
                         <p>Visit our clinics for in-person consultations with our doctors.</p>
                     </div>
@@ -50,23 +57,20 @@ const Services = () => {
                 <h3 className="specialist-heading">Specialist Categories  </h3>
                 <div className="specialist-categories">
                     <div className="specialist-card">
-                        <img src="/images/cardiologist.png" alt="Cardiologist" className="specialist-image" />
+                        <img src={cardiologist} alt="Cardiologist" className="specialist-image" />
                         <h4>  (Cardiologist)</h4>
                     </div>
+                  
                     <div className="specialist-card">
-                        <img src="/images/dermatologist.png" alt="Dermatologist" className="specialist-image" />
-                        <h4> (Dermatologist)</h4>
-                    </div>
-                    <div className="specialist-card">
-                        <img src="/images/pediatrician.png" alt="Pediatrician" className="specialist-image" />
+                        <img src={pediatrician} alt="Pediatrician" className="specialist-image" />
                         <h4> (Pediatrician)</h4>
                     </div>
                     <div className="specialist-card">
-                        <img src="/images/dentist.png" alt="Dentist" className="specialist-image" />
+                        <img src={dentist}  alt="Dentist" className="specialist-image" />
                         <h4>  (Dentist)</h4>
                     </div>
                     <div className="specialist-card">
-                        <img src="/images/other-specialists.png" alt="Other Specialists" className="specialist-image" />
+                        <img src={specialists}  alt="Other Specialists" className="specialist-image" />
                         <h4>  (Other Specialists)</h4>
                     </div>
                 </div>
@@ -80,7 +84,7 @@ const Services = () => {
                 {/* Offered Tests */}
                 <div className="offered-tests">
                     <div className="test-card">
-                        <img src="/images/blood-test.png" alt="Blood Test" className="test-image" />
+                        <img src={bloodtest} alt="Blood Test" className="test-image" />
                         <h3>Blood Test</h3>
                     </div>
                     <div className="test-card">
