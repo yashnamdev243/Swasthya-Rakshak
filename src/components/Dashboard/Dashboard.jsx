@@ -599,6 +599,7 @@ const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [doctorsData, setDoctorsData] = useState([]);
   const [patientsData, setPatientsData] = useState([]);
+  const [staffsData, setstaffsData] = useState([]);
 
 
   useEffect(() => {
@@ -627,8 +628,25 @@ const Dashboard = () => {
       }
     };
 
+    const fetchstaffsData = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/api/staff");
+        // Check the structure of response.data
+        if (Array.isArray(response.data)) {
+          setstaffsData(response.data); // Directly set if it's an array
+        } else if (response.data.data && Array.isArray(response.data.data)) {
+          setstaffsData(response.data.data); // Handle nested data
+        } else {
+          console.error("Unexpected response structure for staff data:", response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching staff data:", error);
+      }
+    };
+
     fetchDoctorsData();
     fetchPatientsData();
+    fetchstaffsData();
   }, []);
   // Function to toggle modal visibility
   const toggleModal = () => {
@@ -706,6 +724,7 @@ const Dashboard = () => {
         <div className="card">
           <img src={Staffimg} alt="Staff" />
           <h3>Staff</h3>
+          <p>Registered Staff: {staffsData.length}</p> 
         </div>
       </div>
 

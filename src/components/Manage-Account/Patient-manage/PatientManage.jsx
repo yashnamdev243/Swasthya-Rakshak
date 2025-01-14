@@ -691,7 +691,7 @@
 
 // export default PatientManage;
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import Layout from '../../../Layout/Layout';
 import { Modal, Button, Form, Row, Col } from 'react-bootstrap';

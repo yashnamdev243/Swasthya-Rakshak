@@ -6,7 +6,7 @@
     padding: 10px 20px;
     /* background-color: #0096FF; */
     /* background-color: #1F51FF; */
-    background-color:   #024d82;
+    background-color: #024d82;
 
     color: white;
     border: none;
@@ -18,7 +18,7 @@
 
 .add-doctor-btn:hover {
     /* background-color:  #37474f; */
-    background-color:   #0e6aab;
+    background-color: #0e6aab;
     color: #000;
 
 }
@@ -29,17 +29,19 @@
     margin: 0 auto;
     margin-top: 50px;
     padding: 20px;
-    
+
     /* background-color: #f9f9f9; */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     /* Ensure the button is positioned correctly */
 }
-.heading{
+
+.heading {
     color: #ffffff;
     font-size: 40px;
 }
+
 /* Table Styles */
 .doctors-table {
     width: 100%;
@@ -56,7 +58,7 @@
 
 .doctors-table th {
     /* background-color: #0096FF; */
-    background-color:   #024d82;
+    background-color: #024d82;
 
     color: white;
     font-weight: bold;
@@ -72,9 +74,21 @@
     border-radius: 50%;
     object-fit: cover;
     /* border: 2px solid #0096FF; */
-    border: 2px solid  #024d82;
+    border: 2px solid #024d82;
 }
 
+/* ------------------------------------------- */
 
+.search-box {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
 
-
+.search-input {
+    padding: 8px;
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
