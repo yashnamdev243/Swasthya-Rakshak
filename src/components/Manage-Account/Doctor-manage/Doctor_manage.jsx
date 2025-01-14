@@ -759,8 +759,8 @@ const DoctorManage = () => {
     consultation_fees: "",
     hospital_clinic_address: "",
     working_hours: "",
-    emergency_contact_number: "",
-    room_number: "",
+    // emergency_contact_number: "",
+    // room_number: "",
     profile_picture: "", // Profile picture will be handled by file input
   });
 
