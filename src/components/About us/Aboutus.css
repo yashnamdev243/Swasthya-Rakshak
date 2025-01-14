@@ -1,4 +1,4 @@
-.dashboard-container {
+.about-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,7 +163,7 @@
   
   .mission-image {
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     /* Limit the image width for better responsiveness */
     height: auto;
     object-fit: cover;
@@ -196,8 +196,8 @@
       line-height: 1.8;
       color: #37474f;
       margin-bottom: 1rem;
-      margin-left: -420px;
-      width: 110%;
+      margin-left: -380px;
+      width: 125%;
       /* text-align: left; */
       /* Left-align content */
     }
@@ -295,7 +295,7 @@
   
   .team-image {
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     /* Limit the image size */
     height: auto;
     object-fit: cover;
@@ -303,6 +303,8 @@
     border-radius: 8px;
     /* Add rounded corners */
     margin-bottom: 20px;
+    margin-left: 30px;
+
     /* Space below the image on small screens */
   }
   
@@ -314,37 +316,35 @@
     padding: 20px;
   }
   
-  .team-card {
+  .our-team-card {
+    background-color: transparent;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    font-family: "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    /* Improve readability */
-    color: #333;
-    /* Darker text for contrast */
-    background-color: #ffffff;
-    /* Optional: white card background */
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #37474f;
+    margin-bottom: 1rem;
+    margin-left: 200px;
+    width: 130%;
+    /* text-align: left; */
+    /* Left-align content */
   }
   
-  .team-card h2 {
-    font-size: 24px;
-    /* Adjust heading size */
+  .our-team-card h2 {
+    font-size: 2rem;
+    /* Adjust for smaller screens */
     font-weight: bold;
-    margin-bottom: 15px;
-    color: #2c3e50;
-    /* Dark blue for heading */
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   }
-  
-  .team-card p {
+  /* .team-card p {
     font-size: 16px;
     line-height: 1.6;
     color: #555;
-    /* Soft black for text */
   }
-  
+   */
   /* Responsive Design */
   @media (min-width: 768px) {
     .our-team-container {
@@ -415,44 +415,46 @@
   }
   
   .why-choose-section {
-    flex: 1;
-    max-width: 600px;
-    /* Limits the width of the text container */
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 650px;
+    /* Restrict max width for better alignment */
     text-align: left;
-   gap: 500px;
-  }
-  
-  .unique-card {
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
     padding: 20px;
-    font-family: "Arial", sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-  
-    /* Improves text readability */
-    color: #333;
-    /* Darker text for contrast */
-    background-color: #ffffff;
-    /* Optional: white background */
   }
   
-  .unique-card h2 {
-    font-size: 24px;
-    /* Adjust heading size */
+  .why-choose-card {
+    background-color: transparent;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: #37474f;
+      margin-bottom: 1rem;
+      margin-left: 10px;
+      width: 115%;
+      /* text-align: left; */
+      /* Left-align content */
+
+  }
+  
+  .why-choose-card h2 {
+    font-size: 2rem;
+    /* Adjust for smaller screens */
     font-weight: bold;
-    margin-bottom: 15px;
-    color: #2c3e50;
-    /* Dark blue for heading */
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   }
   
-  .unique-card p {
+  /* .unique-card p {
     font-size: 16px;
     color: #555;
-    /* Soft black for text */
-  }
+  } */
   
   .why-choose-image {
     width: 100%;
@@ -465,6 +467,8 @@
     /* Adds rounded corners */
     margin-bottom: 20px;
     /* Space below image on smaller screens */
+    margin-left: 300px;
+
   }
   
   /* Responsive Design */

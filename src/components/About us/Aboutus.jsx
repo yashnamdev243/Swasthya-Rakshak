@@ -2,7 +2,7 @@ import React from 'react';
 import hospitalimg from "../../assets/view-building-with-cartoon-style-architecture.png"
 import missionimg from "../../assets/vecteezy_3d-target-icon-or-target-symbol-with-arrow_47492152.png"
 import teamimg from "../../assets/portrait-3d-doctors-hospital-attire.png"
-import whychooseimg from "../../assets/fc3a503f145917c0806f8ab5e9d6b841.png"
+import whychooseimg from "../../assets/ddb6577c8c17bebf6d113769a9bcbc4d.png"
 import Layout from '../../Layout/Layout';
 import Footer from "../../Layout/Footer";
 
@@ -11,7 +11,7 @@ import './Aboutus.css'; // CSS file for styling and animations
 const Aboutus = () => {
     return (
         <Layout>
-            <div className="dashboard-container">
+            <div className="about-container">
                 <div className="welcome-section">
                     <h1 className="welcome-text">
                         "Welcome to Swasthya Rakshak, your trusted partner in health and well-being!"
@@ -44,18 +44,18 @@ const Aboutus = () => {
             <div className='our-team-container'>
                 <img src={teamimg} alt="Team Image" className="team-image" />
                 <div className="our-team-section">
-                    <div className="intro-card">
+                    <div className="our-team-card">
                         <h2>Our Team</h2>
-                        <p>Swasthya Rakshak is powered by a team of dedicated healthcare professionals committed to providing the best care. Our doctors, nurses, and support staff work together to ensure excellent service and care for all. Together, we are focused on making healthcare accessible and improving the lives of the communities we serve.</p>
+                        Swasthya Rakshak is powered by a team of dedicated healthcare professionals committed to providing the best care. Our doctors, nurses, and support staff work together to ensure excellent service and care for all. Together, we are focused on making healthcare accessible and improving the lives of the communities we serve.
                     </div>
                 </div>
             </div>
 
             <div className="why-choose-container">
                 <div className="why-choose-section">
-                    <div className="intro-card">
+                    <div className="why-choose-card">
                         <h2>Why Choose Swasthya Rakshak?</h2>
-                        <p>Swasthya Rakshak stands out for its trusted doctors and specialists, simple and fast appointment process, 24x7 support, and commitment to confidentiality and data security. We ensure personalized care with a focus on making healthcare reliable and accessible. Choose us for a seamless healthcare experience you can trust.</p>
+                        Swasthya Rakshak stands out for its trusted doctors and specialists, simple and fast appointment process, 24x7 support, and commitment to confidentiality and data security. We ensure personalized care with a focus on making healthcare reliable and accessible. Choose us for a seamless healthcare experience you can trust.
                     </div>
                 </div>
                 <img src={whychooseimg} alt="Why Choose Image" className="why-choose-image" />
