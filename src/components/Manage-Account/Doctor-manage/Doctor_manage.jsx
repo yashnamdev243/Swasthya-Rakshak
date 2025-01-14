@@ -991,8 +991,8 @@ const DoctorManage = () => {
                 <th>Fees</th>
                 <th>Address</th>
                 <th>Working Hours</th>
-                <th>Emergency Contact</th>
-                <th>Room</th>
+                {/* <th>Emergency Contact</th>
+                <th>Room</th> */}
                 <th>Status</th>
               </tr>
             </thead>
@@ -1015,8 +1015,8 @@ const DoctorManage = () => {
                   <td>₹{doctor.consultation_fees}</td>
                   <td>{doctor.hospital_clinic_address}</td>
                   <td>{doctor.working_hours}</td>
-                  <td>{doctor.emergency_contact_number}</td>
-                  <td>{doctor.room_number}</td>
+                  {/* <td>{doctor.emergency_contact_number}</td>
+                  <td>{doctor.room_number}</td> */}
                   <td>{doctor.profile_status}</td>
                 </tr>
               ))}
