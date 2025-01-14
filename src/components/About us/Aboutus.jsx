@@ -4,6 +4,7 @@ import missionimg from "../../assets/vecteezy_3d-target-icon-or-target-symbol-wi
 import teamimg from "../../assets/portrait-3d-doctors-hospital-attire.png"
 import whychooseimg from "../../assets/fc3a503f145917c0806f8ab5e9d6b841.png"
 import Layout from '../../Layout/Layout';
+import Footer from "../../Layout/Footer";
 
 import './Aboutus.css'; // CSS file for styling and animations
 
@@ -32,10 +33,10 @@ const Aboutus = () => {
             </div>
             <div className="mission-vision">
                 <div className="mission-vision-section">
-                    <div className="intro-card">
+                    <div className="mission-vision-card">
                         <h2>Mission & Vision</h2>
-                        <p><strong>Mission:</strong> Swasthya Rakshak is committed to providing accessible, affordable, and high-quality healthcare services, aiming to improve the health and well-being of communities across the country.</p>
-                        <p><strong>Vision:</strong> To create a world where healthcare is available to all, ensuring a healthier, happier, and more sustainable future for everyone.</p>
+                        <strong>Mission:</strong> Swasthya Rakshak is committed to providing accessible, affordable, and high-quality healthcare services, aiming to improve the health and well-being of communities across the country. <hr></hr>
+                        <strong>Vision:</strong> To create a world where healthcare is available to all, ensuring a healthier, happier, and more sustainable future for everyone.
                     </div>
                 </div>
                 <img src={missionimg} alt="Mission Image" className="mission-image" />
@@ -59,6 +60,8 @@ const Aboutus = () => {
                 </div>
                 <img src={whychooseimg} alt="Why Choose Image" className="why-choose-image" />
             </div>
+            <Footer />
+
         </Layout>
     );
 };

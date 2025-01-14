@@ -8,6 +8,17 @@ import dentist from "../../assets/smiling-dentist-character-holding-tooth-showin
 import pediatrician from "../../assets/360_F_1045887904_QX0ZX58JBoNrMfsapxtiDxbfqSIjqhab-removebg-preview.png"
 import cardiologist from "../../assets/360_F_743426379_mV4iIexdUg81VLYGRHEGX1TK9U4DLJ8d-removebg-preview (1).png"
 import './Services.css' // Make sure to create this CSS file for styling
+import fullbody from "../../assets/pngegg.png"
+import xray from "../../assets/kisspng-nuclear-medicine-radiology-medical-diagnosis-thera-5b1893fa0ae272.5315767215283374020446.png"
+import Diabetes from "../../assets/2020-04-18-19-07-56_diabetic-health.jpg"
+import emergency from "../../assets/kisspng-computer-icons-tree-service-business-24-hours-5abe8923f1d828.3003047015224363879906.png"
+import ambulance from "../../assets/101621237cb0616aca6162e8c521a043.png"
+import nearbyhospitals from "../../assets/kisspng-singapore-map-stock-photography-singapore-map-5b29fe93b34190.0329701115294788037343.png"
+import GeneralConsultations from "../../assets/kisspng-health-medicine-clip-art-5b123c5029fc08.429779301527921744172.png"
+import SpecializedCare from "../../assets/pngtree-chongyang-festival-to-help-the-elderly-walk-babysitter-in-blue-uniform-png-image_3801931.jpg"
+import EmergencySupport from "../../assets/—Pngtree—cartoon first aid rescuers and_7404354.png"
+import Footer from "../../Layout/Footer";
+
 
 const Services = () => {
     return (
@@ -22,14 +33,20 @@ const Services = () => {
                     <div className="service-card">
                         <h3 className="service-title">General Consultations</h3>
                         <p>Our general consultations cover a wide variety of health concerns, from routine check-ups to preventive care.</p>
+                        <img src= {GeneralConsultations}  alt="General Consultation" className="General-image" />
+
                     </div>
                     <div className="service-card">
                         <h3 className="service-title">Specialized Care</h3>
                         <p>We provide expert care in various medical fields, ensuring specialized attention to your unique health needs.</p>
+                        <img src= {SpecializedCare}  alt="General Consultation" className="General-image" />
+
                     </div>
                     <div className="service-card">
                         <h3 className="service-title">Emergency Support</h3>
                         <p>In case of emergencies, we offer round-the-clock medical support to ensure you're never alone in a crisis.</p>
+                        <img src= {EmergencySupport}  alt="General Consultation" className="General-image" />
+
                     </div>
                 </div>
             </div>
@@ -55,6 +72,7 @@ const Services = () => {
 
                 {/* Specialist Categories */}
                 <h3 className="specialist-heading">Specialist Categories  </h3>
+                <p className='Specialist-Categories-description'> Specialist Categories encompass Cardiologists, Pediatricians, and Dentists, along with Dermatologists, Neurologists, Psychiatrists, Orthopedic Surgeons, and Oncologists. These experts address diverse health concerns, including heart, child health, dental, skin, mental health, cancer, hormonal, and musculoskeletal conditions, ensuring specialized care.</p>
                 <div className="specialist-categories">
                     <div className="specialist-card">
                         <img src={cardiologist} alt="Cardiologist" className="specialist-image" />
@@ -88,15 +106,15 @@ const Services = () => {
                         <h3>Blood Test</h3>
                     </div>
                     <div className="test-card">
-                        <img src="/images/diabetes-cholesterol-test.png" alt="Diabetes and Cholesterol Test" className="test-image" />
+                        <img src={Diabetes} alt="Diabetes and Cholesterol Test" className="test-image" />
                         <h3>Diabetes and Cholesterol Tests</h3>
                     </div>
                     <div className="test-card">
-                        <img src="/images/full-body-checkup.png" alt="Full Body Checkup" className="test-image" />
+                        <img src={fullbody} alt="Full Body Checkup" className="test-image" />
                         <h3>Full Body Checkup</h3>
                     </div>
                     <div className="test-card">
-                        <img src="/images/ecg-xray.png" alt="ECG and X-ray" className="test-image" />
+                        <img src={xray} alt="ECG and X-ray" className="test-image" />
                         <h3>ECG, X-ray, and More</h3>
                     </div>
                 </div>
@@ -114,26 +132,28 @@ const Services = () => {
                 <div className="emergency-services-row">
                     {/* Emergency Consultation */}
                     <div className="emergency-card">
-                        <img src="/images/emergency-consultation.png" alt="Emergency Consultation" className="emergency-image" />
+                        <img src={emergency} alt="Emergency Consultation" className="emergency-image" />
                         <h3>24x7 Emergency Doctor Consultation</h3>
                         <p>Our experienced doctors are available around the clock for emergency consultations. Get expert advice and treatment when you need it most.</p>
                     </div>
 
                     {/* Ambulance Booking */}
                     <div className="emergency-card">
-                        <img src="/images/ambulance-booking.png" alt="Ambulance Booking" className="emergency-image" />
+                        <img src={ambulance} alt="Ambulance Booking" className="emergency-image" />
                         <h3>Ambulance Booking</h3>
                         <p>In case of an emergency, you can quickly book an ambulance. Our fleet of ambulances ensures fast response and safe transport to the hospital.</p>
                     </div>
 
                     {/* Nearby Hospitals */}
                     <div className="emergency-card">
-                        <img src="/images/nearby-hospitals.png" alt="Nearby Hospitals" className="emergency-image" />
+                        <img src={nearbyhospitals} alt="Nearby Hospitals" className="emergency-image" />
                         <h3>Quick Access to Nearby Hospitals</h3>
                         <p>In case of urgent medical needs, we help you connect with nearby hospitals and clinics for immediate care.</p>
                     </div>
                 </div>
             </div>
+            <Footer />
+
         </Layout>
     )
 }

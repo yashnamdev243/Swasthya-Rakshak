@@ -37,7 +37,7 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 25px;
-    width: 280px;
+    width: 320px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -45,6 +45,17 @@
 .service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+.General-image{
+    width: 180%;
+    height: auto;
+    max-width: 150px;
+    /* Ensures the image isn't too large */
+    /* border-radius: 50%; */
+    /* Circular image effect */
+    margin-bottom: 15px;
+    /* Space below the image */
+
 }
 
 .service-title {
@@ -99,7 +110,8 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 25px;
-    width: 280px;
+    width: 300px;
+    height: 350px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -114,11 +126,11 @@
 }
 
 .mode-image {
-    width: 100%;
+    width: 180%;
     height: auto;
     max-width: 150px;
     /* Ensures the image isn't too large */
-    border-radius: 50%;
+    /* border-radius: 50%; */
     /* Circular image effect */
     margin-bottom: 15px;
     /* Space below the image */
@@ -163,6 +175,17 @@
     font-weight: bold;
 }
 
+.Specialist-Categories-description{
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
 .specialist-categories {
     display: flex;
     justify-content: space-around;
@@ -170,12 +193,13 @@
     flex-wrap: wrap;
 }
 
+
 .specialist-card {
     background-color: #ffffff;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 25px;
-    width: 200px;
+    width: 250px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -186,8 +210,8 @@
 }
 
 .specialist-image {
-    width: 80px;
-    height: 80px;
+    width: 180px;
+    height: 150px;
     object-fit: cover;
     /* border-radius: 50%; */
     margin-bottom: 15px;
@@ -237,7 +261,7 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 25px;
-    width: 200px;
+    width: 250px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -248,8 +272,8 @@
 }
 
 .test-image {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 15px;
@@ -339,10 +363,10 @@
 }
 
 .emergency-image {
-    width: 80px;
-    height: 80px;
+    width: 220px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     margin-bottom: 15px;
 }
 

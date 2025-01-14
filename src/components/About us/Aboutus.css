@@ -2,59 +2,58 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 15vh;
     text-align: center;
     padding: 20px;
-}
-
-.welcome-section {
-    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .welcome-section {
+    /* animation: fadeIn 2s ease-in-out; */
     border-radius: 15px;
-    margin-top: -500px;
+    margin-top: 100px;
     padding: 20px;
-
-}
-
-.welcome-text {
+  }
+  
+  .welcome-text {
     font-size: 2.5rem;
-    color: #FFFFFF;
+    color: #ffffff;
     /* Dark green for trust and health association */
     font-weight: bold;
     text-transform: uppercase;
-}
-
-.welcome-subtext {
+  }
+  
+  .welcome-subtext {
     margin-top: 1rem;
     font-size: 1.2rem;
-    color: #FFFFFF;
+    color: #ffffff;
     /* Medium green for readability */
-}
-
-@keyframes fadeIn {
+  }
+  
+  @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(-20px);
+      opacity: 0;
+      transform: translateY(-20px);
     }
-
+  
     to {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-}
-
-
-/* ------------------------------------------------------------------- */
-.Introduction-container {
+  }
+  
+  /* ------------------------------------------------------------------- */
+  .Introduction-container {
     display: flex;
     flex-wrap: wrap;
     /* Allow wrapping for responsiveness */
     justify-content: center;
     align-items: center;
     padding: 40px;
-    margin-top: -550px;
-}
-
-.hospital-image {
+    /* margin-top: -10px; */
+    /* margin-left: 100px; */
+  }
+  
+  .hospital-image {
     width: 100%;
     max-width: 400px;
     /* Limit image width for responsiveness */
@@ -62,10 +61,11 @@
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 20px;
+    margin-left: 30px;
     /* Space between image and text */
-}
-
-.introduction-section {
+  }
+  
+  .introduction-section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -73,11 +73,12 @@
     width: 100%;
     max-width: 650px;
     text-align: left;
+  
     /* Ensure text alignment on small screens */
     padding: 0 20px;
-}
-
-.intro-card {
+  }
+  
+  .intro-card {
     background-color: transparent;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -86,79 +87,81 @@
     line-height: 1.8;
     color: #37474f;
     margin-bottom: 1rem;
-    text-align: left;
+    margin-left: 220px;
+    width: 110%;
+    /* text-align: left; */
     /* Left-align content */
-}
-
-.intro-card h2 {
+  }
+  
+  .intro-card h2 {
     font-size: 2rem;
     /* Adjust for smaller screens */
     font-weight: bold;
     margin-bottom: 20px;
     color: #ffffff;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
     .Introduction-container {
-        flex-wrap: nowrap;
-        /* Prevent wrapping on medium screens */
-        margin-top: 0;
-        /* Adjust margin for larger screens */
+      flex-wrap: nowrap;
+      /* Prevent wrapping on medium screens */
+      margin-top: 0;
+      /* Adjust margin for larger screens */
     }
-
+  
     .hospital-image {
-        width: 35%;
-        margin-right: 40px;
-        /* Add space between image and text */
-        margin-bottom: 0;
-        /* Remove bottom margin */
+      width: 35%;
+      margin-right: 40px;
+      /* Add space between image and text */
+      margin-bottom: 0;
+      /* Remove bottom margin */
     }
-
+  
     .introduction-section {
-        margin-left: 20px;
-        align-items: flex-start;
-        width: 60%;
-        /* Adjust text container width */
+      margin-left: 20px;
+      align-items: flex-start;
+      width: 60%;
+      /* Adjust text container width */
     }
-}
-
-@media (min-width: 1024px) {
+  }
+  
+  @media (min-width: 1024px) {
     .Introduction-container {
-        justify-content: flex-start;
+      justify-content: flex-start;
     }
-
+  
     .hospital-image {
-        width: 30%;
-        /* Reduce image width for large screens */
+      width: 30%;
+      /* Reduce image width for large screens */
     }
-
+  
     .introduction-section {
-        margin-left: 40px;
-        /* Increase spacing on large screens */
-        text-align: left;
+      margin-left: 40px;
+      /* Increase spacing on large screens */
+      text-align: left;
     }
-
+  
     .intro-card h2 {
-        font-size: 2.5rem;
-        /* Adjust heading size */
+      font-size: 2.5rem;
+      /* Adjust heading size */
     }
-}
-
-/* ------------------------------------------------------ */
-.mission-vision {
+  }
+  
+  /* ------------------------------------------------------ */
+  .mission-vision {
     display: flex;
     flex-wrap: wrap;
     /* Allow wrapping for small screens */
     justify-content: center;
     /* Center-align content on smaller screens */
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     margin-top: -100px;
-}
-
-.mission-image {
+  }
+  
+  .mission-image {
     width: 100%;
     max-width: 400px;
     /* Limit the image width for better responsiveness */
@@ -166,119 +169,118 @@
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 20px;
+    margin-left: -30px;
+  
     /* Add space below the image */
-}
-
-.mission-vision-section {
+  }
+  
+  .mission-vision-section {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
     /* Restrict max width for better alignment */
     text-align: left;
     padding: 20px;
-}
-
-.mission-vision-card {
-    background-color: transparent;
-    /* Transparent background */
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    /* Darker text for contrast */
-    margin-bottom: 1rem;
-    /* Add spacing for stacking */
-    text-align: left;
-    /* Align text to the left */
-}
-
-.mission-vision-card h2 {
-    font-size: 24px;
-    /* Adjust heading size */
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #2c3e50;
-    /* Dark blue for the heading */
-}
-
-.mission-vision-card p {
-    font-size: 16px;
-    line-height: 1.6;
+  }
+  
+  .mission-vision-card {
+    
+      background-color: transparent;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      font-size: 1.4rem;
+      line-height: 1.8;
+      color: #37474f;
+      margin-bottom: 1rem;
+      margin-left: -420px;
+      width: 110%;
+      /* text-align: left; */
+      /* Left-align content */
+    }
+  
+  .mission-vision-card h2 {
+      font-size: 2rem;
+      /* Adjust for smaller screens */
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    
+  
+  /* .mission-vision-card p { */
+    /* font-size: 16px; */
+    /* line-height: 1.6; */
     /* Improve readability */
-    color: #555;
+    /* color: #555; */
     /* Soft black for text */
-}
-
-.mission-vision-card p strong {
+  /* } */
+  
+  /* .mission-vision-card p strong {
     color: #2c3e50;
-    /* Highlight key points */
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
+  } */
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
     .mission-vision {
-        flex-wrap: nowrap;
-        /* No wrapping for medium screens */
-        justify-content: space-between;
-        /* Distribute content evenly */
+      flex-wrap: nowrap;
+      /* No wrapping for medium screens */
+      justify-content: space-between;
+      /* Distribute content evenly */
     }
-
+  
     .mission-image {
-        width: 45%;
-        /* Adjust width for larger screens */
-        margin-bottom: 0;
-        /* Remove bottom margin */
+      width: 45%;
+      /* Adjust width for larger screens */
+      margin-bottom: 0;
+      /* Remove bottom margin */
     }
-
+  
     .mission-vision-section {
-        width: 50%;
-        /* Allow space for both sections */
-        padding: 20px 40px;
-        /* Add padding for spacing */
+      width: 50%;
+      /* Allow space for both sections */
+      padding: 20px 40px;
+      /* Add padding for spacing */
     }
-}
-
-@media (min-width: 1024px) {
+  }
+  
+  @media (min-width: 1024px) {
     .mission-vision {
-        justify-content: flex-end;
-        /* Align content to the right */
-        margin-top: 0;
-        /* Adjust margin for desktops */
+      justify-content: flex-end;
+      /* Align content to the right */
+      margin-top: 0;
+      /* Adjust margin for desktops */
     }
-
+  
     .mission-image {
-        width: 40%;
-        /* Reduce image width slightly */
+      width: 40%;
+      /* Reduce image width slightly */
     }
-
+  
     .mission-vision-section {
-        width: 55%;
-        /* Adjust text section width */
-        padding: 40px;
-        /* Increase padding for better spacing */
+      width: 55%;
+      /* Adjust text section width */
+      padding: 40px;
+      /* Increase padding for better spacing */
     }
-
+  
     .mission-vision-card h2 {
-        font-size: 28px;
-        /* Larger heading for desktops */
+      font-size: 28px;
+      /* Larger heading for desktops */
     }
-
+  
     .mission-vision-card p {
-        font-size: 18px;
-        /* Slightly larger font for readability */
+      font-size: 18px;
+      /* Slightly larger font for readability */
     }
-}
-
-
-/* --------------------------------------------------- */
-.our-team-container {
+  }
+  
+  /* --------------------------------------------------- */
+  .our-team-container {
     display: flex;
     flex-wrap: wrap;
     /* Enable wrapping for smaller screens */
@@ -289,9 +291,9 @@
     gap: 20px;
     /* Space between image and card */
     padding: 20px;
-}
-
-.team-image {
+  }
+  
+  .team-image {
     width: 100%;
     max-width: 400px;
     /* Limit the image size */
@@ -302,22 +304,22 @@
     /* Add rounded corners */
     margin-bottom: 20px;
     /* Space below the image on small screens */
-}
-
-.our-team-section {
+  }
+  
+  .our-team-section {
     flex: 1;
     max-width: 600px;
     /* Limit the text container's width */
     text-align: left;
     padding: 20px;
-}
-
-.team-card {
+  }
+  
+  .team-card {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     /* Subtle shadow */
     padding: 20px;
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
     font-size: 16px;
     line-height: 1.6;
     /* Improve readability */
@@ -325,82 +327,81 @@
     /* Darker text for contrast */
     background-color: #ffffff;
     /* Optional: white card background */
-}
-
-.team-card h2 {
+  }
+  
+  .team-card h2 {
     font-size: 24px;
     /* Adjust heading size */
     font-weight: bold;
     margin-bottom: 15px;
     color: #2c3e50;
     /* Dark blue for heading */
-}
-
-.team-card p {
+  }
+  
+  .team-card p {
     font-size: 16px;
     line-height: 1.6;
     color: #555;
     /* Soft black for text */
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
     .our-team-container {
-        flex-wrap: nowrap;
-        /* Prevent wrapping on medium screens */
-        justify-content: space-between;
-        /* Spread content evenly */
+      flex-wrap: nowrap;
+      /* Prevent wrapping on medium screens */
+      justify-content: space-between;
+      /* Spread content evenly */
     }
-
+  
     .team-image {
-        width: 40%;
-        /* Adjust image size for medium screens */
-        margin-bottom: 0;
-        /* Remove bottom margin */
+      width: 40%;
+      /* Adjust image size for medium screens */
+      margin-bottom: 0;
+      /* Remove bottom margin */
     }
-
+  
     .our-team-section {
-        width: 50%;
-        /* Adjust text container width */
-        padding: 20px 40px;
-        /* Add padding for spacing */
+      width: 50%;
+      /* Adjust text container width */
+      padding: 20px 40px;
+      /* Add padding for spacing */
     }
-}
-
-@media (min-width: 1024px) {
+  }
+  
+  @media (min-width: 1024px) {
     .our-team-container {
-        justify-content: flex-start;
-        /* Align content to the left */
-        gap: 40px;
-        /* Increase gap for larger screens */
+      justify-content: flex-start;
+      /* Align content to the left */
+      gap: 40px;
+      /* Increase gap for larger screens */
     }
-
+  
     .team-image {
-        width: 35%;
-        /* Reduce image width slightly */
+      width: 35%;
+      /* Reduce image width slightly */
     }
-
+  
     .our-team-section {
-        width: 55%;
-        /* Adjust text container width */
-        padding: 40px;
-        /* Increase padding for better spacing */
+      width: 55%;
+      /* Adjust text container width */
+      padding: 40px;
+      /* Increase padding for better spacing */
     }
-
+  
     .team-card h2 {
-        font-size: 28px;
-        /* Larger heading for desktops */
+      font-size: 28px;
+      /* Larger heading for desktops */
     }
-
+  
     .team-card p {
-        font-size: 18px;
-        /* Slightly larger font for readability */
+      font-size: 18px;
+      /* Slightly larger font for readability */
     }
-}
-
-
-/* ------------------------------------------------------ */
-.why-choose-container {
+  }
+  
+  /* ------------------------------------------------------ */
+  .why-choose-container {
     display: flex;
     flex-wrap: wrap;
     /* Allows items to stack on smaller screens */
@@ -411,47 +412,49 @@
     gap: 20px;
     /* Adds spacing between elements */
     padding: 20px;
-}
-
-.why-choose-section {
+  }
+  
+  .why-choose-section {
     flex: 1;
     max-width: 600px;
     /* Limits the width of the text container */
     padding: 20px;
     text-align: left;
-}
-
-.unique-card {
+   gap: 500px;
+  }
+  
+  .unique-card {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     /* Subtle shadow for depth */
     padding: 20px;
-    font-family: 'Arial', sans-serif;
+    font-family: "Arial", sans-serif;
     font-size: 16px;
     line-height: 1.6;
+  
     /* Improves text readability */
     color: #333;
     /* Darker text for contrast */
     background-color: #ffffff;
     /* Optional: white background */
-}
-
-.unique-card h2 {
+  }
+  
+  .unique-card h2 {
     font-size: 24px;
     /* Adjust heading size */
     font-weight: bold;
     margin-bottom: 15px;
     color: #2c3e50;
     /* Dark blue for heading */
-}
-
-.unique-card p {
+  }
+  
+  .unique-card p {
     font-size: 16px;
     color: #555;
     /* Soft black for text */
-}
-
-.why-choose-image {
+  }
+  
+  .why-choose-image {
     width: 100%;
     max-width: 400px;
     /* Limits the image size */
@@ -462,59 +465,60 @@
     /* Adds rounded corners */
     margin-bottom: 20px;
     /* Space below image on smaller screens */
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
     .why-choose-container {
-        flex-wrap: nowrap;
-        /* Prevent wrapping on medium screens */
-        justify-content: space-between;
-        /* Distributes content evenly */
+      flex-wrap: nowrap;
+      /* Prevent wrapping on medium screens */
+      justify-content: space-between;
+      /* Distributes content evenly */
     }
-
+  
     .why-choose-image {
-        width: 40%;
-        /* Adjust image width for medium screens */
-        margin-bottom: 0;
-        /* Remove bottom margin */
+      width: 40%;
+      /* Adjust image width for medium screens */
+      margin-bottom: 0;
+      /* Remove bottom margin */
     }
-
+  
     .why-choose-section {
-        width: 50%;
-        /* Adjust text container width */
-        padding: 20px 40px;
-        /* Add padding for spacing */
+      width: 50%;
+      /* Adjust text container width */
+      padding: 20px 40px;
+      /* Add padding for spacing */
     }
-}
-
-@media (min-width: 1024px) {
+  }
+  
+  @media (min-width: 1024px) {
     .why-choose-container {
-        justify-content: flex-start;
-        /* Aligns content to the left */
-        gap: 40px;
-        /* Increase spacing between elements */
+      justify-content: flex-start;
+      /* Aligns content to the left */
+      gap: 40px;
+      /* Increase spacing between elements */
     }
-
+  
     .why-choose-image {
-        width: 35%;
-        /* Reduce image width slightly */
+      width: 35%;
+      /* Reduce image width slightly */
     }
-
+  
     .why-choose-section {
-        width: 55%;
-        /* Adjust text container width */
-        padding: 40px;
-        /* Increase padding for larger screens */
+      width: 55%;
+      /* Adjust text container width */
+      padding: 40px;
+      /* Increase padding for larger screens */
     }
-
+  
     .unique-card h2 {
-        font-size: 28px;
-        /* Larger heading for desktops */
+      font-size: 28px;
+      /* Larger heading for desktops */
     }
-
+  
     .unique-card p {
-        font-size: 18px;
-        /* Slightly larger font for readability */
+      font-size: 18px;
+      /* Slightly larger font for readability */
     }
-}
+  }
+  
