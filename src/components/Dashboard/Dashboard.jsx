@@ -684,6 +684,16 @@ const Dashboard = () => {
 
   return (
     <Layout>
+        <div className="about-container">
+                      <div className="welcome-section">
+                          <h1 className="welcome-text">
+                              "Welcome to Swasthya Rakshak, your trusted partner in health and well-being!"
+                          </h1>
+                          {/* <p className="welcome-subtext">
+                              Join us in our mission to safeguard your health with care, innovation, and commitment.
+                          </p> */}
+                      </div>
+                  </div>
       <div className="dashboard-container">
         {/* Left Side - Image */}
         <div className="dashboard-image">

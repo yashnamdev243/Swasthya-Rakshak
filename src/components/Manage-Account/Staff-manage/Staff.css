@@ -1,6 +1,6 @@
 /* Add Staff Button */
 .add-staff-btn {
-    position: absolute;
+    /* position: absolute;
     top: 20px;
     right: 20px;
     padding: 10px 20px;
@@ -10,7 +10,7 @@
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; */
 }
 
 .add-staff-btn:hover {
@@ -43,7 +43,7 @@
 }
 
 .staff-table th {
-    background-color: #0096FF;
+    background-color: #024d82;
     color: white;
     font-weight: bold;
 }

@@ -97,21 +97,24 @@ const Staff = () => {
     const handleShowModal = () => setShowModal(true);
     const handleCloseModal = () => setShowModal(false);
 
-    if (loading) {
-        return <Layout><div>Loading...</div></Layout>;
-    }
+    // if (loading) {
+    //     return <Layout><div>Loading...</div></Layout>;
+    // }
 
-    if (error) {
-        return <Layout><div>Error: {error}</div></Layout>;
-    }
+    // if (error) {
+    //     return <Layout><div>Error: {error}</div></Layout>;
+    // }
 
     return (
         <Layout>
             <div className="staff-list-container">
-                <h2>Staff List</h2>
+            <h2 className="heading">Staff List</h2>
+
+
+
 
                 {/* Add Staff Button */}
-                <Button variant="primary" onClick={handleShowModal}>Add Staff</Button>
+                <button className="add-patient-btn" onClick={handleShowModal}>Add Staff</button>
 
                 {/* Staff Form Modal */}
                 <Modal show={showModal} onHide={handleCloseModal}>
