@@ -846,15 +846,16 @@ const DoctorManage = () => {
 
         {/* Search Box */}
         <div className="search-box">
-          <input
+           <Form.Control
+          
             type="text"
-            placeholder="Search by doctor name"
+            placeholder="Search by Doctor Name"
             value={searchQuery}
             onChange={handleSearchChange}
             className="search-input"
           />
         </div>
-        
+
         {/* Add Doctor Button */}
         <button className="add-doctor-btn" onClick={handleAddDoctor}>
           Add Doctor
@@ -950,8 +951,8 @@ const DoctorManage = () => {
                   <th>Fees</th>
                   <th>Address</th>
                   <th>Working Hours</th>
-                  <th>Emergency Contact</th>
-                  <th>Room</th>
+                  {/* <th>Emergency Contact</th> */}
+                  {/* <th>Room</th> */}
                   <th>Status</th>
                 </tr>
               </thead>
@@ -969,8 +970,8 @@ const DoctorManage = () => {
                     <td><Skeleton width={150} /></td>
                     <td><Skeleton width={100} /></td>
                     <td><Skeleton width={120} /></td>
-                    <td><Skeleton width={80} /></td>
-                    <td><Skeleton width={100} /></td>
+                    {/* <td><Skeleton width={80} /></td> */}
+                    {/* <td><Skeleton width={100} /></td> */}
                   </tr>
                 ))}
               </tbody>
