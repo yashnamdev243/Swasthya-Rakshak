@@ -40,7 +40,7 @@
 .patients-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .patients-table th,
@@ -82,18 +82,21 @@
 
 
 /* PatientManage.css */
+.search-bar{
+    margin-left: 78%;
+    margin-top: -55px;}
 
 /* Container for the search bar */
 .search-container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: 20px;
 }
 
 /* Style for the search input */
 .search-input {
-  width: 250px;
+  width: 195px;
   padding: 8px 12px;
   font-size: 16px;
   border-radius: 4px;

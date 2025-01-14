@@ -804,8 +804,11 @@ const PatientManage = () => {
     return (
         <Layout>
             <div className="patient-list-container">
+            <h2 className="heading">Patient Details</h2>
+
                 {/* Search Bar */}
                 <div className="search-bar">
+                    
                     <Form.Control
                         type="text"
                         placeholder="Search by Patient Name"
@@ -820,7 +823,6 @@ const PatientManage = () => {
                     Add Patient
                 </button>
 
-                <h2 className="heading">Patient Details</h2>
 
                 {/* Bootstrap Modal for Add Patient Form */}
                 <Modal show={showAddPatientForm} onHide={() => setShowAddPatientForm(false)}

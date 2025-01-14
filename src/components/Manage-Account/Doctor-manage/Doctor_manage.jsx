@@ -841,12 +841,8 @@ const DoctorManage = () => {
   return (
     <Layout>
       <div className="doctor-list-container">
-        {/* Add Doctor Button */}
-        <button className="add-doctor-btn" onClick={handleAddDoctor}>
-          Add Doctor
-        </button>
+      <h2 className="heading">Doctor Details</h2>
 
-        <h2 className="heading">Doctor Details</h2>
 
         {/* Search Box */}
         <div className="search-box">
@@ -858,6 +854,13 @@ const DoctorManage = () => {
             className="search-input"
           />
         </div>
+        
+        {/* Add Doctor Button */}
+        <button className="add-doctor-btn" onClick={handleAddDoctor}>
+          Add Doctor
+        </button>
+
+
 
         {/* Bootstrap Modal for Add Doctor Form */}
         <Modal

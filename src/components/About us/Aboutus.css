@@ -94,7 +94,7 @@
   }
   
   .intro-card h2 {
-    font-size: 2rem;
+    font-size: 2.8rem;
     /* Adjust for smaller screens */
     font-weight: bold;
     margin-bottom: 20px;
@@ -144,7 +144,7 @@
     }
   
     .intro-card h2 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       /* Adjust heading size */
     }
   }
@@ -203,7 +203,7 @@
     }
   
   .mission-vision-card h2 {
-      font-size: 2rem;
+      font-size: 2.8rem;
       /* Adjust for smaller screens */
       font-weight: bold;
       margin-bottom: 20px;
@@ -269,14 +269,11 @@
     }
   
     .mission-vision-card h2 {
-      font-size: 28px;
-      /* Larger heading for desktops */
+        font-size: 2.8rem;
+        /* Larger heading for desktops */
     }
   
-    .mission-vision-card p {
-      font-size: 18px;
-      /* Slightly larger font for readability */
-    }
+   
   }
   
   /* --------------------------------------------------- */
@@ -332,7 +329,7 @@
   }
   
   .our-team-card h2 {
-    font-size: 2rem;
+    font-size: 2.8rem;
     /* Adjust for smaller screens */
     font-weight: bold;
     margin-bottom: 20px;
@@ -390,14 +387,11 @@
     }
   
     .team-card h2 {
-      font-size: 28px;
-      /* Larger heading for desktops */
+        font-size: 2.8rem;
+        /* Larger heading for desktops */
     }
   
-    .team-card p {
-      font-size: 18px;
-      /* Slightly larger font for readability */
-    }
+   
   }
   
   /* ------------------------------------------------------ */
@@ -443,7 +437,7 @@
   }
   
   .why-choose-card h2 {
-    font-size: 2rem;
+    font-size: 2.8rem;
     /* Adjust for smaller screens */
     font-weight: bold;
     margin-bottom: 20px;
@@ -515,14 +509,12 @@
       /* Increase padding for larger screens */
     }
   
-    .unique-card h2 {
-      font-size: 28px;
+    .why-choose-card h2 {
+         font-size: 2.8rem;
+
       /* Larger heading for desktops */
     }
   
-    .unique-card p {
-      font-size: 18px;
-      /* Slightly larger font for readability */
-    }
+   
   }
   
