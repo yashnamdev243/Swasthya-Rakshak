@@ -691,6 +691,11 @@
 
 // export default PatientManage;
 
+
+
+
+
+
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import Layout from '../../../Layout/Layout';
@@ -804,11 +809,11 @@ const PatientManage = () => {
     return (
         <Layout>
             <div className="patient-list-container">
-            <h2 className="heading">Patient Details</h2>
+                <h2 className="heading">Patient Details</h2>
 
                 {/* Search Bar */}
                 <div className="search-bar">
-                    
+
                     <Form.Control
                         type="text"
                         placeholder="Search by Patient Name"
@@ -846,7 +851,136 @@ const PatientManage = () => {
                                         />
                                     </Form.Group>
                                 </Col>
-                                {/* Additional form fields... */}
+                                <Col md={4}>
+                                    <Form.Group controlId="formDateOfBirth">
+                                        <Form.Label>Date of Birth</Form.Label>
+                                        <Form.Control
+                                            type="date"
+                                            name="date_of_birth"
+                                            value={newPatient.date_of_birth}
+                                            onChange={handleInputChange}
+                                            required
+                                            className="form-control-custom"
+                                        />
+                                    </Form.Group>
+                                </Col>
+                                <Col md={4}>
+                                    <Form.Group controlId="formGender">
+                                        <Form.Label>Gender</Form.Label>
+                                        <Form.Control
+                                            as="select"
+                                            name="gender"
+                                            value={newPatient.gender}
+                                            onChange={handleInputChange}
+                                            required
+                                            className="form-control-custom"
+                                        >
+                                            <option value="">Select Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </Form.Control>
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+
+                            <Row className="mb-4">
+                                <Col md={4}>
+                                    <Form.Group controlId="formAddress">
+                                        <Form.Label>Address</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            name="address"
+                                            value={newPatient.address}
+                                            onChange={handleInputChange}
+                                            required
+                                            className="form-control-custom"
+                                        />
+                                    </Form.Group>
+                                </Col>
+                                <Col md={4}>
+                                    <Form.Group controlId="formEmergencyContact">
+                                        <Form.Label>Emergency Contact</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            name="emergency_contact"
+                                            value={newPatient.emergency_contact}
+                                            onChange={handleInputChange}
+                                            required
+                                            className="form-control-custom"
+                                        />
+                                    </Form.Group>
+                                </Col>
+                                <Col md={4}>
+                                    <Form.Group controlId="formMedicalHistory">
+                                        <Form.Label>Medical History</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            name="medical_history"
+                                            value={newPatient.medical_history}
+                                            onChange={handleInputChange}
+                                            required
+                                            className="form-control-custom"
+                                        />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+
+                            <Row className="mb-4">
+                                <Col md={4}>
+                                    <Form.Group controlId="formReasonForVisit">
+                                        <Form.Label>Reason for Visit</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            name="reason_for_visit"
+                                            value={newPatient.reason_for_visit}
+                                            onChange={handleInputChange}
+                                            required
+                                            className="form-control-custom"
+                                        />
+                                    </Form.Group>
+                                </Col>
+                                <Col md={4}>
+                                    <Form.Group controlId="formAdmitDate">
+                                        <Form.Label>Admit Date</Form.Label>
+                                        <Form.Control
+                                            type="date"
+                                            name="admit_date"
+                                            value={newPatient.admit_date}
+                                            onChange={handleInputChange}
+                                            required
+                                            className="form-control-custom"
+                                        />
+                                    </Form.Group>
+                                </Col>
+                                <Col md={4}>
+                                    <Form.Group controlId="formDisease">
+                                        <Form.Label>Disease</Form.Label>
+                                        <Form.Control
+                                            type="text"
+                                            name="disease"
+                                            value={newPatient.disease}
+                                            onChange={handleInputChange}
+                                            required
+                                            className="form-control-custom"
+                                        />
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+
+                            {/* Image Upload */}
+                            <Row className="mb-4">
+                                <Col md={12}>
+                                    <Form.Group controlId="formProfilePicture">
+                                        <Form.Label>Profile Picture</Form.Label>
+                                        <Form.Control
+                                            type="file"
+                                            name="profile_picture"
+                                            onChange={handleImageChange}
+                                            className="form-control-custom"
+                                        />
+                                    </Form.Group>
+                                </Col>
                             </Row>
 
                             {/* Add/Cancel Buttons */}
