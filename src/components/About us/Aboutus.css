@@ -1,5 +1,26 @@
 
-  
+  .about-head{
+    font-size: 1.7rem;
+    /* color: #ffffff; */
+        /* color: linear-gradient(135deg, #6a11cb, #2575fc); */
+        color: #001f3f; /* Dark Navy */
+        animation: fadeIn 2s ease-in-out;
+        padding: 20px;
+margin-left: 10px;
+    /* Dark green for trust and health association */
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .welcome-subtext {
+    animation: fadeIn 4s ease-in-out;
+
+    margin-left: 30%;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    color: #b3e5fc; /* Light Sky Blue */
+    /* Medium green for readability */
+  }
   /* ------------------------------------------------------------------- */
   .Introduction-container {
     display: flex;
@@ -7,7 +28,7 @@
     /* Allow wrapping for responsiveness */
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 20px;
     /* margin-top: -10px; */
     /* margin-left: 100px; */
   }

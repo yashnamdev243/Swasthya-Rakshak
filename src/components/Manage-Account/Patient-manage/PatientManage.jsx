@@ -810,7 +810,9 @@ const PatientManage = () => {
         <Layout>
             <div className="patient-list-container">
                 <h2 className="heading">Patient Details</h2>
-
+                <button className="check-doctor-btn" >
+      Check Appointment
+        </button>
                 {/* Search Bar */}
                 <div className="search-bar">
 

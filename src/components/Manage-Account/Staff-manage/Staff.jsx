@@ -110,7 +110,9 @@ const Staff = () => {
             <div className="staff-list-container">
             <h2 className="heading">Staff List</h2>
 
-
+            <button className="check-doctor-btn" >
+      Check Appointment
+        </button>
 
 
                 {/* Add Staff Button */}

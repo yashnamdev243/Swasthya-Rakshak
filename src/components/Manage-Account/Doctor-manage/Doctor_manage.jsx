@@ -842,7 +842,9 @@ const DoctorManage = () => {
     <Layout>
       <div className="doctor-list-container">
       <h2 className="heading">Doctor Details</h2>
-
+      <button className="check-doctor-btn" onClick={handleAddDoctor}>
+      Check Appointment
+        </button>
 
         {/* Search Box */}
         <div className="search-box">

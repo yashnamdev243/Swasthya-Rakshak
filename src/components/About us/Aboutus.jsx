@@ -11,7 +11,12 @@ import './Aboutus.css'; // CSS file for styling and animations
 const Aboutus = () => {
     return (
         <Layout>
-          
+<h3 className='about-head' >"Transforming lives through accessible, innovative, and compassionate healthcare excellence."
+
+</h3>
+<p className="welcome-subtext">
+                              Join us in our mission to safeguard your health with care, innovation, and commitment.
+                          </p>
             <div className="Introduction-container">
                 <img src={hospitalimg} alt="Hospital" className="hospital-image" />
                 <div className="introduction-section">

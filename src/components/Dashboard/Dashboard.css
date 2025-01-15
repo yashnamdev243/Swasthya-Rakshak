@@ -25,12 +25,7 @@
     text-transform: uppercase;
   }
   
-  .welcome-subtext {
-    margin-top: 0.5rem;
-    font-size: 1.2rem;
-    color: #b3e5fc; /* Light Sky Blue */
-    /* Medium green for readability */
-  }
+ 
   
   @keyframes fadeIn {
     from {
@@ -354,6 +349,7 @@ margin-top: -80px;
     margin-top: 50px;
     padding: 0 20px;
     gap: 50px;
+    
 }
 
 .appointment-left {
@@ -398,20 +394,32 @@ margin-top: -80px;
     padding: 20px;
     z-index: 9999;
 }
-
-.form-header {
-    text-align: center;
-    margin-bottom: 20px;
+/* General Modal Styling */
+.custom-modal {
+    
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
+/* .modal-header {
+    
+    margin-bottom: 20px; } */
+    /* margin-left: 20%; */
+    /* text-align: center; */
 
-.form-header h2 {
+
+
+
+.modal-header .modal-title {
     font-size: 40px;
     color: #1e78d7;
+    text-align: center;
 
     font-weight: bold;
 }
 
-.form-header h2:hover {
+.modal-header .modal-title:hover {
     color: #0056b3;
 }
 
@@ -419,25 +427,26 @@ margin-top: -80px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    
 }
 
-.form-column {
+/* .modal-column {
     flex: 1;
     min-width: 250px;
-}
+} */
 
-.form-group {
+/* .modal-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
-}
+} */
 
-.form-label {
+/* .modal-label {
     font-weight: bold;
     color: #333;
-}
+} */
 
-.form-input {
+/* .modal-input {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -445,11 +454,11 @@ margin-top: -80px;
     outline: none;
     background-color: whitesmoke;
     color: #000;
-}
-
-textarea.form-input {
+} */
+/* 
+textarea.modal-input {
     resize: vertical;
-}
+} */
 
 .appointment-submit-btn {
     padding: 10px 20px;
@@ -477,10 +486,11 @@ textarea.form-input {
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    /* transition: background-color 0.3s, transform 0.3s; */
     margin-top: 20px;
     width: 200px;
     height: 50px;
+    transition: background-color 0.3s;
 
     margin-left: 200px;
 }
@@ -489,6 +499,8 @@ textarea.form-input {
     background-color: #0056b3;
     /* Darker blue for hover effect */
     transform: scale(1.05);
+    color: #000;
+
 }
 
 .Appoinment-image {

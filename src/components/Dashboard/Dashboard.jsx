@@ -594,6 +594,7 @@ import Facilitiesimage from "../../assets/transparent-sick-room-hospital-room-me
 import "./Dashboard.css"; // Ensure to update the CSS for attractive design
 import Appoinmentimage from "../../assets/transparent-glasses-young-female-doctor-with-serious-expression65ee80a19eb183.12780541171012931.png";
 import Footer from "../../Layout/Footer";
+import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
 
 const Dashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -689,9 +690,7 @@ const Dashboard = () => {
                           <h1 className="welcome-text">
                               "Welcome to Swasthya Rakshak, your trusted partner in health and well-being!"
                           </h1>
-                          {/* <p className="welcome-subtext">
-                              Join us in our mission to safeguard your health with care, innovation, and commitment.
-                          </p> */}
+                          
                       </div>
                   </div>
       <div className="dashboard-container">
@@ -780,7 +779,6 @@ const Dashboard = () => {
             for better health!
 
             <button
-              type="button"
               className="appointment-open-btn"
               onClick={toggleModal}
             >
@@ -788,166 +786,174 @@ const Dashboard = () => {
             </button>
           </p>
 
-          {isModalOpen && (
-            <div className="appointment-form-container">
-              <div className="form-header">
-                <h2>New Appointment</h2>
+        {/* Bootstrap Modal for New Appointment Form */}
+<Modal show={isModalOpen} onHide={handleCloseModal} className="custom-modal">
+  <Modal.Header closeButton>
+    
+    <Modal.Title>New Appointment</Modal.Title>
+  </Modal.Header>
+  <Modal.Body>
+    <Form onSubmit={handleSubmit}>
+      <Row className="mb-4">
+        {/* Full Name */}
+        <Col md={6}>
+          <Form.Group controlId="formFullName">
+            <Form.Label>Full Name</Form.Label>
+            <Form.Control
+              type="text"
+              name="fullName"
+              value={formData.fullName}
+              onChange={handleChange}
+              placeholder="Enter your full name"
+              required
+              className="form-control-custom"
+            />
+          </Form.Group>
+        </Col>
+        {/* Gender */}
+        <Col md={6}>
+          <Form.Group controlId="formGender">
+            <Form.Label>Gender</Form.Label>
+            <Form.Control
+              as="select"
+              name="gender"
+              value={formData.gender}
+              onChange={handleChange}
+              required
+              className="form-control-custom"
+            >
+              <option value="">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </Form.Control>
+          </Form.Group>
+        </Col>
+      </Row>
 
-                {/* Cancel Icon */}
-                <button
-                  type="button"
-                  className="close-icon"
-                  onClick={handleCloseModal}
-                  aria-label="Close"
-                >
-                  &times; {/* Or use an icon from a library */}
-                </button>
-              </div>
-              <form onSubmit={handleSubmit} className="appointment-form">
-                <div className="form-column">
-                  <div className="form-group">
-                    <label htmlFor="fullName" className="form-label">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="fullName"
-                      name="fullName"
-                      value={formData.fullName}
-                      onChange={handleChange}
-                      placeholder="Enter your full name"
-                      required
-                      className="form-input"
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="gender" className="form-label">
-                      Gender
-                    </label>
-                    <select
-                      id="gender"
-                      name="gender"
-                      value={formData.gender}
-                      onChange={handleChange}
-                      required
-                      className="form-input"
-                    >
-                      <option value="">Select Gender</option>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
+      <Row className="mb-4">
+        {/* Phone Number */}
+        <Col md={6}>
+          <Form.Group controlId="formPhoneNumber">
+            <Form.Label>Phone Number</Form.Label>
+            <Form.Control
+              type="text"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              placeholder="Enter your phone number"
+              required
+              className="form-control-custom"
+            />
+          </Form.Group>
+        </Col>
+        {/* Email */}
+        <Col md={6}>
+          <Form.Group controlId="formEmail">
+            <Form.Label>Email Address</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Enter your email address"
+              required
+              className="form-control-custom"
+            />
+          </Form.Group>
+        </Col>
+      </Row>
 
-                  <div className="form-group">
-                    <label htmlFor="phoneNumber" className="form-label">
-                      Phone Number
-                    </label>
-                    <input
-                      type="text"
-                      id="phoneNumber"
-                      name="phoneNumber"
-                      value={formData.phoneNumber}
-                      onChange={handleChange}
-                      placeholder="Enter your phone number"
-                      required
-                      className="form-input"
-                    />
-                  </div>
+      <Row className="mb-4">
+        {/* Preferred Doctor */}
+        <Col md={6}>
+          <Form.Group controlId="formPreferredDoctor">
+            <Form.Label>Preferred Doctor</Form.Label>
+            <Form.Control
+              as="select"
+              name="preferredDoctor"
+              value={formData.preferredDoctor}
+              onChange={handleChange}
+              required
+              className="form-control-custom"
+            >
+              <option value="">Select Doctor</option>
+              <option value="Dr. A">Dr. A</option>
+              <option value="Dr. B">Dr. B</option>
+              <option value="Dr. C">Dr. C</option>
+            </Form.Control>
+          </Form.Group>
+        </Col>
+        {/* Appointment Date */}
+        <Col md={6}>
+          <Form.Group controlId="formAppointmentDate">
+            <Form.Label>Date</Form.Label>
+            <Form.Control
+              type="date"
+              name="appointmentDate"
+              value={formData.appointmentDate}
+              onChange={handleChange}
+              required
+              className="form-control-custom"
+            />
+          </Form.Group>
+        </Col>
+      </Row>
 
-                  <div className="form-group">
-                    <label htmlFor="email" className="form-label">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Enter your email address"
-                      required
-                      className="form-input"
-                    />
-                  </div>
-                </div>
+      <Row className="mb-4">
+        {/* Time Slot */}
+        <Col md={6}>
+          <Form.Group controlId="formTimeSlot">
+            <Form.Label>Time Slot</Form.Label>
+            <Form.Control
+              as="select"
+              name="timeSlot"
+              value={formData.timeSlot}
+              onChange={handleChange}
+              required
+              className="form-control-custom"
+            >
+              <option value="">Select Time Slot</option>
+              <option value="9:00 AM">9:00 AM</option>
+              <option value="10:00 AM">10:00 AM</option>
+              <option value="11:00 AM">11:00 AM</option>
+              <option value="2:00 PM">2:00 PM</option>
+              <option value="4:00 PM">4:00 PM</option>
+            </Form.Control>
+          </Form.Group>
+        </Col>
+        {/* Reason for Visit */}
+        <Col md={6}>
+          <Form.Group controlId="formReasonForVisit">
+            <Form.Label>Reason for Visit</Form.Label>
+            <Form.Control
+              as="textarea"
+              name="reasonForVisit"
+              value={formData.reasonForVisit}
+              onChange={handleChange}
+              placeholder="Explain the reason for your visit"
+              required
+              className="form-control-custom"
+            />
+          </Form.Group>
+        </Col>
+      </Row>
 
-                <div className="form-column">
-                  <div className="form-group">
-                    <label htmlFor="preferredDoctor" className="form-label">
-                      Preferred Doctor
-                    </label>
-                    <select
-                      id="preferredDoctor"
-                      name="preferredDoctor"
-                      value={formData.preferredDoctor}
-                      onChange={handleChange}
-                      required
-                      className="form-input"
-                    >
-                      <option value="">Select Doctor</option>
-                      <option value="Dr. A">Dr. A</option>
-                      <option value="Dr. B">Dr. B</option>
-                      <option value="Dr. C">Dr. C</option>
-                    </select>
-                  </div>
+      {/* Submit and Cancel Buttons */}
+      <div className="d-flex justify-content-between" style={{ gap: "10px" }}>
+        <Button variant="primary" type="submit" className="btn-submit">
+          Submit
+        </Button>
+        <Button variant="secondary" onClick={handleCloseModal} className="btn-cancel">
+          Cancel
+        </Button>
+      </div>
+    </Form>
+  </Modal.Body>
+</Modal>
 
-                  <div className="form-group">
-                    <label htmlFor="appointmentDate" className="form-label">
-                      Date
-                    </label>
-                    <input
-                      type="date"
-                      id="appointmentDate"
-                      name="appointmentDate"
-                      value={formData.appointmentDate}
-                      onChange={handleChange}
-                      required
-                      className="form-input"
-                    />
-                  </div>
 
-                  <div className="form-group">
-                    <label htmlFor="timeSlot" className="form-label">
-                      Time Slot
-                    </label>
-                    <select
-                      id="timeSlot"
-                      name="timeSlot"
-                      value={formData.timeSlot}
-                      onChange={handleChange}
-                      required
-                      className="form-input"
-                    >
-                      <option value="">Select Time Slot</option>
-                      <option value="9:00 AM">9:00 AM</option>
-                      <option value="10:00 AM">10:00 AM</option>
-                      <option value="11:00 AM">11:00 AM</option>
-                      <option value="2:00 PM">2:00 PM</option>
-                      <option value="4:00 PM">4:00 PM</option>
-                    </select>
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="reasonForVisit" className="form-label">
-                      Reason for Visit
-                    </label>
-                    <textarea
-                      id="reasonForVisit"
-                      name="reasonForVisit"
-                      value={formData.reasonForVisit}
-                      onChange={handleChange}
-                      placeholder="Explain the reason for your visit"
-                      required
-                      className="form-input"
-                    ></textarea>
-                  </div>
-                  <button type="submit" className="appointment-submit-btn">
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
-          )}
+       
         </div>
       </div>
    
