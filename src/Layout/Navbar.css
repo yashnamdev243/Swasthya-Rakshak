@@ -70,7 +70,7 @@
   width: 100%;
 }
 
-/* Dropdown Menu */
+
 .navbar-links .dropdown {
   position: relative;
 
@@ -89,7 +89,7 @@
   margin: 0;
   min-width: 150px;
   z-index: 1000;
-  
+
 }
 
 .navbar-links .dropdown-menu li a {
@@ -104,7 +104,7 @@
 
 }
 
-/* Hamburger Menu Styling */
+
 .navbar-toggle {
   display: none;
   flex-direction: column;
@@ -120,7 +120,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Mobile Responsiveness */
+
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
