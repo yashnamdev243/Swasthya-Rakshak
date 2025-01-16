@@ -1,0 +1,57 @@
+.appointment-list-container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.appointment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.appointment-table th,
+.appointment-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.appointment-table th {
+    background-color: #024d82;
+    color: white;
+    font-weight: bold;
+}
+
+.appointment-table td {
+    background-color: rgb(220, 230, 245);
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.add-appointment-btn {
+    padding: 10px 20px;
+    background-color: #37474f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-appointment-btn:hover {
+    background-color: #1a237e;
+}

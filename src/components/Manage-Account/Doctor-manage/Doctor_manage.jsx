@@ -361,6 +361,7 @@ import "./DoctorManage.css";
 
 const DoctorManage = () => {
   const [doctorsData, setDoctorsData] = useState([]);
+  const [filteredDoctors, setFilteredDoctors] = useState([]); // Add filteredDoctors state
   const [showAddDoctorForm, setShowAddDoctorForm] = useState(false);
   const [searchTerm, setSearchTerm] = useState(""); // Search input state
 
@@ -384,9 +385,8 @@ const DoctorManage = () => {
     const fetchDoctorsData = async () => {
       try {
         const response = await axios.get("http://localhost:3000/api/doctors");
-        // const response = await axios.get("http://192.168.46.246:3001/api/doctors");
-
         setDoctorsData(response.data);
+        setFilteredDoctors(response.data); // Set filteredDoctors to the fetched data initially
       } catch (error) {
         console.error("Error fetching doctors data:", error);
       }
@@ -394,17 +394,18 @@ const DoctorManage = () => {
 
     fetchDoctorsData();
   }, []);
-     // Handle search input change
+
+  // Handle search input change
   const handleSearch = (e) => {
     const value = e.target.value;
     setSearchTerm(value);
 
-   const filtered = doctorsData.filter((doctor) =>
-     doctor.full_name.toLowerCase().includes(value.toLowerCase())
-  );
+    // Filter the doctors based on search term
+    const filtered = doctorsData.filter((doctor) =>
+      doctor.full_name.toLowerCase().includes(value.toLowerCase())
+    );
     setFilteredDoctors(filtered);
   };
-
 
   // Handle Add Doctor button click
   const handleAddDoctor = () => {
@@ -434,7 +435,6 @@ const DoctorManage = () => {
 
       const response = await axios.post(
         "http://localhost:3000/api/doctors",
-        // "http://192.168.46.246:3001/api/doctors",
         formData,
         {
           headers: {
@@ -443,6 +443,7 @@ const DoctorManage = () => {
         }
       );
       setDoctorsData([...doctorsData, response.data]);
+      setFilteredDoctors([...filteredDoctors, response.data]); // Add to filteredDoctors as well
       setShowAddDoctorForm(false); // Close the form
     } catch (error) {
       console.error("Error adding doctor:", error);
@@ -451,20 +452,20 @@ const DoctorManage = () => {
 
   return (
     <Layout>
- <div className="doctor-list-container">
- <h2 className="heading">Doctor Details</h2>
+      <div className="doctor-list-container">
+        <h2 className="heading">Doctor Details</h2>
 
         {/* Search Bar */}
         <div className="search-bar">
-        <Form.Control
-        
-          type="text"
-          placeholder="Search by Doctor Name"
-         value={searchTerm}
-         onChange={handleSearch}
-         className="search-input"
-         />
-      </div>        {/* Add Doctor Button */}
+          <Form.Control
+
+            type="text"
+            placeholder="Search by Doctor Name"
+            value={searchTerm}
+            onChange={handleSearch}
+            className="search-input"
+          />
+        </div>        {/* Add Doctor Button */}
         <button className="add-doctor-btn" onClick={handleAddDoctor}>
           Add Doctor
         </button>
@@ -667,7 +668,7 @@ const DoctorManage = () => {
         </Modal>
 
         {/* Show skeleton table structure while data is loading */}
-        {doctorsData.length === 0 ? (
+        {filteredDoctors.length === 0 ? (
           <div className="loading-skeleton">
             <table className="doctors-table">
               <thead>
@@ -728,7 +729,7 @@ const DoctorManage = () => {
               </tr>
             </thead>
             <tbody>
-              {doctorsData.map((doctor, index) => (
+              {filteredDoctors.map((doctor, index) => (
                 <tr key={index}>
                   <td>
                     <img

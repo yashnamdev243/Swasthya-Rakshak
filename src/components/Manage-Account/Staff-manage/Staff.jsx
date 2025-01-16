@@ -5,10 +5,11 @@ import axios from 'axios'; // Import axios
 import './Staff.css'; // Assuming you will create a similar CSS file
 
 const Staff = () => {
-    const [staff, setStaff] = useState([]);
+    const [staff, setStaff] = useState([]); // Original staff data
+    const [filteredStaffs, setFilteredStaffs] = useState([]); // Filtered staff data
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-      const [searchTerms, setSearchTerms] = useState(""); // Search input state
+    const [searchTerms, setSearchTerms] = useState(""); // Search input state
     
     const [newStaff, setNewStaff] = useState({
         fullName: '',
@@ -35,6 +36,7 @@ const Staff = () => {
                 }
                 const data = await response.json();
                 setStaff(data.data || data);
+                setFilteredStaffs(data.data || data); // Initially set filteredStaffs to all staff
                 setLoading(false);
             } catch (err) {
                 setError(err.message);
@@ -44,16 +46,18 @@ const Staff = () => {
 
         fetchStaffData();
     }, []);
-      // Handle search input change
-  const handleSearched = (e) => {
-    const value = e.target.value;
-    setSearchTerms(value);
 
-   const filtered = staffsData.filter((staff) =>
-     staff.full_name.toLowerCase().includes(value.toLowerCase())
-  );
-    setFilteredStaffs(filtered);
-  };
+    // Handle search input change
+    const handleSearched = (e) => {
+        const value = e.target.value;
+        setSearchTerms(value);
+
+        // Filter the staff data based on search terms
+        const filtered = staff.filter((staffMember) =>
+            staffMember.fullName.toLowerCase().includes(value.toLowerCase())
+        );
+        setFilteredStaffs(filtered); // Update filtered staff data
+    };
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -109,13 +113,13 @@ const Staff = () => {
     const handleShowModal = () => setShowModal(true);
     const handleCloseModal = () => setShowModal(false);
 
-    // if (loading) {
-    //     return <Layout><div>Loading...</div></Layout>;
-    // }
+    if (loading) {
+        return <Layout><div>Loading...</div></Layout>;
+    }
 
-    // if (error) {
-    //     return <Layout><div>Error: {error}</div></Layout>;
-    // }
+    if (error) {
+        return <Layout><div>Error: {error}</div></Layout>;
+    }
 
     return (
         <Layout>
@@ -306,6 +310,7 @@ const Staff = () => {
                 </Modal>
 
                 {/* Table */}
+                {/* Table */}
                 <table className="staff-table">
                     <thead>
                         <tr>
@@ -323,7 +328,7 @@ const Staff = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {staff.map((staffMember) => (
+                        {filteredStaffs.map((staffMember) => (
                             <tr key={staffMember.id}>
                                 <td>
                                     {staffMember.profilePicture ? (
