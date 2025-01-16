@@ -122,6 +122,73 @@
 
 
 
+// import React, { useState } from 'react';
+// import './Navbar.css';
+// import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+
+// const Navbar = () => {
+//     const [isSecondaryNavbarVisible, setIsSecondaryNavbarVisible] = useState(false);
+
+//     const toggleSecondaryNavbar = () => {
+//         setIsSecondaryNavbarVisible(!isSecondaryNavbarVisible);
+//     };
+
+//     return (
+//         <>
+//             <nav className="navbar">
+//                 <div className="navbar-brand">Swasthya Rakshak</div>
+//                 <ul className="navbar-links">
+//                     <li><a href="/dashboard">Home</a></li>
+//                     <li><a href="/about">About us</a></li>
+//                     <li><a href="/services">Services</a></li>
+//                     <li><a href="/doctors">Doctors</a></li>
+//                 </ul>
+//                 <button
+//                     className="toggle-navbar-button"
+//                     onClick={toggleSecondaryNavbar}
+//                     style={{
+//                         marginLeft: 'auto',
+//                         padding: '10px',
+//                         backgroundColor: 'transparent',
+//                         color: '#007bff',
+//                         border: 'none',
+//                         borderRadius: '5px',
+//                         cursor: 'pointer',
+//                     }}
+//                 >
+//                     {isSecondaryNavbarVisible ? <FaChevronUp size={24} /> : <FaChevronDown size={24} />}
+//                 </button>
+//             </nav>
+
+//             {isSecondaryNavbarVisible && (
+//           <div className='items'>
+//                     <nav className="secondary-navbar-links" style={{
+//                         display: 'flex',
+//                         listStyle: 'none',
+//                         margin: 0,
+//                         padding: 0,
+//                     }}>
+//                         <nav className="navbar-link" style={{}}>
+//                             <li ><a href="/doctor-manage"> <button className="check-doctor-btn" >Doctor Manage    </button>
+// </a></li>
+//                             <li><a href="/staff-manage"><button className="check-doctor-btn" >Staff Manage  </button></a></li>
+//                             <li><a href="/patient-manage"> <button className="check-doctor-btn" >Patient Manage  </button></a></li>
+//                             <li><a href="/patient-manage"> <button className="check-doctor-btn" >
+//       Check Appointment
+//         </button>
+//         </a></li>
+//                         </nav>
+//                     </nav>
+//                     </div>
+                
+//             )}
+//         </>
+//     );
+// };
+
+// export default Navbar;
+
+
 import React, { useState } from 'react';
 import './Navbar.css';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
@@ -139,52 +206,31 @@ const Navbar = () => {
                 <div className="navbar-brand">Swasthya Rakshak</div>
                 <ul className="navbar-links">
                     <li><a href="/dashboard">Home</a></li>
-                    <li><a href="/about">About us</a></li>
+                    <li><a href="/about">About Us</a></li>
                     <li><a href="/services">Services</a></li>
                     <li><a href="/doctors">Doctors</a></li>
+                    <li><a href="/notification">Notification</a></li>
                 </ul>
                 <button
                     className="toggle-navbar-button"
                     onClick={toggleSecondaryNavbar}
-                    style={{
-                        marginLeft: 'auto',
-                        padding: '10px',
-                        backgroundColor: 'transparent',
-                        color: '#007bff',
-                        border: 'none',
-                        borderRadius: '5px',
-                        cursor: 'pointer',
-                    }}
                 >
                     {isSecondaryNavbarVisible ? <FaChevronUp size={24} /> : <FaChevronDown size={24} />}
                 </button>
             </nav>
 
             {isSecondaryNavbarVisible && (
-                <nav className="secondary-navbar" style={{
-                    backgroundColor: '#f8f9fa',
-                    borderTop: '1px solid #ddd',
-                    padding: '10px 20px',
-                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                }}>
-                    <ul className="secondary-navbar-links" style={{
-                        display: 'flex',
-                        listStyle: 'none',
-                        margin: 0,
-                        padding: 0,
-                    }}>
-                        <ul className="navbar-links" style={{}}>
-                            <li ><a href="/doctor-manage">Doctor Manage</a></li>
-                            <li><a href="/staff-manage">Staff Manage</a></li>
-                            <li><a href="/patient-manage">Patient Manage</a></li>
-                        </ul>
+                <div className="secondary-navbar">
+                    <ul className="secondary-navbar-links">
+                        <li><a href="/doctor-manage"><button className="action-btn">Doctor Manage</button></a></li>
+                        <li><a href="/staff-manage"><button className="action-btn">Staff Manage</button></a></li>
+                        <li><a href="/patient-manage"><button className="action-btn">Patient Manage</button></a></li>
+                        <li><a href="/appointments"><button className="action-btn">Check Appointment</button></a></li>
                     </ul>
-                </nav>
+                </div>
             )}
         </>
     );
 };
 
 export default Navbar;
-
-

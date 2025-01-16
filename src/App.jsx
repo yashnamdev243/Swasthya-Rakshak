@@ -13,6 +13,7 @@ import Staff from './components/Manage-Account/Staff-manage/Staff.jsx';
 //import Patient from './components/Manage-Account/Patient-manage/PatientManage.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PatientManage from './components/Manage-Account/Patient-manage/PatientManage.jsx';
+import NotificationPage from './Layout/Notification/NotificationPage.jsx';
 
 
 
@@ -33,6 +34,7 @@ const App = () => {
           <Route path='/patient-manage' element={<PatientManage></PatientManage>} />
           <Route path='/staff-manage' element={<Staff />} />
           <Route path='/doctor-manage' element={<Doctor_manage></Doctor_manage>} />
+          <Route path='/notification' element={<NotificationPage/>} />
         </Routes>
       </div>
     </Router>

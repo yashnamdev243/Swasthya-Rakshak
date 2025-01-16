@@ -24,30 +24,6 @@
     color: #000;
 
 }
-.check-doctor-btn{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 10px 20px;
-    /* background-color: #0096FF; */
-    /* background-color: #1F51FF; */
-    background-color: #024d82;
-
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-}
-    .check-doctor-btn:hover {
-    /* background-color:  #37474f; */
-    background-color: #0e6aab;
-    color: #000;
-    transform: scale(1.05);
-
-}
 
 /* General container styles */
 .doctor-list-container {
