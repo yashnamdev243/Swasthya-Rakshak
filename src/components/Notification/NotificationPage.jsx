@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './NotificationPage.css';
-import Footer from "../../Layout/Footer";
 import Layout from "../../Layout/Layout";
 
 const NotificationPage = () => {
@@ -60,7 +59,6 @@ const NotificationPage = () => {
             )}
         </div>
        
-<Footer />
     </Layout> 
     );
 };

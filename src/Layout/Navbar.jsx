@@ -208,8 +208,9 @@ const Navbar = () => {
                     <li><a href="/dashboard">Home</a></li>
                     <li><a href="/about">About Us</a></li>
                     <li><a href="/services">Services</a></li>
-                    <li><a href="/doctors">Doctors</a></li>
+                    {/* <li><a href="/doctors">Doctors</a></li> */}
                     <li><a href="/notification">Notification</a></li>
+                    <li><a href="/accounts">Account</a></li>
                 </ul>
                 <button
                     className="toggle-navbar-button"

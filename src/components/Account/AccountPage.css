@@ -1,0 +1,88 @@
+/* Account Page Styles */
+.account-page {
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.account-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #024d82;
+}
+
+.account-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.account-field {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+}
+
+.account-field:last-child {
+    border-bottom: none;
+}
+
+.edit-btn,
+.logout-btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: white;
+    margin-right: 10px;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .account-card {
+        padding: 15px;
+    }
+
+    .account-field {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .account-field span {
+        margin-top: 5px;
+    }
+
+    .edit-btn,
+    .logout-btn {
+        font-size: 0.9rem;
+    }
+}

@@ -113,13 +113,13 @@ const Staff = () => {
     const handleShowModal = () => setShowModal(true);
     const handleCloseModal = () => setShowModal(false);
 
-    if (loading) {
-        return <Layout><div>Loading...</div></Layout>;
-    }
+    // if (loading) {
+    //     return <Layout><div>Loading...</div></Layout>;
+    // }
 
-    if (error) {
-        return <Layout><div>Error: {error}</div></Layout>;
-    }
+    // if (error) {
+    //     return <Layout><div>Error: {error}</div></Layout>;
+    // }
 
     return (
         <Layout>
