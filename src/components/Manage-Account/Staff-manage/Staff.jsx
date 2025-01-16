@@ -8,6 +8,8 @@ const Staff = () => {
     const [staff, setStaff] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+      const [searchTerms, setSearchTerms] = useState(""); // Search input state
+    
     const [newStaff, setNewStaff] = useState({
         fullName: '',
         position: '',
@@ -42,6 +44,16 @@ const Staff = () => {
 
         fetchStaffData();
     }, []);
+      // Handle search input change
+  const handleSearched = (e) => {
+    const value = e.target.value;
+    setSearchTerms(value);
+
+   const filtered = staffsData.filter((staff) =>
+     staff.full_name.toLowerCase().includes(value.toLowerCase())
+  );
+    setFilteredStaffs(filtered);
+  };
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -109,10 +121,20 @@ const Staff = () => {
         <Layout>
             <div className="staff-list-container">
             <h2 className="heading">Staff List</h2>
-
-            <button className="check-doctor-btn" >
+  {/* Search Bar */}
+        <div className="search-bar">
+        <Form.Control
+        
+          type="text"
+          placeholder="Search by Staff Name"
+         value={searchTerms}
+         onChange={handleSearched}
+         className="search-input"
+         />
+      </div>
+            {/* <button className="check-doctor-btn" >
       Check Appointment
-        </button>
+        </button> */}
 
 
                 {/* Add Staff Button */}

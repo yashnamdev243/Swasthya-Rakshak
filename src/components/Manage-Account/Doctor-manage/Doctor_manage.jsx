@@ -362,6 +362,8 @@ import "./DoctorManage.css";
 const DoctorManage = () => {
   const [doctorsData, setDoctorsData] = useState([]);
   const [showAddDoctorForm, setShowAddDoctorForm] = useState(false);
+  const [searchTerm, setSearchTerm] = useState(""); // Search input state
+
   const [newDoctor, setNewDoctor] = useState({
     full_name: "",
     specialization: "",
@@ -392,6 +394,17 @@ const DoctorManage = () => {
 
     fetchDoctorsData();
   }, []);
+     // Handle search input change
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+
+   const filtered = doctorsData.filter((doctor) =>
+     doctor.full_name.toLowerCase().includes(value.toLowerCase())
+  );
+    setFilteredDoctors(filtered);
+  };
+
 
   // Handle Add Doctor button click
   const handleAddDoctor = () => {
@@ -438,13 +451,24 @@ const DoctorManage = () => {
 
   return (
     <Layout>
-      <div className="doctor-list-container">
-        {/* Add Doctor Button */}
+ <div className="doctor-list-container">
+ <h2 className="heading">Doctor Details</h2>
+
+        {/* Search Bar */}
+        <div className="search-bar">
+        <Form.Control
+        
+          type="text"
+          placeholder="Search by Doctor Name"
+         value={searchTerm}
+         onChange={handleSearch}
+         className="search-input"
+         />
+      </div>        {/* Add Doctor Button */}
         <button className="add-doctor-btn" onClick={handleAddDoctor}>
           Add Doctor
         </button>
 
-        <h2 className="heading">Doctor Details</h2>
 
         {/* Bootstrap Modal for Add Doctor Form */}
         <Modal

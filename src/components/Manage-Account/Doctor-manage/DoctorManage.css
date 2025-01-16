@@ -66,9 +66,9 @@
 .heading {
     color: #ffffff;
     font-size: 40px;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    
+     */
 }
 
 /* Table Styles */
@@ -114,7 +114,7 @@
     margin: 120px auto;
   }
   
-.search-box {
+.search-bar {
     margin-left: 78%;
     margin-top: -55px;}
 
