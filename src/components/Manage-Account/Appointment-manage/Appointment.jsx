@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Layout from '../../../Layout/Layout';
 import { Modal, Button, Form } from 'react-bootstrap';
 import axios from 'axios'; // Import axios
+import Skeleton from 'react-loading-skeleton'; // Import Skeleton
+import 'react-loading-skeleton/dist/skeleton.css'; // Import skeleton styles
 import './Appointment.css'; // Assuming you will create a similar CSS file
 
 const Appointment = () => {
@@ -12,11 +14,15 @@ const Appointment = () => {
     const [searchTerms, setSearchTerms] = useState(""); // Search input state
 
     const [newAppointment, setNewAppointment] = useState({
-        name: '',
-        date: '',
-        time: '',
-        status: '',
-        description: '',
+        full_name: '',
+        gender: '',
+        phone_number: '',
+        email_address: '',
+        preferred_doctor: '',
+        appointment_date: '',
+        time_slot: '',
+        reason_for_visit: '',
+        status: 'Pending', // Default status
     });
 
     const [showModal, setShowModal] = useState(false);
@@ -45,7 +51,7 @@ const Appointment = () => {
 
         // Filter the appointments based on search terms
         const filtered = appointments.filter((appointment) =>
-            appointment.name.toLowerCase().includes(value.toLowerCase())
+            appointment.full_name.toLowerCase().includes(value.toLowerCase())
         );
         setFilteredAppointments(filtered); // Update filtered appointments
     };
@@ -60,34 +66,34 @@ const Appointment = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        
         try {
+            // Post the new appointment
             const response = await axios.post('http://localhost:3000/api/appointments', newAppointment);
             console.log('New appointment added:', response.data);
-            setAppointments([...appointments, response.data]); // Optionally, add new appointment to the list
+            
+            // Add the new appointment to the existing appointments list
+            setAppointments((prevAppointments) => [...prevAppointments, response.data]);
+            setFilteredAppointments((prevFilteredAppointments) => [...prevFilteredAppointments, response.data]);
+    
+            // Reset form after submission
             setNewAppointment({
-                name: '',
-                date: '',
-                time: '',
-                status: '',
-                description: '',
-            }); // Reset form after submission
+                full_name: '',
+                gender: '',
+                phone_number: '',
+                email_address: '',
+                preferred_doctor: '',
+                appointment_date: '',
+                time_slot: '',
+                reason_for_visit: '',
+                status: 'Pending',
+            });
+    
             setShowModal(false); // Close modal after submission
         } catch (err) {
             setError('Failed to add appointment: ' + err.message);
         }
     };
-
-    const handleShowModal = () => setShowModal(true);
-    const handleCloseModal = () => setShowModal(false);
-
-    if (loading) {
-        return <Layout><div>Loading...</div></Layout>;
-    }
-
-    if (error) {
-        return <Layout><div>Error: {error}</div></Layout>;
-    }
 
     return (
         <Layout>
@@ -105,105 +111,60 @@ const Appointment = () => {
                     />
                 </div>
 
-                {/* Add Appointment Button */}
-                <button className="add-appointment-btn" onClick={handleShowModal}>Add Appointment</button>
-
-                {/* Appointment Form Modal */}
-                <Modal show={showModal} onHide={handleCloseModal}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Add New Appointment</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <Form onSubmit={handleSubmit}>
-                            <Form.Group controlId="name">
-                                <Form.Label>Appointment Name</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    name="name"
-                                    value={newAppointment.name}
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                            </Form.Group>
-
-                            <Form.Group controlId="date">
-                                <Form.Label>Date</Form.Label>
-                                <Form.Control
-                                    type="date"
-                                    name="date"
-                                    value={newAppointment.date}
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                            </Form.Group>
-
-                            <Form.Group controlId="time">
-                                <Form.Label>Time</Form.Label>
-                                <Form.Control
-                                    type="time"
-                                    name="time"
-                                    value={newAppointment.time}
-                                    onChange={handleInputChange}
-                                    required
-                                />
-                            </Form.Group>
-
-                            <Form.Group controlId="status">
-                                <Form.Label>Status</Form.Label>
-                                <Form.Control
-                                    as="select"
-                                    name="status"
-                                    value={newAppointment.status}
-                                    onChange={handleInputChange}
-                                    required
-                                >
-                                    <option value="">Select Status</option>
-                                    <option value="Scheduled">Scheduled</option>
-                                    <option value="Completed">Completed</option>
-                                    <option value="Canceled">Canceled</option>
-                                </Form.Control>
-                            </Form.Group>
-
-                            <Form.Group controlId="description">
-                                <Form.Label>Description</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    name="description"
-                                    value={newAppointment.description}
-                                    onChange={handleInputChange}
-                                />
-                            </Form.Group>
-
-                            <Button type="submit">Add Appointment</Button>
-                        </Form>
-                    </Modal.Body>
-                </Modal>
-
-                {/* Table */}
+                {/* Appointment Table */}
                 <table className="appointment-table">
                     <thead>
                         <tr>
-                            <th>Appointment ID</th>
+                            <th> ID</th>
                             <th>Name</th>
                             <th>Date</th>
                             <th>Time</th>
                             <th>Status</th>
                             <th>Description</th>
+                            <th>Gender</th>
+                            <th>Phone Number</th>
+                            <th>Email Address</th>
+                            <th>Preferred Doctor</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {filteredAppointments.map((appointment) => (
-                            <tr key={appointment.id}>
-                                <td>{appointment.id}</td>
-                                <td>{appointment.name}</td>
-                                <td>{new Date(appointment.date).toLocaleDateString()}</td>
-                                <td>{appointment.time}</td>
-                                <td>{appointment.status}</td>
-                                <td>{appointment.description}</td>
-                            </tr>
-                        ))}
+                        {loading ? (
+                            // Display skeleton loaders if data is loading
+                            Array(5)
+                                .fill()
+                                .map((_, index) => (
+                                    <tr key={index}>
+                                        <td><Skeleton width={100} /></td>
+                                        <td><Skeleton width={150} /></td>
+                                        <td><Skeleton width={120} /></td>
+                                        <td><Skeleton width={80} /></td>
+                                        <td><Skeleton width={80} /></td>
+                                        <td><Skeleton width={150} /></td>
+                                        <td><Skeleton width={100} /></td>
+                                        <td><Skeleton width={120} /></td>
+                                        <td><Skeleton width={180} /></td>
+                                        <td><Skeleton width={150} /></td>
+                                    </tr>
+                                ))
+                        ) : (
+                            filteredAppointments.map((appointment) => (
+                                <tr key={appointment.id}>
+                                    <td>{appointment.id}</td>
+                                    <td>{appointment.full_name}</td>
+                                    <td>{new Date(appointment.appointment_date).toLocaleDateString()}</td>
+                                    <td>{appointment.time_slot}</td>
+                                    <td>{appointment.status}</td>
+                                    <td>{appointment.reason_for_visit}</td>
+                                    <td>{appointment.gender}</td> {/* Display Gender */}
+                                    <td>{appointment.phone_number}</td> {/* Display Phone Number */}
+                                    <td>{appointment.email_address}</td> {/* Display Email Address */}
+                                    <td>{appointment.preferred_doctor}</td> {/* Display Preferred Doctor */}
+                                </tr>
+                            ))
+                        )}
                     </tbody>
                 </table>
+
             </div>
         </Layout>
     );

@@ -36,11 +36,14 @@
 }
 
 .search-input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
+    width: 195px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+  }
 
 .add-appointment-btn {
     padding: 10px 20px;

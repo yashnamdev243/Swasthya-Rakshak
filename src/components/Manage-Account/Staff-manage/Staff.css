@@ -52,6 +52,16 @@
     background-color: rgb(220, 230, 245);
 }
 
+.search-input {
+    width: 195px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+}
+
 /* Modal Styling */
 .custom-modal .modal-dialog {
     max-width: 50%;

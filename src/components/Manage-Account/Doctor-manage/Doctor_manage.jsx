@@ -719,12 +719,12 @@ const DoctorManage = () => {
                 <th>Qualifications</th>
                 <th>Experience</th>
                 <th>Phone</th>
-                <th>Email</th>
+                {/* <th>Email</th> */}
                 <th>Fees</th>
-                <th>Address</th>
+                {/* <th>Address</th> */}
                 <th>Working Hours</th>
                 <th>Emergency Contact</th>
-                <th>Room</th>
+                {/* <th>Room</th> */}
                 <th>Status</th>
               </tr>
             </thead>
@@ -743,18 +743,19 @@ const DoctorManage = () => {
                   <td>{doctor.qualifications}</td>
                   <td>{doctor.years_of_experience} years</td>
                   <td>{doctor.phone_number}</td>
-                  <td>{doctor.email_address}</td>
+                  {/* <td>{doctor.email_address}</td> */}
                   <td>₹{doctor.consultation_fees}</td>
-                  <td>{doctor.hospital_clinic_address}</td>
+                  {/* <td>{doctor.hospital_clinic_address}</td> */}
                   <td>{doctor.working_hours}</td>
                   <td>{doctor.emergency_contact_number}</td>
-                  <td>{doctor.room_number}</td>
+                  {/* <td>{doctor.room_number}</td> */}
                   <td>{doctor.profile_status}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         )}
+        
       </div>
     </Layout>
   );
