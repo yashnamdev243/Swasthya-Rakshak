@@ -128,3 +128,15 @@
 .search-button:hover {
   background-color: #0056b3;
 }
+.action-icon {
+  font-size: 1.2rem;
+}
+.view-profile-icon {
+  color: #007bff;
+}
+.update-icon {
+  color: #28a745;
+}
+.delete-icon {
+  color: #dc3545;
+}

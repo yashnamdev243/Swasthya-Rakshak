@@ -336,7 +336,7 @@ const Staff = () => {
                                             src={`http://localhost:3000/${staffMember.profilePicture}`}
                                             alt={staffMember.fullName}
                                             className='staff-image'
-                                            style={{ width: '50px', height: '50px', borderRadius: '50%' }}
+                                            style={{ width: '30px', height: '30px', borderRadius: '50%' }}
                                         />
                                     ) : (
                                         <span>No Profile Picture</span>
