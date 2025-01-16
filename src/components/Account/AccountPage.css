@@ -1,88 +1,237 @@
-/* Account Page Styles */
 .account-page {
-    padding: 20px;
-    max-width: 600px;
-    margin: 50px auto;
-    font-family: 'Arial', sans-serif;
-    color: #333;
+    padding: 40px 20px; /* Increased padding for more space */
+    text-align: center;
+    background-color: var(--card-bg);
 }
 
 .account-title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #024d82;
+    font-size: 2.5rem; /* Slightly larger title */
+    margin-bottom: 30px;
+    color: var(--text-color);
 }
 
 .account-card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 12px; /* Softer corners */
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture-container {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center; /* Center the profile picture */
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-picture {
+    width: 120px; /* Reduced size for better proportion */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.profile-picture-upload {
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Added shadow for button */
+    transition: background-color 0.3s ease;
+}
+
+.profile-picture-upload:hover {
+    background-color: var(--primary-dark); /* Darker hover effect */
+}
+
+.profile-picture-upload input {
+    display: none;
 }
 
 .account-field {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
     display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 1rem;
+    flex-direction: column;
 }
 
-.account-field:last-child {
-    border-bottom: none;
+.account-field label {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 8px; /* Spacing between label and input */
+}
+
+.account-field span {
+    display: block;
+    color: var(--text-secondary);
+    margin-bottom: 8px; /* Added spacing for visual clarity */
+}
+
+.account-field input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.account-field input:focus {
+    border-color: var(--primary-color);
 }
 
 .edit-btn,
-.logout-btn {
-    margin-top: 15px;
-    padding: 10px 15px;
-    font-size: 1rem;
+.settings-btn,
+.theme-toggle-btn,
+.logout-btn,
+.save-all-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 15px 0;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    font-size: 1.1rem; /* Larger button text */
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s ease;
+    transition: background-color 0.3s ease;
+    width: auto;
 }
 
 .edit-btn {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
-    margin-right: 10px;
+    margin-left: -200px;
 }
 
 .edit-btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+    background-color: var(--primary-dark);
 }
 
-.logout-btn {
-    background-color: #ff4d4d;
+.settings-btn {
+    background-color: #f0ad4e;
+    color: white;
+    margin-left: 500px;
+}
+
+.settings-btn:hover {
+    background-color: #ec971f;
+}
+.settings-menu{
+    margin-left: 400px;
+}
+.theme-toggle-btn {
+    background-color: #5bc0de;
     color: white;
 }
 
+.theme-toggle-btn:hover {
+    background-color: #31b0d5;
+}
+
+.logout-btn {
+    background-color: #d9534f;
+    color: white;
+    margin-left:200px;
+    margin-top: -65px;
+
+}
+
 .logout-btn:hover {
-    background-color: #d32f2f;
-    transform: scale(1.05);
+    background-color: #c9302c;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 480px) {
-    .account-card {
-        padding: 15px;
-    }
-
-    .account-field {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .account-field span {
-        margin-top: 5px;
-    }
-
-    .edit-btn,
-    .logout-btn {
-        font-size: 0.9rem;
-    }
+.save-all-btn {
+    background-color: #5cb85c;
+    color: white;
 }
+
+.save-all-btn:hover {
+    background-color: #4cae4c;
+}
+
+/* Dark Mode */
+:root {
+    --primary-color: #007bff;
+    --primary-dark: #0056b3;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --text-secondary: #555555;
+}
+
+body.dark-mode {
+    --card-bg: #333333;
+    --text-color: #ffffff;
+    --text-secondary: #cccccc;
+}
+
+
+/* Style the switch (toggle) button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 50px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    border-radius: 50px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+  }
+  
+  /* When the checkbox is checked, change the background */
+  input:checked + .slider {
+    background-color: #4CAF50;
+  }
+  
+  /* Move the slider when checked */
+  input:checked + .slider:before {
+    transform: translateX(14px);
+  }
+  
+  /* Round sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
