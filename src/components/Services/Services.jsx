@@ -15,10 +15,9 @@ import emergency from "../../assets/kisspng-computer-icons-tree-service-business
 import ambulance from "../../assets/101621237cb0616aca6162e8c521a043.png"
 import nearbyhospitals from "../../assets/kisspng-singapore-map-stock-photography-singapore-map-5b29fe93b34190.0329701115294788037343.png"
 import GeneralConsultations from "../../assets/kisspng-health-medicine-clip-art-5b123c5029fc08.429779301527921744172.png"
-import SpecializedCare from "../../assets/pngtree-chongyang-festival-to-help-the-elderly-walk-babysitter-in-blue-uniform-png-image_3801931.jpg"
+import SpecializedCare from "../../assets/pngtree-chongyang-festival-to-help-the-elderly-walk-babysitter-in-blue-uniform-png-image_3801931-removebg-preview.png"
 import EmergencySupport from "../../assets/—Pngtree—cartoon first aid rescuers and_7404354.png"
 import Footer from "../../Layout/Footer";
-
 
 const Services = () => {
     return (

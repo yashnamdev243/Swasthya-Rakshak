@@ -1,6 +1,6 @@
 /* Services Page Styling */
 .services-container {
-    padding: 40px;
+    padding: 10px;
     /* background-color: #f4f7fb; */
     text-align: center;
 }
@@ -8,10 +8,12 @@
 .services-heading {
     font-size: 2.8rem;
     color: #2c3e50;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
+    animation: fadeIn 2s ease-in-out;
+
 }
 
 .services-description {

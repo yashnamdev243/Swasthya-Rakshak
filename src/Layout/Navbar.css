@@ -29,6 +29,7 @@
 
 /* Navbar Links Container */
 .navbar-links {
+  margin-top: 10px;
   list-style: none;
   display: flex;
   gap: 20px;
