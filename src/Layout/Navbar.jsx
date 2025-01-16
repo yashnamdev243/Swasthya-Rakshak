@@ -226,7 +226,8 @@ const Navbar = () => {
                         <li><a href="/doctor-manage"><button className="action-btn">Doctor Manage</button></a></li>
                         <li><a href="/staff-manage"><button className="action-btn">Staff Manage</button></a></li>
                         <li><a href="/patient-manage"><button className="action-btn">Patient Manage</button></a></li>
-                        <li><a href="/appointments"><button className="action-btn">Check Appointment</button></a></li>
+                        {/* <li><a href="/appointments"><button className="action-btn">Check Appointment</button></a></li> */}
+                        <li><a href="/appointments-manage"><button className="action-btn">Check Appointment</button></a></li>
                     </ul>
                 </div>
             )}

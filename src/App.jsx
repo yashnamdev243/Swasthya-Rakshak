@@ -15,6 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import PatientManage from './components/Manage-Account/Patient-manage/PatientManage.jsx';
 import NotificationPage from './components/Notification/NotificationPage.jsx';
 import AccountPage from './components/Account/AccountPage.jsx';
+import Appointment from './components/Manage-Account/Appointment-manage/Appointment.jsx';
 
 
 
@@ -37,6 +38,7 @@ const App = () => {
           <Route path='/doctor-manage' element={<Doctor_manage></Doctor_manage>} />
           <Route path='/notification' element={<NotificationPage/>} />
           <Route path='/accounts' element={<AccountPage/>} />
+          <Route path='/appointments-manage' element={<Appointment/>} />
 
         </Routes>
       </div>
