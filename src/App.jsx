@@ -16,6 +16,9 @@ import PatientManage from "./components/Manage-Account/Patient-manage/PatientMan
 import NotificationPage from "./Layout/Notification/NotificationPage.jsx";
 import AccountPage from "./components/Account/AccountPage.jsx";
 import Appointment from "./components/Manage-Account/Appointment-manage/Appointment.jsx";
+import Patientupdate from "./components/Manage-Account/Patient-manage/Patientupdate.jsx";
+ 
+ 
 
 const App = () => {
   return (
@@ -32,16 +35,17 @@ const App = () => {
           {/* <Route path='/doctors' element={<Doctors />} /> */}
           <Route
             path="/patient-manage"
-            element={<PatientManage></PatientManage>}
+            element={<PatientManage />}
           />
           <Route path="/staff-manage" element={<Staff />} />
           <Route
             path="/doctor-manage"
-            element={<Doctor_manage></Doctor_manage>}
+            element={<Doctor_manage />}
           />
           <Route path="/notification" element={<NotificationPage />} />
           <Route path="/accounts" element={<AccountPage />} />
           <Route path="/appointments-manage" element={<Appointment />} />
+          <Route path="/patient-update" element={<Patientupdate/>} />
         </Routes>
       </div>
     </Router>

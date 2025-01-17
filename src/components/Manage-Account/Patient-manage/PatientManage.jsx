@@ -301,78 +301,10 @@ const PatientManage = () => {
                 </Modal>
 
                 {/* Table Structure (even if data is loading) */}
-                {/* <table className="patients-table">
-                    <thead>
-                        <tr>
-                            <th>Profile Picture</th>
-                            <th>Name</th>
-                            <th>Date of Birth</th>
-                            <th>Gender</th>
-                            <th>Address</th>
-                            <th>Emergency Contact</th>
-                            <th>Medical History</th>
-                            <th>Reason for Visit</th>
-                            <th>Admit Date</th>
-                            <th>Disease</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {filteredPatients.length === 0 ? (
-                            // Skeleton Loader when no patient data is loaded
-                            <>
-                                {[...Array(5)].map((_, index) => (
-                                    <tr key={index}>
-                                        <td><Skeleton circle={true} height={50} width={50} /></td>
-                                        <td><Skeleton width={150} /></td>
-                                        <td><Skeleton width={100} /></td>
-                                        <td><Skeleton width={80} /></td>
-                                        <td><Skeleton width={200} /></td>
-                                        <td><Skeleton width={150} /></td>
-                                        <td><Skeleton width={150} /></td>
-                                        <td><Skeleton width={150} /></td>
-                                        <td><Skeleton width={100} /></td>
-                                        <td><Skeleton width={100} /></td>
-                                    </tr>
-                                ))}
-                            </>
-                        ) : (
-                            // Actual Patient Data
-                            filteredPatients.map((patient, index) => (
-                                <tr key={index}>
-                                    <td>
-                                        {patient.profile_picture ? (
-                                            <img
-                                                src={`http://localhost:3000/uploads/${patient.profile_picture}`} // Ensure the image path is correct
-                                                alt={patient.full_name}
-                                                className="patient-image"
-                                                style={{ width: '30px', height: '30px', objectFit: 'cover' }}
-                                            />
-                                        ) : (
-                                            <span>No Image</span>
-                                        )}
-                                    </td>
-                                    <td>{patient.full_name}</td>
-                                    <td>{new Date(patient.date_of_birth).toLocaleDateString()}</td>
-                                    <td>{patient.gender}</td>
-                                    <td>{patient.address}</td>
-                                    <td>{patient.emergency_contact}</td>
-                                    <td>{patient.medical_history}</td>
-                                    <td>{patient.reason_for_visit}</td>
-                                    <td>{new Date(patient.admit_date).toLocaleDateString()}</td>
-                                    <td>{patient.disease}</td>
-                                </tr>
-                            ))
-                        )}
-                    </tbody>
-                </table> */}
-
-
-
                 <table className="patients-table">
                     <thead>
                         <tr>
                             <th>Profile Picture</th>
-                            {/* <th>ID</th> */}
                             <th>Name</th>
                             <th>Date of Birth</th>
                             <th>Gender</th>
@@ -382,7 +314,6 @@ const PatientManage = () => {
                             <th>Reason for Visit</th>
                             <th>Admit Date</th>
                             <th>Disease</th>
-                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -392,16 +323,15 @@ const PatientManage = () => {
                                 {[...Array(5)].map((_, index) => (
                                     <tr key={index}>
                                         <td><Skeleton circle={true} height={50} width={50} /></td>
-                                        <td><Skeleton width={50} /></td>
                                         <td><Skeleton width={150} /></td>
                                         <td><Skeleton width={100} /></td>
                                         <td><Skeleton width={80} /></td>
                                         <td><Skeleton width={200} /></td>
                                         <td><Skeleton width={150} /></td>
                                         <td><Skeleton width={150} /></td>
-                                        <td><Skeleton width={100} /></td>
-                                        <td><Skeleton width={100} /></td>
                                         <td><Skeleton width={150} /></td>
+                                        <td><Skeleton width={100} /></td>
+                                        <td><Skeleton width={100} /></td>
                                     </tr>
                                 ))}
                             </>
@@ -421,7 +351,6 @@ const PatientManage = () => {
                                             <span>No Image</span>
                                         )}
                                     </td>
-                                    {/* <td>{patient.id}</td> Patient ID */}
                                     <td>{patient.full_name}</td>
                                     <td>{new Date(patient.date_of_birth).toLocaleDateString()}</td>
                                     <td>{patient.gender}</td>
@@ -431,31 +360,14 @@ const PatientManage = () => {
                                     <td>{patient.reason_for_visit}</td>
                                     <td>{new Date(patient.admit_date).toLocaleDateString()}</td>
                                     <td>{patient.disease}</td>
-                                    <td>
-                                        <i
-                                            className="fa fa-eye action-icon view-profile-icon"
-                                            onClick={() => handleViewProfile(patient.id)}
-                                            title="View Profile"
-                                            style={{ cursor: 'pointer', margin: '0 5px' }}
-                                        ></i>
-                                        <i
-                                            className="fa fa-edit action-icon update-icon"
-                                            onClick={() => handleUpdate(patient.id)}
-                                            title="Update"
-                                            style={{ cursor: 'pointer', margin: '0 5px' }}
-                                        ></i>
-                                        <i
-                                            className="fa fa-trash action-icon delete-icon"
-                                            onClick={() => handleDelete(patient.id)}
-                                            title="Delete"
-                                            style={{ cursor: 'pointer', margin: '0 5px', color: 'red' }}
-                                        ></i>
-                                    </td>
                                 </tr>
                             ))
                         )}
                     </tbody>
                 </table>
+
+
+
 
 
             </div>
