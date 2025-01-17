@@ -320,7 +320,7 @@ const Doctors = () => {
                   View Profile
                 </button>
                 <button
-                  className="button book-button"
+                  className="button book-buttons"
                   onClick={() =>
                     alert(`Booking an appointment with ${doctor.full_name}`)
                   }
@@ -335,7 +335,7 @@ const Doctors = () => {
         {/* Modal for viewing doctor details */}
         {isModalOpen && selectedDoctor && (
           <div className="modal-overlay">
-            <div className="modal-content">
+            <div className="modal-contents">
               <span className="modal-close" onClick={handleCloseModal}>
                 &times;
               </span>

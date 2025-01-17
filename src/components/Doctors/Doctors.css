@@ -631,11 +631,11 @@ max-width: 100px;
   background-color: #0056b3;
 }
 
-.book-button {
+.book-buttons {
   background-color: #28a745;
 }
 
-.book-button:hover {
+.book-buttons:hover {
   background-color: #218838;
 }
 
@@ -666,7 +666,7 @@ max-width: 100px;
   /* z-index: 1000; */
 }
 
-.modal-content {
+.modal-contents {
   background: #fff;
   padding: 15px;
   /* Smaller padding */
@@ -704,13 +704,13 @@ max-width: 100px;
   /* Smaller gap */
 }
 
-.modal-content h2 {
+.modal-contents h2 {
   font-size: 18px;
   /* Smaller heading size */
   margin-bottom: 10px;
 }
 
-.modal-content p {
+.modal-contents p {
   font-size: 14px;
   /* Smaller paragraph text */
   margin-bottom: 8px;
