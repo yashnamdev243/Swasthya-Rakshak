@@ -7,7 +7,7 @@ import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import Services from "./components/Services/Services.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import Aboutus from "./components/About us/Aboutus.jsx";
-// import Doctors from './components/Doctors/Doctors.jsx';
+import Doctors from './components/Doctors/Doctors.jsx';
 import Doctor_manage from "./components/Manage-Account/Doctor-manage/Doctor_manage.jsx";
 import Staff from "./components/Manage-Account/Staff-manage/Staff.jsx";
 //import Patient from './components/Manage-Account/Patient-manage/PatientManage.jsx';
@@ -17,8 +17,8 @@ import NotificationPage from "./Layout/Notification/NotificationPage.jsx";
 import AccountPage from "./components/Account/AccountPage.jsx";
 import Appointment from "./components/Manage-Account/Appointment-manage/Appointment.jsx";
 import Patientupdate from "./components/Manage-Account/Patient-manage/Patientupdate.jsx";
- 
- 
+
+
 
 const App = () => {
   return (
@@ -32,7 +32,7 @@ const App = () => {
           <Route path="/about" element={<Aboutus />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          {/* <Route path='/doctors' element={<Doctors />} /> */}
+          <Route path='/doctors' element={<Doctors />} />
           <Route
             path="/patient-manage"
             element={<PatientManage />}
@@ -45,7 +45,7 @@ const App = () => {
           <Route path="/notification" element={<NotificationPage />} />
           <Route path="/accounts" element={<AccountPage />} />
           <Route path="/appointments-manage" element={<Appointment />} />
-          <Route path="/patient-update" element={<Patientupdate/>} />
+          <Route path="/patient-update" element={<Patientupdate />} />
         </Routes>
       </div>
     </Router>
