@@ -5,6 +5,7 @@ import { Modal, Button, Form, Row, Col } from 'react-bootstrap';
 import Skeleton from 'react-loading-skeleton'; // Import the Skeleton component
 import 'react-loading-skeleton/dist/skeleton.css'; // Import the CSS for Skeleton
 import './PatientManage.css';
+import { Link } from 'react-router-dom';
 
 const PatientManage = () => {
     const [patientsData, setPatientsData] = useState([]);
@@ -111,10 +112,20 @@ const PatientManage = () => {
     return (
         <Layout>
             <div className="patient-list-container">
+                
+            <Link to="/manage-patients">
+    <button className="manage-patient-btn">
+        Manage 
+    </button>
+</Link>
+
                 <h2 className="heading">Patient Details</h2>
+                
                 {/* <button className="check-doctor-btn" >
       Check Appointment
         </button> */}
+       
+
                 {/* Search Bar */}
                 <div className="search-bar">
 

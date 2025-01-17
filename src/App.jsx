@@ -18,7 +18,7 @@ import AccountPage from "./components/Account/AccountPage.jsx";
 import Appointment from "./components/Manage-Account/Appointment-manage/Appointment.jsx";
 import Patientupdate from "./components/Manage-Account/Patient-manage/Patientupdate.jsx";
 
-
+import PatientCRUD from "./components/Manage-Account/Patient-manage/PatientCRUD.jsx";
 
 const App = () => {
   return (
@@ -46,6 +46,8 @@ const App = () => {
           <Route path="/accounts" element={<AccountPage />} />
           <Route path="/appointments-manage" element={<Appointment />} />
           <Route path="/patient-update" element={<Patientupdate />} />
+          <Route path="/manage-patients" element={<PatientCRUD />} />
+
         </Routes>
       </div>
     </Router>

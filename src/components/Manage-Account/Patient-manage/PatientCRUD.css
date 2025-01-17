@@ -1,0 +1,146 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Button Styles */
+.manage-patient-btn {
+    position: absolute;
+    top: -30px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #37474f;
+    /* background-color: #024d82; */
+  
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+.manage-patient-btn:hover {
+    background-color: #0e6aab;
+    color: #000;
+}
+
+.manage-patient-btn:focus {
+    outline: none;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #495057;
+}
+
+td {
+    background-color: #fff;
+}
+
+tr:hover td {
+    background-color: #f1f1f1;
+}
+
+/* Modal Styles */
+.modal-header {
+    /* background-color: #e2e5e9; */
+    color: white;
+    border-bottom: none;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+button[type="submit"]:focus {
+    outline: none;
+}
+
+/* Row Styling for the Form */
+.mb-4 {
+    margin-bottom: 20px;
+}
+
+.col-md-6 {
+    margin-bottom: 15px;
+}
+
+/* Layout Styling */
+h2 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .manage-patient-btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .table th, .table td {
+        padding: 8px;
+    }
+
+    .modal-body {
+        padding: 15px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 12px;
+    }
+}
+/* Table Header Styling */
+
+
+.thead th {
+  color: #000;
+  background-color: rgb(15, 87, 150); /* Make text white for better contrast */
+    padding: 12px; /* Adjust padding for spacing */
+    text-align: left; /* Left-align the text */
+}
+
