@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 import Layout from '../../Layout/Layout'
 import offlineconsultation from "../../assets/c0a9d3ce8c41bf587cf6c62388f4461e.png"
 import onlineconsultation from "../../assets/72abed91e94df20cf803e8bf536e5f0c.png"
@@ -74,21 +76,32 @@ const Services = () => {
                 <p className='Specialist-Categories-description'> Specialist Categories encompass Cardiologists, Pediatricians, and Dentists, along with Dermatologists, Neurologists, Psychiatrists, Orthopedic Surgeons, and Oncologists. These experts address diverse health concerns, including heart, child health, dental, skin, mental health, cancer, hormonal, and musculoskeletal conditions, ensuring specialized care.</p>
                 <div className="specialist-categories">
                     <div className="specialist-card">
+                        <Link to="/doctors" style={{textDecoration:"none"}}>  
                         <img src={cardiologist} alt="Cardiologist" className="specialist-image" />
                         <h4>  (Cardiologist)</h4>
+                        </Link>
                     </div>
                   
                     <div className="specialist-card">
+                    <Link to="/doctors" style={{textDecoration:"none"}}>  
+
                         <img src={pediatrician} alt="Pediatrician" className="specialist-image" />
                         <h4> (Pediatrician)</h4>
+                    </Link>
                     </div>
                     <div className="specialist-card">
+                    <Link to="/doctors" style={{textDecoration:"none"}}>  
+
                         <img src={dentist}  alt="Dentist" className="specialist-image" />
                         <h4>  (Dentist)</h4>
+                    </Link>
                     </div>
                     <div className="specialist-card">
+                    <Link to="/doctors" style={{textDecoration:"none"}}>  
+
                         <img src={specialists}  alt="Other Specialists" className="specialist-image" />
                         <h4>  (Other Specialists)</h4>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -101,6 +114,7 @@ const Services = () => {
                 {/* Offered Tests */}
                 <div className="offered-tests">
                     <div className="test-card">
+                        
                         <img src={bloodtest} alt="Blood Test" className="test-image" />
                         <h3>Blood Test</h3>
                     </div>

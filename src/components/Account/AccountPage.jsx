@@ -427,7 +427,7 @@
 import React, { useState, useEffect } from 'react';
 import './AccountPage.css';
 import Layout from '../../Layout/Layout';
-import { FaSun, FaMoon, FaBell, FaRegBell } from 'react-icons/fa'; // Import icons from react-icons
+//import { FaSun, FaMoon, FaBell, FaRegBell } from 'react-icons/fa'; // Import icons from react-icons
 
 const AccountPage = () => {
     const [user, setUser] = useState(null);
