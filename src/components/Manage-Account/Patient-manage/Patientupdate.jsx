@@ -262,7 +262,7 @@ const Patientupdate = () => {
       </div>
 
       {/* Modal for updating patient */}
-      <Modal show={showUpdateModal} onHide={() => setShowUpdateModal(false)} className="custom-modal">
+      <Modal show={showUpdateModal} onHide={() => setShowUpdateModal(false)} className="custom-modals">
         <Modal.Header closeButton>
           <Modal.Title>Update Patient Information</Modal.Title>
         </Modal.Header>
