@@ -620,29 +620,29 @@ max-width: 100px;
 }
 
 /* Modal Image Styling */
-.modal-image {
+/* .modal-image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
-}
+} */
 
 /* Modal title styling */
-.modal-title {
+/* .modal-title {
   font-size: 1.8rem;
   color: #34495e;
   font-weight: bold;
-}
+} */
 
 /* Form styling inside the modal */
-.form-control {
+/* .form-control {
   border: 1px solid #dcdcdc;
   border-radius: 5px;
   padding: 10px;
   font-size: 1rem;
-}
-
+} */
+/* 
 .form-control:focus {
   border-color: #3498db;
   box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
@@ -651,7 +651,7 @@ max-width: 100px;
 .form-label {
   font-weight: bold;
   color: #2c3e50;
-}
+} */
 
 /* Buttons in the modal footer */
 button {
