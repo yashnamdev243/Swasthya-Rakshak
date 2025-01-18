@@ -113,7 +113,7 @@ const PatientManage = () => {
         <Layout>
             <div className="patient-list-container">
                 
-            <Link to="/manage-patients">
+            <Link to="/patient-update">
     <button className="manage-patient-btn">
         Manage 
     </button>

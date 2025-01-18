@@ -145,14 +145,17 @@ const Staff = () => {
                 <button className="add-patient-btn" onClick={handleShowModal}>Add Staff</button>
 
                 {/* Staff Form Modal */}
-                <Modal show={showModal} onHide={handleCloseModal}>
+                <Modal show={showModal} onHide={handleCloseModal} 
+                 className="custom-modal">
                     <Modal.Header closeButton>
                         <Modal.Title>Add New Staff</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <Form onSubmit={handleSubmit}>
-                            <Row>
-                                <Col>
+                       {/* Form inputs here */}
+                          <Row className="mb-1"> 
+                           <Col md={6}>
+                                          
                                     <Form.Group controlId="fullName">
                                         <Form.Label>Full Name</Form.Label>
                                         <Form.Control
@@ -161,10 +164,12 @@ const Staff = () => {
                                             value={newStaff.fullName}
                                             onChange={handleInputChange}
                                             required
+                                            className="form-control-custom"
+
                                         />
                                     </Form.Group>
                                 </Col>
-                                <Col>
+                            <Col md={6}>
                                     <Form.Group controlId="position">
                                         <Form.Label>Position</Form.Label>
                                         <Form.Control
@@ -173,13 +178,15 @@ const Staff = () => {
                                             value={newStaff.position}
                                             onChange={handleInputChange}
                                             required
+                                            className="form-control-custom"
+
                                         />
                                     </Form.Group>
                                 </Col>
                             </Row>
 
-                            <Row>
-                                <Col>
+                   <Row className="mb-1">
+                          <Col md={6}>
                                     <Form.Group controlId="department">
                                         <Form.Label>Department</Form.Label>
                                         <Form.Control
@@ -188,10 +195,12 @@ const Staff = () => {
                                             value={newStaff.department}
                                             onChange={handleInputChange}
                                             required
+                                            className="form-control-custom"
+
                                         />
                                     </Form.Group>
                                 </Col>
-                                <Col>
+                         <Col md={6}>
                                     <Form.Group controlId="emailId">
                                         <Form.Label>Email</Form.Label>
                                         <Form.Control
@@ -200,13 +209,15 @@ const Staff = () => {
                                             value={newStaff.emailId}
                                             onChange={handleInputChange}
                                             required
+                                            className="form-control-custom"
+
                                         />
                                     </Form.Group>
                                 </Col>
                             </Row>
 
-                            <Row>
-                                <Col>
+              <Row className="mb-1">
+                <Col md={6}>
                                     <Form.Group controlId="phoneNo">
                                         <Form.Label>Phone Number</Form.Label>
                                         <Form.Control
@@ -215,11 +226,13 @@ const Staff = () => {
                                             value={newStaff.phoneNo}
                                             onChange={handleInputChange}
                                             required
+                                            className="form-control-custom"
+
                                         />
                                     </Form.Group>
                                 </Col>
-                                <Col>
-                                    <Form.Group controlId="qualifications">
+                                <Col md={4}>
+                                <Form.Group controlId="qualifications">
                                         <Form.Label>Qualifications</Form.Label>
                                         <Form.Control
                                             type="text"
@@ -227,14 +240,16 @@ const Staff = () => {
                                             value={newStaff.qualifications}
                                             onChange={handleInputChange}
                                             required
+                                            className="form-control-custom"
+
                                         />
                                     </Form.Group>
                                 </Col>
                             </Row>
 
-                            <Row>
-                                <Col>
-                                    <Form.Group controlId="dateOfBirth">
+              <Row className="mb-1">
+              <Col md={6}>
+              <Form.Group controlId="dateOfBirth">
                                         <Form.Label>Date of Birth</Form.Label>
                                         <Form.Control
                                             type="date"
@@ -242,11 +257,13 @@ const Staff = () => {
                                             value={newStaff.dateOfBirth}
                                             onChange={handleInputChange}
                                             required
+                                            className="form-control-custom"
+
                                         />
                                     </Form.Group>
                                 </Col>
-                                <Col>
-                                    <Form.Group controlId="dateOfJoining">
+                                <Col md={4}>
+                                <Form.Group controlId="dateOfJoining">
                                         <Form.Label>Date of Joining</Form.Label>
                                         <Form.Control
                                             type="date"
@@ -254,13 +271,15 @@ const Staff = () => {
                                             value={newStaff.dateOfJoining}
                                             onChange={handleInputChange}
                                             required
+                                            className="form-control-custom"
+
                                         />
                                     </Form.Group>
                                 </Col>
                             </Row>
 
-                            <Row>
-                                <Col>
+              <Row className="mb-1">
+                <Col md={6}>
                                     <Form.Group controlId="gender">
                                         <Form.Label>Gender</Form.Label>
                                         <Form.Control
@@ -269,6 +288,8 @@ const Staff = () => {
                                             value={newStaff.gender}
                                             onChange={handleInputChange}
                                             required
+                                            className="form-control-custom"
+
                                         >
                                             <option value="">Select Gender</option>
                                             <option value="Male">Male</option>
@@ -276,8 +297,8 @@ const Staff = () => {
                                         </Form.Control>
                                     </Form.Group>
                                 </Col>
-                                <Col>
-                                    <Form.Group controlId="workStatus">
+                                <Col md={4}>
+                                <Form.Group controlId="workStatus">
                                         <Form.Label>Work Status</Form.Label>
                                         <Form.Control
                                             as="select"
@@ -285,6 +306,8 @@ const Staff = () => {
                                             value={newStaff.workStatus}
                                             onChange={handleInputChange}
                                             required
+                                            className="form-control-custom"
+
                                         >
                                             <option value="">Select Status</option>
                                             <option value="Active">Active</option>
@@ -303,8 +326,18 @@ const Staff = () => {
                                     required
                                 />
                             </Form.Group>
+                                  {/* Add/Cancel Buttons */}
+                            <div className="d-flex justify-content-between" style={{ gap: "10px", marginTop: '10px' }}>
 
                             <Button type="submit">Add Staff</Button>
+                             <Button
+                                              variant="secondary"
+                                              onClick={() => handleCloseModal(false)}
+                                              className="btn-cancel"
+                                            >
+                                              Cancel
+                                            </Button>
+                                            </div>
                         </Form>
                     </Modal.Body>
                 </Modal>
