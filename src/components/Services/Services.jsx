@@ -34,19 +34,19 @@ const Services = () => {
                     <div className="service-card">
                         <h3 className="service-title">General Consultations</h3>
                         <p>Our general consultations cover a wide variety of health concerns, from routine check-ups to preventive care.</p>
-                        <img src= {GeneralConsultations}  alt="General Consultation" className="General-image" />
+                        <img src={GeneralConsultations} alt="General Consultation" className="General-image" />
 
                     </div>
                     <div className="service-card">
                         <h3 className="service-title">Specialized Care</h3>
                         <p>We provide expert care in various medical fields, ensuring specialized attention to your unique health needs.</p>
-                        <img src= {SpecializedCare}  alt="General Consultation" className="General-image" />
+                        <img src={SpecializedCare} alt="General Consultation" className="General-image" />
 
                     </div>
                     <div className="service-card">
                         <h3 className="service-title">Emergency Support</h3>
                         <p>In case of emergencies, we offer round-the-clock medical support to ensure you're never alone in a crisis.</p>
-                        <img src= {EmergencySupport}  alt="General Consultation" className="General-image" />
+                        <img src={EmergencySupport} alt="General Consultation" className="General-image" />
 
                     </div>
                 </div>
@@ -65,7 +65,7 @@ const Services = () => {
                         <p>Choose video or audio calls for a consultation from the comfort of your home.</p>
                     </div>
                     <div className="mode-card">
-                        <img src= {offlineconsultation}  alt="Offline Consultation" className="mode-image" />
+                        <img src={offlineconsultation} alt="Offline Consultation" className="mode-image" />
                         <h3 className="mode-title">Offline Consultation  </h3>
                         <p>Visit our clinics for in-person consultations with our doctors.</p>
                     </div>
@@ -76,31 +76,31 @@ const Services = () => {
                 <p className='Specialist-Categories-description'> Specialist Categories encompass Cardiologists, Pediatricians, and Dentists, along with Dermatologists, Neurologists, Psychiatrists, Orthopedic Surgeons, and Oncologists. These experts address diverse health concerns, including heart, child health, dental, skin, mental health, cancer, hormonal, and musculoskeletal conditions, ensuring specialized care.</p>
                 <div className="specialist-categories">
                     <div className="specialist-card">
-                        <Link to="/doctors" style={{textDecoration:"none"}}>  
-                        <img src={cardiologist} alt="Cardiologist" className="specialist-image" />
-                        <h4>  (Cardiologist)</h4>
+                        <Link to="/cardiologist" style={{ textDecoration: "none" }}>
+                            <img src={cardiologist} alt="Cardiologist" className="specialist-image" />
+                            <h4>  (Cardiologist)</h4>
                         </Link>
                     </div>
-                  
-                    <div className="specialist-card">
-                    <Link to="/doctors" style={{textDecoration:"none"}}>  
 
-                        <img src={pediatrician} alt="Pediatrician" className="specialist-image" />
-                        <h4> (Pediatrician)</h4>
-                    </Link>
+                    <div className="specialist-card">
+                        <Link to="/pediatrician" style={{ textDecoration: "none" }}>
+
+                            <img src={pediatrician} alt="Pediatrician" className="specialist-image" />
+                            <h4> (Pediatrician)</h4>
+                        </Link>
                     </div>
                     <div className="specialist-card">
-                    <Link to="/doctors" style={{textDecoration:"none"}}>  
+                        <Link to="/dentist" style={{ textDecoration: "none" }}>
 
-                        <img src={dentist}  alt="Dentist" className="specialist-image" />
-                        <h4>  (Dentist)</h4>
-                    </Link>
+                            <img src={dentist} alt="Dentist" className="specialist-image" />
+                            <h4>  (Dentist)</h4>
+                        </Link>
                     </div>
                     <div className="specialist-card">
-                    <Link to="/doctors" style={{textDecoration:"none"}}>  
+                        <Link to="/doctors" style={{ textDecoration: "none" }}>
 
-                        <img src={specialists}  alt="Other Specialists" className="specialist-image" />
-                        <h4>  (Other Specialists)</h4>
+                            <img src={specialists} alt="Other Specialists" className="specialist-image" />
+                            <h4>  (Other Specialists)</h4>
                         </Link>
                     </div>
                 </div>
@@ -114,7 +114,7 @@ const Services = () => {
                 {/* Offered Tests */}
                 <div className="offered-tests">
                     <div className="test-card">
-                        
+
                         <img src={bloodtest} alt="Blood Test" className="test-image" />
                         <h3>Blood Test</h3>
                     </div>
@@ -133,7 +133,7 @@ const Services = () => {
                 </div>
 
                 {/* Home Sample Collection */}
-             
+
             </div>
             <div className="emergency-services-container">
                 <h2 className="emergency-services-heading">Emergency Services</h2>

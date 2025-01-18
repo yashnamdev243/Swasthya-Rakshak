@@ -17,8 +17,13 @@ import NotificationPage from "./Layout/Notification/NotificationPage.jsx";
 import AccountPage from "./components/Account/AccountPage.jsx";
 import Appointment from "./components/Manage-Account/Appointment-manage/Appointment.jsx";
 import Patientupdate from "./components/Manage-Account/Patient-manage/Patientupdate.jsx";
-
 import PatientCRUD from "./components/Manage-Account/Patient-manage/PatientCRUD.jsx";
+import Cardiologist from "./components/Specialist Categories/Cardilologist/Cardiologist.jsx";
+import Pediatrician from "./components/Specialist Categories/Pediatrician/Pediatrician.jsx";
+import Dentist from "./components/Specialist Categories/Dentist/Dentist.jsx";
+  
+ 
+
 
 const App = () => {
   return (
@@ -47,7 +52,9 @@ const App = () => {
           <Route path="/appointments-manage" element={<Appointment />} />
           <Route path="/patient-update" element={<Patientupdate />} />
           <Route path="/manage-patients" element={<PatientCRUD />} />
-
+          <Route path="/cardiologist" element={<Cardiologist />} />
+          <Route path="/pediatrician" element={<Pediatrician />} />
+          <Route path="/dentist" element={<Dentist />} />
         </Routes>
       </div>
     </Router>

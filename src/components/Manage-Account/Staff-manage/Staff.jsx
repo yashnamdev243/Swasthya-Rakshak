@@ -10,7 +10,7 @@ const Staff = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [searchTerms, setSearchTerms] = useState(""); // Search input state
-    
+
     const [newStaff, setNewStaff] = useState({
         fullName: '',
         position: '',
@@ -124,19 +124,19 @@ const Staff = () => {
     return (
         <Layout>
             <div className="staff-list-container">
-            <h2 className="heading">Staff List</h2>
-  {/* Search Bar */}
-        <div className="search-bar">
-        <Form.Control
-        
-          type="text"
-          placeholder="Search by Staff Name"
-         value={searchTerms}
-         onChange={handleSearched}
-         className="search-input"
-         />
-      </div>
-            {/* <button className="check-doctor-btn" >
+                <h2 className="heading">Staff List</h2>
+                {/* Search Bar */}
+                <div className="search-bar">
+                    <Form.Control
+
+                        type="text"
+                        placeholder="Search by Staff Name"
+                        value={searchTerms}
+                        onChange={handleSearched}
+                        className="search-input"
+                    />
+                </div>
+                {/* <button className="check-doctor-btn" >
       Check Appointment
         </button> */}
 
@@ -145,17 +145,17 @@ const Staff = () => {
                 <button className="add-patient-btn" onClick={handleShowModal}>Add Staff</button>
 
                 {/* Staff Form Modal */}
-                <Modal show={showModal} onHide={handleCloseModal} 
-                 className="custom-modal">
+                <Modal show={showModal} onHide={handleCloseModal}
+                    className="custom-modal">
                     <Modal.Header closeButton>
                         <Modal.Title>Add New Staff</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <Form onSubmit={handleSubmit}>
-                       {/* Form inputs here */}
-                          <Row className="mb-1"> 
-                           <Col md={6}>
-                                          
+                            {/* Form inputs here */}
+                            <Row className="mb-1">
+                                <Col md={6}>
+
                                     <Form.Group controlId="fullName">
                                         <Form.Label>Full Name</Form.Label>
                                         <Form.Control
@@ -169,7 +169,7 @@ const Staff = () => {
                                         />
                                     </Form.Group>
                                 </Col>
-                            <Col md={6}>
+                                <Col md={6}>
                                     <Form.Group controlId="position">
                                         <Form.Label>Position</Form.Label>
                                         <Form.Control
@@ -185,8 +185,8 @@ const Staff = () => {
                                 </Col>
                             </Row>
 
-                   <Row className="mb-1">
-                          <Col md={6}>
+                            <Row className="mb-1">
+                                <Col md={6}>
                                     <Form.Group controlId="department">
                                         <Form.Label>Department</Form.Label>
                                         <Form.Control
@@ -200,7 +200,7 @@ const Staff = () => {
                                         />
                                     </Form.Group>
                                 </Col>
-                         <Col md={6}>
+                                <Col md={6}>
                                     <Form.Group controlId="emailId">
                                         <Form.Label>Email</Form.Label>
                                         <Form.Control
@@ -216,8 +216,8 @@ const Staff = () => {
                                 </Col>
                             </Row>
 
-              <Row className="mb-1">
-                <Col md={6}>
+                            <Row className="mb-1">
+                                <Col md={6}>
                                     <Form.Group controlId="phoneNo">
                                         <Form.Label>Phone Number</Form.Label>
                                         <Form.Control
@@ -232,7 +232,7 @@ const Staff = () => {
                                     </Form.Group>
                                 </Col>
                                 <Col md={4}>
-                                <Form.Group controlId="qualifications">
+                                    <Form.Group controlId="qualifications">
                                         <Form.Label>Qualifications</Form.Label>
                                         <Form.Control
                                             type="text"
@@ -247,9 +247,9 @@ const Staff = () => {
                                 </Col>
                             </Row>
 
-              <Row className="mb-1">
-              <Col md={6}>
-              <Form.Group controlId="dateOfBirth">
+                            <Row className="mb-1">
+                                <Col md={6}>
+                                    <Form.Group controlId="dateOfBirth">
                                         <Form.Label>Date of Birth</Form.Label>
                                         <Form.Control
                                             type="date"
@@ -263,7 +263,7 @@ const Staff = () => {
                                     </Form.Group>
                                 </Col>
                                 <Col md={4}>
-                                <Form.Group controlId="dateOfJoining">
+                                    <Form.Group controlId="dateOfJoining">
                                         <Form.Label>Date of Joining</Form.Label>
                                         <Form.Control
                                             type="date"
@@ -278,8 +278,8 @@ const Staff = () => {
                                 </Col>
                             </Row>
 
-              <Row className="mb-1">
-                <Col md={6}>
+                            <Row className="mb-1">
+                                <Col md={6}>
                                     <Form.Group controlId="gender">
                                         <Form.Label>Gender</Form.Label>
                                         <Form.Control
@@ -298,7 +298,7 @@ const Staff = () => {
                                     </Form.Group>
                                 </Col>
                                 <Col md={4}>
-                                <Form.Group controlId="workStatus">
+                                    <Form.Group controlId="workStatus">
                                         <Form.Label>Work Status</Form.Label>
                                         <Form.Control
                                             as="select"
@@ -326,18 +326,18 @@ const Staff = () => {
                                     required
                                 />
                             </Form.Group>
-                                  {/* Add/Cancel Buttons */}
+                            {/* Add/Cancel Buttons */}
                             <div className="d-flex justify-content-between" style={{ gap: "10px", marginTop: '10px' }}>
 
-                            <Button type="submit">Add Staff</Button>
-                             <Button
-                                              variant="secondary"
-                                              onClick={() => handleCloseModal(false)}
-                                              className="btn-cancel"
-                                            >
-                                              Cancel
-                                            </Button>
-                                            </div>
+                                <Button type="submit">Add Staff</Button>
+                                <Button
+                                    variant="secondary"
+                                    onClick={() => handleCloseModal(false)}
+                                    className="btn-cancel"
+                                >
+                                    Cancel
+                                </Button>
+                            </div>
                         </Form>
                     </Modal.Body>
                 </Modal>
@@ -369,7 +369,7 @@ const Staff = () => {
                                             src={`http://localhost:3000/${staffMember.profilePicture}`}
                                             alt={staffMember.fullName}
                                             className='staff-image'
-                                            style={{ width: '30px', height: '30px', borderRadius: '50%' }}
+                                            // style={{ width: '30px', height: '30px', borderRadius: '50%' }}
                                         />
                                     ) : (
                                         <span>No Profile Picture</span>
