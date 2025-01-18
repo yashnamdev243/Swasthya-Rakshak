@@ -26,7 +26,7 @@
   letter-spacing: 2px;
 }
 
-.check-doctor-btn{
+.check-doctor-btn {
   position: absolute;
   top: 50px;
   left: 20px;
@@ -43,7 +43,8 @@
   transition: background-color 0.3s;
 
 }
-  .check-doctor-btn:hover {
+
+.check-doctor-btn:hover {
   /* background-color:  #37474f; */
   background-color: #0e6aab;
   color: #000;
@@ -173,6 +174,7 @@
     display: flex;
   }
 }
+
 /* Toggle Navbar Button */
 .toggle-navbar-button {
   padding: 1px 2px;
@@ -190,7 +192,8 @@
   /* background-color: #22c609; */
   background-color: transparent;
 
-  color: #22c609;;
+  color: #22c609;
+  ;
   transform: scale(1.1);
 }
 
@@ -205,8 +208,8 @@
   margin-top: -10px;
   margin-bottom: -10px;
   /* animation: fadeIn 0.3s ease-in-out; */
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 
 }
 
@@ -233,50 +236,81 @@ justify-content: center;
 
 /* Button Styles Inside Secondary Navbar */
 .action-btn {
-  padding: 12px 20px;
-  background-color: #024d82;
+  padding: 14px 24px;
+  background: linear-gradient(45deg, #024d82, #1c67a2);
+  /* Gradient background */
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
+  /* Soft, rounded corners */
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
+  /* Bold text */
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
   text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  outline: none;
 }
 
+/* Hover effect with gradient change */
 .action-btn:hover {
-  background-color: #0e6aab;
-  color: #000;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(45deg, #1c67a2, #024d82);
+  /* Reverse gradient on hover */
+  transform: translateY(-5px);
+  /* Slight lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* Deeper shadow on hover */
+  color: #f0f0f0;
+  /* Lightens text color on hover */
 }
+
+
+.action-btn:focus {
+  box-shadow: 0 0 12px rgba(2, 77, 130, 0.5);
+
+  outline: none;
+
+}
+
+
+.action-btn:active {
+  transform: translateY(-2px);
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  background: linear-gradient(45deg, #022f58, #1c67a2);
+
+}
+
 
 /* Animation */
 @keyframes fadeIn {
   from {
-      opacity: 0;
-      transform: translateY(-10px);
+    opacity: 0;
+    transform: translateY(-10px);
   }
+
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
   .secondary-navbar {
-      padding: 15px;
+    padding: 15px;
   }
 
   .action-btn {
-      font-size: 0.9rem;
-      padding: 10px 15px;
+    font-size: 0.9rem;
+    padding: 10px 15px;
   }
 
   .toggle-navbar-button {
-      padding: 6px 12px;
-      font-size: 0.9rem;
+    padding: 6px 12px;
+    font-size: 0.9rem;
   }
 }
